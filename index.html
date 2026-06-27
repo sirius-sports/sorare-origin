@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SORARE ORIGIN</title>
+  <style>
+    :root {
+      --bg: #0a0f1e;
+      --bg2: #111827;
+      --bg3: #1e293b;
+      --text: #f1f5f9;
+      --text2: #94a3b8;
+      --border: #1e293b;
+
+      --football: #16a34a;
+      --football-dark: #14532d;
+      --football-light: #4ade80;
+
+      --mlb: #1d4ed8;
+      --mlb-dark: #1e3a8a;
+      --mlb-light: #60a5fa;
+
+      --nba: #ea580c;
+      --nba-dark: #7c2d12;
+      --nba-light: #fb923c;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', 'Noto Sans JP', sans-serif;
+      min-height: 100vh;
+    }
+
+    /* ── NAVIGATION ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(10, 15, 30, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      padding: 0 2rem;
+      height: 60px;
+      gap: 2rem;
+    }
+
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+      margin-right: auto;
+    }
+
+    .nav-logo .en {
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      color: var(--accent, #16a34a);
+    }
+
+    .nav-logo .ja {
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: var(--text2);
+      margin-top: 2px;
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 4px;
+    }
+
+    .nav-tab {
+      padding: 6px 20px;
+      border-radius: 6px;
+      border: none;
+      background: transparent;
+      color: var(--text2);
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      letter-spacing: 1px;
+      transition: all 0.2s;
+    }
+
+    .nav-tab:hover { color: var(--text); background: var(--bg3); }
+
+    .nav-tab.active-football {
+      background: var(--football);
+      color: #fff;
+    }
+    .nav-tab.active-mlb {
+      background: var(--mlb);
+      color: #fff;
+    }
+    .nav-tab.active-nba {
+      background: var(--nba);
+      color: #fff;
+    }
+
+    /* ── PAGES ── */
+    .page { display: none; padding-top: 60px; }
+    .page.active { display: block; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      height: 520px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      filter: blur(3px) brightness(0.5);
+      transform: scale(1.05);
+    }
+
+    .hero-football .hero-bg {
+      background-image: url('football.jpg');
+    }
+
+    .hero-mlb .hero-bg {
+      background-image: url('mlb.jpg');
+    }
+
+    .hero-nba .hero-bg {
+      background-image: url('nba.jpg');
+    }
+
+    .hero-content {
+      position: relative;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .hero-sport-badge {
+      display: inline-block;
+      padding: 4px 16px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 16px;
+    }
+
+    .hero-football .hero-sport-badge { background: var(--football); }
+    .hero-mlb .hero-sport-badge { background: var(--mlb); }
+    .hero-nba .hero-sport-badge { background: var(--nba); }
+
+    .hero-title {
+      font-size: 56px;
+      font-weight: 900;
+      letter-spacing: 6px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .hero-subtitle {
+      font-size: 14px;
+      letter-spacing: 4px;
+      color: var(--text2);
+      margin-bottom: 10px;
+    }
+
+    .hero-unofficial {
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--text2);
+      margin-bottom: 10px;
+      opacity: 0.7;
+    }
+
+    .hero-sport-name {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      color: #fff;
+      margin-bottom: 20px;
+      opacity: 0.85;
+    }
+
+    .hero-desc {
+      font-size: 15px;
+      color: #cbd5e1;
+      max-width: 520px;
+      line-height: 1.8;
+    }
+
+    .accent-football { color: var(--football-light); }
+    .accent-mlb { color: var(--mlb-light); }
+    .accent-nba { color: var(--nba-light); }
+
+    /* ── CONTENT ── */
+    .content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 2rem;
+    }
+
+    .section { margin-bottom: 60px; }
+
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-title.football { color: var(--football-light); border-color: var(--football); }
+    .section-title.mlb { color: var(--mlb-light); border-color: var(--mlb); }
+    .section-title.nba { color: var(--nba-light); border-color: var(--nba); }
+
+    .section-heading {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .section-body {
+      color: var(--text2);
+      line-height: 1.9;
+      font-size: 14px;
+    }
+
+    /* ── FLOW STEPS ── */
+    .flow {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .flow-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 20px;
+    }
+
+    .flow-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .football .flow-num { background: var(--football); }
+    .mlb .flow-num { background: var(--mlb); }
+    .nba .flow-num { background: var(--nba); }
+
+    .flow-text {
+      font-size: 14px;
+      color: var(--text2);
+      line-height: 1.7;
+    }
+
+    .flow-text strong { color: var(--text); }
+
+    /* ── GW BOX ── */
+    .gw-box {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .gw-item {
+      background: var(--bg3);
+      border-radius: 8px;
+      padding: 14px 18px;
+    }
+
+    .gw-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .football .gw-label { color: var(--football-light); }
+    .mlb .gw-label { color: var(--mlb-light); }
+    .nba .gw-label { color: var(--nba-light); }
+
+    .gw-days {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 2px;
+    }
+
+    .gw-sub { font-size: 12px; color: var(--text2); }
+
+    /* ── TABLES ── */
+    .table-wrap { overflow-x: auto; margin-top: 20px; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+
+    th {
+      padding: 10px 16px;
+      text-align: left;
+      font-size: 10px;
+      letter-spacing: 1px;
+      color: var(--text2);
+      border-bottom: 1px solid var(--border);
+    }
+
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text2);
+    }
+
+    td:first-child { color: var(--text); font-weight: 500; }
+
+    td.plus { color: #4ade80; font-weight: 700; }
+    td.minus { color: #f87171; font-weight: 700; }
+    td.big { color: #fbbf24; font-weight: 700; }
+
+    tr:hover td { background: var(--bg2); }
+
+    .table-group-header td {
+      background: var(--bg3);
+      color: var(--text2);
+      font-size: 10px;
+      letter-spacing: 2px;
+      font-weight: 700;
+      padding: 8px 16px;
+    }
+
+    /* ── CARD RARITY ── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .card-item {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 12px;
+      text-align: center;
+    }
+
+    .card-rarity {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .card-count {
+      font-size: 18px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+
+    .card-desc { font-size: 11px; color: var(--text2); line-height: 1.5; }
+
+    .rarity-common { color: #94a3b8; }
+    .rarity-limited { color: #a78bfa; }
+    .rarity-rare { color: #60a5fa; }
+    .rarity-sr { color: #f59e0b; }
+    .rarity-unique { color: #f43f5e; }
+
+    /* ── NOTE BOX ── */
+    .note-box {
+      background: var(--bg2);
+      border-left: 3px solid;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--text2);
+      line-height: 1.7;
+    }
+
+    .football .note-box { border-color: var(--football); }
+    .mlb .note-box { border-color: var(--mlb); }
+    .nba .note-box { border-color: var(--nba); }
+
+    /* ── TOOLS ── */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .tool-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      text-decoration: none;
+      display: block;
+      transition: all 0.2s;
+    }
+
+    .tool-card:hover {
+      border-color: var(--accent-color);
+      transform: translateY(-2px);
+    }
+
+    .tool-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .tool-desc {
+      font-size: 12px;
+      color: var(--text2);
+      line-height: 1.6;
+    }
+
+    /* ── FORMULA BOX ── */
+    .formula-box {
+      background: var(--bg3);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 20px 0;
+      font-family: monospace;
+      font-size: 13px;
+      color: var(--text2);
+      line-height: 2;
+    }
+
+    .formula-box span { color: var(--text); font-weight: 700; }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 2rem;
+      text-align: center;
+      color: var(--text2);
+      font-size: 12px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      /* ナビ */
+      nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 1rem;
+        gap: 8px;
+      }
+      .nav-logo { margin-right: 0; }
+      .nav-tabs { width: 100%; justify-content: center; }
+      .nav-tab { flex: 1; text-align: center; padding: 6px 8px; font-size: 12px; }
+
+      /* ページトップのずれ補正 */
+      .page { padding-top: 100px; }
+
+      /* ヒーロー */
+      .hero { height: 360px; padding: 0 1rem; }
+      .hero-title { font-size: 32px; letter-spacing: 3px; }
+      .hero-subtitle { font-size: 12px; }
+      .hero-desc { font-size: 13px; }
+
+      /* コンテンツ */
+      .content { padding: 40px 1rem; }
+
+      /* カード */
+      .cards-grid { grid-template-columns: repeat(3, 1fr); }
+      .card-item { padding: 12px 8px; }
+      .card-count { font-size: 14px; }
+      .card-desc { font-size: 10px; }
+
+      /* ツール */
+      .tools-grid { grid-template-columns: 1fr; }
+
+      /* GW */
+      .gw-box { grid-template-columns: 1fr; }
+
+      /* テーブル */
+      table { font-size: 12px; }
+      th, td { padding: 10px 10px; }
+
+      /* フロー */
+      .flow-item { padding: 14px 14px; }
+
+      /* フォーミュラ */
+      .formula-box { font-size: 12px; padding: 16px; }
+    }
+
+    @media (max-width: 400px) {
+      .cards-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-title { font-size: 26px; }
+      .nav-tab { font-size: 11px; padding: 5px 4px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-logo">
+    <span class="en" id="logo-text">SORARE ORIGIN</span>
+    <span class="ja">ソラレ オリジン</span>
+  </div>
+  <div class="nav-tabs">
+    <button class="nav-tab active-football" onclick="showPage('football')">⚽ FOOTBALL</button>
+    <button class="nav-tab" onclick="showPage('mlb')">⚾ MLB</button>
+    <button class="nav-tab" onclick="showPage('nba')">🏀 NBA</button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════
+     FOOTBALL PAGE
+═══════════════════════════════════════════ -->
+<div id="page-football" class="page active football">
+
+  <div class="hero hero-football">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-title accent-football">SORARE ORIGIN</div>
+      <div class="hero-subtitle">ソラレ オリジン</div>
+      <div class="hero-unofficial">Unofficial Fan Site</div>
+      <div class="hero-sport-name">SORARE FOOTBALL</div>
+      <div class="hero-desc">
+        世界中のサッカー選手のデジタルカードを集め、<br>
+        ファンタジースポーツとして楽しむNFTゲームへの入口。
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- Sorareとは -->
+    <div class="section">
+      <div class="section-title football">WHAT IS SORARE</div>
+      <div class="section-heading">Sorareとは？</div>
+      <div class="section-body">
+        Sorareは、実在する選手のデジタルカードを集めてチームを編成し、実際の試合結果をもとにスコアを競うファンタジースポーツゲームです。カードはブロックチェーン技術を使ったNFTで、売買・トレードが可能です。サッカー・MLB・NBAの3競技に対応しており、世界中の数百クラブと公式提携しています。
+      </div>
+    </div>
+
+    <!-- 基本的な流れ -->
+    <div class="section">
+      <div class="section-title football">HOW TO PLAY</div>
+      <div class="section-heading">基本的な流れ</div>
+      <div class="flow">
+        <div class="flow-item">
+          <div class="flow-num">1</div>
+          <div class="flow-text"><strong>選手カードを入手する</strong><br>無料カード（Common）から始められます。マーケットでの購入やトーナメント報酬でカードを増やしていきます。</div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-num">2</div>
+          <div class="flow-text"><strong>5枚のカードでチームを編成する</strong><br>GK・DF・MF・FW＋1枚（フレキシブル）の計5枚でチームを作ります。</div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-num">3</div>
+          <div class="flow-text"><strong>ゲームウィーク（GW）のトーナメントに参加する</strong><br>週2回のGWに参加します。出場する選手・試合をよく確認して編成しましょう。</div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-num">4</div>
+          <div class="flow-text"><strong>実際の試合結果でスコアが決まる</strong><br>選手の実際のパフォーマンス（ゴール・アシスト・評価点など）がスコアに反映されます。</div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-num">5</div>
+          <div class="flow-text"><strong>上位入賞で報酬を獲得する</strong><br>順位に応じてカードや賞金が獲得できます。</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ゲームウィーク -->
+    <div class="section">
+      <div class="section-title football">GAME WEEK</div>
+      <div class="section-heading">ゲームウィーク（GW）の仕組み</div>
+      <div class="section-body">3競技共通で、1週間を前半・後半に分けてGWが設定されています。</div>
+      <div class="gw-box">
+        <div class="gw-item">
+          <div class="gw-label">週前半</div>
+          <div class="gw-days">月 〜 木</div>
+          <div class="gw-sub">4日間</div>
+        </div>
+        <div class="gw-item">
+          <div class="gw-label">週後半</div>
+          <div class="gw-days">金 〜 日</div>
+          <div class="gw-sub">3日間</div>
+        </div>
+      </div>
+      <div class="note-box football">
+        ⚠️ Footballでは週2試合出場しても<strong>カウントは1試合のみ</strong>（高い方ではなく、最初の試合）。スケジュール確認が重要です。
+      </div>
+    </div>
+
+    <!-- カードの種類 -->
+    <div class="section">
+      <div class="section-title football">CARD RARITY</div>
+      <div class="section-heading">カードのレアリティ</div>
+      <div class="cards-grid">
+        <div class="card-item">
+          <div class="card-rarity rarity-common">COMMON</div>
+          <div class="card-count" style="color:#94a3b8">∞</div>
+          <div class="card-desc">無料配布<br>報酬なしトーナメントのみ</div>
+        </div>
+        <div class="card-item">
+          <div class="card-rarity rarity-limited">LIMITED</div>
+          <div class="card-count" style="color:#a78bfa">1,000</div>
+          <div class="card-desc">発行枚数<br>1,000枚以下</div>
+        </div>
+        <div class="card-item">
+          <div class="card-rarity rarity-rare">RARE</div>
+          <div class="card-count" style="color:#60a5fa">100</div>
+          <div class="card-desc">発行枚数<br>100枚以下</div>
+        </div>
+        <div class="card-item">
+          <div class="card-rarity rarity-sr">SUPER RARE</div>
+          <div class="card-count" style="color:#f59e0b">10</div>
+          <div class="card-desc">発行枚数<br>10枚以下</div>
+        </div>
+        <div class="card-item">
+          <div class="card-rarity rarity-unique">UNIQUE</div>
+          <div class="card-count" style="color:#f43f5e">1</div>
+          <div class="card-desc">世界に<br>1枚のみ</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 得点システム -->
+    <div class="section">
+      <div class="section-title football">SCORING SYSTEM</div>
+      <div class="section-heading">得点システム</div>
+
+      <div class="formula-box">
+        チームスコア = <span>5枚のカードスコアの合計</span><br>
+        カードスコア = <span>プレイヤースコア × ボーナス倍率</span><br>
+        プレイヤースコア = <span>決定的得点(DS) + 総合得点(AAS)</span>
+      </div>
+
+      <div class="section-body" style="margin-bottom:16px">
+        プレイヤースコアは<strong style="color:var(--text)">0〜100点</strong>の範囲で計算されます。先発・途中出場ともにレベル0（35pt）からスタートし、プラス統計でレベルアップ、マイナス統計でレベルダウンします。
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>項目</th>
+              <th>英語</th>
+              <th>レベル変動</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-group-header"><td colspan="3">▲ プラス（レベルアップ）</td></tr>
+            <tr><td>ゴール</td><td>Goal (G)</td><td class="plus">+1</td></tr>
+            <tr><td>アシスト</td><td>Assist (A)</td><td class="plus">+1</td></tr>
+            <tr><td>ペナルティ獲得</td><td>Penalty Won</td><td class="plus">+1</td></tr>
+            <tr class="table-group-header"><td colspan="3">▼ マイナス（レベルダウン）</td></tr>
+            <tr><td>レッドカード</td><td>Red Card</td><td class="minus">-2</td></tr>
+            <tr><td>ペナルティ献上</td><td>Penalty Conceded</td><td class="minus">-1</td></tr>
+            <tr><td>オウンゴール</td><td>Own Goal (OG)</td><td class="minus">-1</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top:24px; margin-bottom:12px; font-size:14px; font-weight:600;">レベル別保証ポイント</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>レベル</th><th>保証ポイント</th></tr></thead>
+          <tbody>
+            <tr><td>-2以下</td><td>5 pt</td></tr>
+            <tr><td>-1</td><td>15 pt</td></tr>
+            <tr><td>0（スタート）</td><td>35 pt</td></tr>
+            <tr><td>1</td><td>55 pt</td></tr>
+            <tr><td>2</td><td>70 pt</td></tr>
+            <tr><td>3</td><td>80 pt</td></tr>
+            <tr><td>4</td><td>87 pt</td></tr>
+            <tr><td>5以上</td><td class="big">100 pt</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top:24px; margin-bottom:12px; font-size:14px; font-weight:600;">DF限定ボーナス（ダブルダブル）</div>
+      <div class="section-body" style="margin-bottom:12px">対象：インターセプト / タックル成功 / ネットデュエル</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>ボーナス</th><th>条件</th><th>得点</th></tr></thead>
+          <tbody>
+            <tr><td>ダブルダブル</td><td>3項目中2項目で各2回以上</td><td class="plus">+4 pt</td></tr>
+            <tr><td>トリプルダブル</td><td>3項目すべてで各2回以上</td><td class="plus">+6 pt</td></tr>
+            <tr><td>トリプルトリプル</td><td>3項目すべてで各3回以上</td><td class="big">+12 pt</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top:24px; margin-bottom:12px; font-size:14px; font-weight:600;">カードボーナス</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>ボーナス種別</th><th>内容</th></tr></thead>
+          <tbody>
+            <tr><td>キャプテン</td><td>0% / 20% / 50%（大会による）</td></tr>
+            <tr><td>今シーズンカード</td><td>+5%</td></tr>
+            <tr><td>トレーニング</td><td>カードごとに追加%</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-box football" style="margin-top:16px">
+        例：プレイヤースコア70点 × ボーナス10% → カードスコア <strong>77点</strong>
+      </div>
+    </div>
+
+    <!-- 分析ツール -->
+    <div class="section">
+      <div class="section-title football">TOOLS</div>
+      <div class="section-heading">分析ツール</div>
+      <div class="tools-grid">
+        <a class="tool-card" href="#" style="--accent-color: var(--football)">
+          <div class="tool-name">🔗 分析ツール①</div>
+          <div class="tool-desc">準備中</div>
+        </a>
+        <a class="tool-card" href="#" style="--accent-color: var(--football)">
+          <div class="tool-name">🔗 分析ツール②</div>
+          <div class="tool-desc">準備中</div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     MLB PAGE
+═══════════════════════════════════════════ -->
+<div id="page-mlb" class="page mlb">
+
+  <div class="hero hero-mlb">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-title accent-mlb">SORARE ORIGIN</div>
+      <div class="hero-subtitle">ソラレ オリジン</div>
+      <div class="hero-unofficial">Unofficial Fan Site</div>
+      <div class="hero-sport-name">SORARE MLB</div>
+      <div class="hero-desc">
+        大谷翔平・山本由伸をはじめとする<br>
+        MLBスター選手のカードでファンタジーを楽しもう。
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <div class="section-title mlb">HOW TO PLAY</div>
+      <div class="section-heading">基本的な流れ</div>
+      <div class="flow">
+        <div class="flow-item">
+          <div class="flow-num">1</div>
+          <div class="flow-text"><strong>MLB選手のカードを入手する</strong><br>無料カードから始められます。大谷・山本など人気日本人選手のカードも流通しています。</div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-num">2</div>
+          <div class="flow-text"><strong>7枚のカードでロスターを組む</strong><br>投手＋野手の計7枚でロスターを編成します。先発・中継ぎ・抑えの役割に注意しましょう。</div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-num">3</div>
+          <div class="flow-text"><strong>ゲームウィーク（GW）に参加する</strong><br>週前半・週後半のGWに参加します。シーズン中は試合数が多いため毎日スコアが動きます。</div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-num">4</div>
+          <div class="flow-text"><strong>GW内の全試合スコアが合算される</strong><br>MLB はGW内の<strong>全試合の合計スコア</strong>が採用されます（他競技と異なる点）。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title mlb">GAME WEEK</div>
+      <div class="section-heading">ゲームウィーク（GW）の仕組み</div>
+      <div class="gw-box">
+        <div class="gw-item">
+          <div class="gw-label">週前半</div>
+          <div class="gw-days">月 〜 木</div>
+          <div class="gw-sub">4日間</div>
+        </div>
+        <div class="gw-item">
+          <div class="gw-label">週後半</div>
+          <div class="gw-days">金 〜 日</div>
+          <div class="gw-sub">3日間</div>
+        </div>
+      </div>
+      <div class="note-box mlb">
+        ⚾ MLBは<strong>GW内の全試合スコアの合計</strong>が採用されます。試合数が多い選手ほど高スコアを狙いやすいです。
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title mlb">CARD RARITY</div>
+      <div class="section-heading">カードのレアリティ</div>
+      <div class="cards-grid">
+        <div class="card-item">
+          <div class="card-rarity rarity-common">COMMON</div>
+          <div class="card-count" style="color:#94a3b8">∞</div>
+          <div class="card-desc">無料配布<br>報酬なしのみ</div>
+        </div>
+        <div class="card-item">
+          <div class="card-rarity rarity-limited">LIMITED</div>
+          <div class="card-count" style="color:#a78bfa">1,000</div>
+          <div class="card-desc">発行枚数<br>1,000枚以下</div>
+        </div>
+        <div class="card-item">
+          <div class="card-rarity rarity-rare">RARE</div>
+          <div class="card-count" style="color:#60a5fa">100</div>
+          <div class="card-desc">発行枚数<br>100枚以下</div>
+        </div>
+        <div class="card-item">
+          <div class="card-rarity rarity-sr">SUPER RARE</div>
+          <div class="card-count" style="color:#f59e0b">10</div>
+          <div class="card-desc">発行枚数<br>10枚以下</div>
+        </div>
+        <div class="card-item">
+          <div class="card-rarity rarity-unique">UNIQUE</div>
+          <div class="card-count" style="color:#f43f5e">1</div>
+          <div class="card-desc">世界に<br>1枚のみ</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title mlb">SCORING SYSTEM</div>
+      <div class="section-heading">得点システム（採点マトリックス）</div>
+      <div class="section-body" style="margin-bottom:16px">アクションベースの得点システム。GW内の全試合スコアの合計がそのカードのGWスコアになります。</div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>項目</th><th>英語</th><th>得点</th></tr>
+          </thead>
+          <tbody>
+            <tr class="table-group-header"><td colspan="3">打撃部門</td></tr>
+            <tr><td>得点</td><td>Run (R)</td><td class="plus">+3</td></tr>
+            <tr><td>打点</td><td>RBI</td><td class="plus">+3</td></tr>
+            <tr><td>単打</td><td>Single (1B)</td><td class="plus">+2</td></tr>
+            <tr><td>二塁打</td><td>Double (2B)</td><td class="plus">+5</td></tr>
+            <tr><td>三塁打</td><td>Triple (3B)</td><td class="plus">+8</td></tr>
+            <tr><td>本塁打</td><td>Home Run (HR)</td><td class="big">+10</td></tr>
+            <tr><td>四球</td><td>Walk (BB)</td><td class="plus">+2</td></tr>
+            <tr><td>盗塁</td><td>Stolen Base (SB)</td><td class="plus">+5</td></tr>
+            <tr><td>死球</td><td>Hit by Pitch (HBP)</td><td class="plus">+2</td></tr>
+            <tr><td>三振</td><td>Strikeout (K)</td><td class="minus">-1</td></tr>
+            <tr><td>盗塁死</td><td>Caught Stealing (CS)</td><td class="minus">-1</td></tr>
+            <tr class="table-group-header"><td colspan="3">投球部門</td></tr>
+            <tr><td>投球回</td><td>Innings Pitched (IP)</td><td class="plus">+3</td></tr>
+            <tr><td>奪三振</td><td>Strikeout (K)</td><td class="plus">+2</td></tr>
+            <tr><td>勝利</td><td>Win (W)</td><td class="plus">+5</td></tr>
+            <tr><td>セーブ</td><td>Save (S)</td><td class="big">+10</td></tr>
+            <tr><td>ホールド</td><td>Hold (H)</td><td class="plus">+5</td></tr>
+            <tr><td>救援登板</td><td>Relief Appearance (RA)</td><td class="plus">+5</td></tr>
+            <tr><td>ノーヒットノーラン</td><td>No-Hitter</td><td class="big">+30</td></tr>
+            <tr><td>被安打</td><td>Hits Allowed (H)</td><td class="minus">-0.5</td></tr>
+            <tr><td>自責点</td><td>Earned Run (ER)</td><td class="minus">-2</td></tr>
+            <tr><td>四球（投手）</td><td>Walk (BB)</td><td class="minus">-1</td></tr>
+            <tr><td>死球（投手）</td><td>Hit by Pitch (HBP)</td><td class="minus">-1</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-box mlb" style="margin-top:16px">
+        ⚡ <strong>大谷選手のような二刀流カード</strong>は、置くポジションで採点方法が決まります。投手スロット→投球部門のみ、打者スロット→打撃部門のみが適用されます。
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title mlb">TOOLS</div>
+      <div class="section-heading">分析ツール</div>
+      <div class="tools-grid">
+        <a class="tool-card" href="#" style="--accent-color: var(--mlb)">
+          <div class="tool-name">🔗 分析ツール①</div>
+          <div class="tool-desc">準備中</div>
+        </a>
+        <a class="tool-card" href="#" style="--accent-color: var(--mlb)">
+          <div class="tool-name">🔗 分析ツール②</div>
+          <div class="tool-desc">準備中</div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     NBA PAGE
+═══════════════════════════════════════════ -->
+<div id="page-nba" class="page nba">
+
+  <div class="hero hero-nba">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-title accent-nba">SORARE ORIGIN</div>
+      <div class="hero-subtitle">ソラレ オリジン</div>
+      <div class="hero-unofficial">Unofficial Fan Site</div>
+      <div class="hero-sport-name">SORARE NBA</div>
+      <div class="hero-desc">
+        NBAスター選手のカードを集めて<br>
+        ファンタジーバスケットボールを極めよう。
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <div class="section-title nba">HOW TO PLAY</div>
+      <div class="section-heading">基本的な流れ</div>
+      <div class="flow">
+        <div class="flow-item">
+          <div class="flow-num">1</div>
+          <div class="flow-text"><strong>NBA選手のカードを入手する</strong><br>無料カードから始められます。スター選手から役割の明確なロールプレイヤーまで幅広く流通しています。</div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-num">2</div>
+          <div class="flow-text"><strong>5枚のカードでチームを組む</strong><br>各ポジションの選手を組み合わせて5枚のロスターを編成します。</div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-num">3</div>
+          <div class="flow-text"><strong>ゲームウィーク（GW）のトーナメントに参加する</strong><br>シーズン中は週3〜4試合あります。稼働率の高い選手が有利です。</div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-num">4</div>
+          <div class="flow-text"><strong>最も高いスコアの1試合が採用される</strong><br>NBAはGW内で複数試合出場した場合、<strong>最高スコアの1試合のみ</strong>がカウントされます。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title nba">GAME WEEK</div>
+      <div class="section-heading">ゲームウィーク（GW）の仕組み</div>
+      <div class="gw-box">
+        <div class="gw-item">
+          <div class="gw-label">週前半</div>
+          <div class="gw-days">月 〜 木</div>
+          <div class="gw-sub">4日間</div>
+        </div>
+        <div class="gw-item">
+          <div class="gw-label">週後半</div>
+          <div class="gw-days">金 〜 日</div>
+          <div class="gw-sub">3日間</div>
+        </div>
+      </div>
+      <div class="note-box nba">
+        🏀 NBAは複数試合出場した場合、<strong>最高スコアの1試合のみ</strong>がカウントされます。爆発力のある選手を選ぶ戦略が有効です。
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title nba">CARD RARITY</div>
+      <div class="section-heading">カードのレアリティ</div>
+      <div class="cards-grid">
+        <div class="card-item">
+          <div class="card-rarity rarity-common">COMMON</div>
+          <div class="card-count" style="color:#94a3b8">∞</div>
+          <div class="card-desc">無料配布<br>報酬なしのみ</div>
+        </div>
+        <div class="card-item">
+          <div class="card-rarity rarity-limited">LIMITED</div>
+          <div class="card-count" style="color:#a78bfa">1,000</div>
+          <div class="card-desc">発行枚数<br>1,000枚以下</div>
+        </div>
+        <div class="card-item">
+          <div class="card-rarity rarity-rare">RARE</div>
+          <div class="card-count" style="color:#60a5fa">100</div>
+          <div class="card-desc">発行枚数<br>100枚以下</div>
+        </div>
+        <div class="card-item">
+          <div class="card-rarity rarity-sr">SUPER RARE</div>
+          <div class="card-count" style="color:#f59e0b">10</div>
+          <div class="card-desc">発行枚数<br>10枚以下</div>
+        </div>
+        <div class="card-item">
+          <div class="card-rarity rarity-unique">UNIQUE</div>
+          <div class="card-count" style="color:#f43f5e">1</div>
+          <div class="card-desc">世界に<br>1枚のみ</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title nba">SCORING SYSTEM</div>
+      <div class="section-heading">得点システム（採点マトリックス）</div>
+      <div class="section-body" style="margin-bottom:16px">アクションベースのスコアリング。コート上の出来事が即座にスコアに反映されます。</div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>項目</th><th>英語</th><th>得点</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>得点</td><td>Point (PT)</td><td class="plus">+1</td></tr>
+            <tr><td>リバウンド</td><td>Rebound (REB)</td><td class="plus">+1.2</td></tr>
+            <tr><td>アシスト</td><td>Assist (AST)</td><td class="plus">+1.5</td></tr>
+            <tr><td>ブロック</td><td>Block (BLK)</td><td class="plus">+3</td></tr>
+            <tr><td>スティール</td><td>Steal (STL)</td><td class="plus">+3</td></tr>
+            <tr><td>3ポイント成功</td><td>3-Point FG Made (3PM)</td><td class="plus">+1</td></tr>
+            <tr><td>ターンオーバー</td><td>Turnover (TO)</td><td class="minus">-2</td></tr>
+            <tr><td>ダブルダブル</td><td>Double-Double (DD)</td><td class="plus">+1</td></tr>
+            <tr><td>トリプルダブル</td><td>Triple-Double (TD)</td><td class="plus">+1</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note-box nba" style="margin-top:16px">
+        🌟 トリプルダブル達成時はダブルダブル（+1）＋トリプルダブル（+1）で合計 <strong>+2pt</strong> のボーナス。
+      </div>
+    </div>
+
+    <!-- 大会の種類 -->
+    <div class="section">
+      <div class="section-title nba">COMPETITIONS</div>
+      <div class="section-heading">大会の種類</div>
+      <div class="section-body" style="margin-bottom:20px">Sorare NBAには5種類の大会があります。シーズン中大会とクラシック大会、そしてデイリーの3カテゴリーに分かれています。</div>
+
+      <div style="margin-bottom:12px; font-size:13px; font-weight:700; color:var(--nba-light); letter-spacing:1px;">── シーズン中・隔週大会</div>
+      <div class="flow" style="margin-bottom:24px">
+        <div class="flow-item">
+          <div class="flow-num" style="background:var(--nba); font-size:10px">👑</div>
+          <div class="flow-text">
+            <strong>Champion（チャンピオン）</strong><br>
+            最上位のシーズン中大会。Limited・Rare・SR/Uniqueの各レアリティで参加可能。1GWにつき各レアリティ最大<strong>5ライン</strong>まで提出できます。最高報酬を狙う上位マネージャー向け。
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-num" style="background:var(--nba); font-size:10px">🥈</div>
+          <div class="flow-text">
+            <strong>Contender（コンテンダー）</strong><br>
+            Championに次ぐシーズン中大会。同じく各レアリティで最大<strong>5ライン</strong>提出可能。Championより競争が少なく、中級マネージャーが賞金を狙いやすい大会です。
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:12px; font-size:13px; font-weight:700; color:var(--nba-light); letter-spacing:1px;">── クラシック・隔週大会（過去カード使用可）</div>
+      <div class="flow" style="margin-bottom:24px">
+        <div class="flow-item">
+          <div class="flow-num" style="background:#475569; font-size:10px">⚔️</div>
+          <div class="flow-text">
+            <strong>Challenger（チャレンジャー）</strong><br>
+            過去シーズンのカードで参加できるクラシック大会。<strong>Cap 140 + MVP形式</strong>で、各レアリティ最大<strong>3ライン</strong>提出可能。シーズン中カード不要なので過去カードを有効活用できます。
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-num" style="background:#475569; font-size:10px">🏟️</div>
+          <div class="flow-text">
+            <strong>Arena（アリーナ）</strong><br>
+            エッセンスを消費して参加する特殊な大会。<strong>10人リーダーボード制</strong>で少人数対決。スコアボーナス（XP・コレクション等）は一切なし。5%の確率で「ゴールデンルーム」に入ると<strong>報酬2倍</strong>。形式はUncapped・Arena 140・Arena 75の3種類。
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:12px; font-size:13px; font-weight:700; color:var(--nba-light); letter-spacing:1px;">── デイリー大会</div>
+      <div class="flow" style="margin-bottom:16px">
+        <div class="flow-item">
+          <div class="flow-num" style="background:var(--nba); font-size:10px">📅</div>
+          <div class="flow-text">
+            <strong>Daily Pickup（デイリーピックアップ）</strong><br>
+            NBA試合開催日にいつでも参加可能。<strong>Cap 120 + MVP形式</strong>。1GWにつき<strong>1ライン</strong>のみ提出可能。シーズン中カード不要で気軽に参加できます。その日の最終試合終了後に締切。
+          </div>
+        </div>
+      </div>
+
+      <div class="note-box nba">
+        ⚠️ <strong>Commonカードで参加できる大会</strong>は Common Champion・Common Contender・Daily Pickupの3つのみです。
+      </div>
+
+      <div style="margin-top:24px; margin-bottom:12px; font-size:14px; font-weight:600;">マルチエントリー（複数ライン提出）まとめ</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>大会</th><th>最大ライン数</th><th>シーズン中カード</th></tr></thead>
+          <tbody>
+            <tr><td>Champion / Contender</td><td>各レアリティ 5ライン</td><td>必要</td></tr>
+            <tr><td>Challenger / Arena</td><td>各レアリティ 3ライン</td><td>不要</td></tr>
+            <tr><td>Daily Pickup</td><td>1ライン</td><td>不要</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title nba">TOOLS</div>
+      <div class="section-heading">分析ツール</div>
+      <div class="tools-grid">
+        <a class="tool-card" href="#" style="--accent-color: var(--nba)">
+          <div class="tool-name">🔗 分析ツール①</div>
+          <div class="tool-desc">準備中</div>
+        </a>
+        <a class="tool-card" href="#" style="--accent-color: var(--nba)">
+          <div class="tool-name">🔗 分析ツール②</div>
+          <div class="tool-desc">準備中</div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div>SORARE ORIGIN &nbsp;|&nbsp; ソラレ オリジン</div>
+  <div style="margin-top:8px">当サイトはSorareの公式サイトではありません。情報は参考目的でご利用ください。</div>
+</footer>
+
+<script>
+  const accentColors = {
+    football: '#16a34a',
+    mlb: '#1d4ed8',
+    nba: '#ea580c'
+  };
+
+  function showPage(sport) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.nav-tab').forEach(t => {
+      t.classList.remove('active-football', 'active-mlb', 'active-nba');
+    });
+
+    document.getElementById('page-' + sport).classList.add('active');
+
+    const tabs = document.querySelectorAll('.nav-tab');
+    const idx = { football: 0, mlb: 1, nba: 2 };
+    tabs[idx[sport]].classList.add('active-' + sport);
+
+    document.getElementById('logo-text').style.color = accentColors[sport];
+  }
+</script>
+
+</body>
+</html>
