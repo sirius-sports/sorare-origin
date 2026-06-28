@@ -946,6 +946,7 @@
         <li><a href="#f-vault">封印（Vault）システム</a></li>
         <li><a href="#f-ngdnp">NG・DNPとは？</a></li>
         <li><a href="#f-referral">Sorareを始める方へ — 登録で特典がつきます</a></li>
+        <li><a href="#f-note">noteで詳しく読む</a></li>
         <li><a href="#f-tools">分析ツール</a></li>
       </ul>
     </div>
@@ -1386,6 +1387,7 @@
         <li><a href="#m-vault">封印（Vault）システム</a></li>
         <li><a href="#m-ngdnp">NG・DNPとは？</a></li>
         <li><a href="#m-referral">Sorareを始める方へ — 登録で特典がつきます</a></li>
+        <li><a href="#m-note">noteで詳しく読む</a></li>
         <li><a href="#m-tools">分析ツール</a></li>
       </ul>
     </div>
@@ -1718,6 +1720,7 @@
         <li><a href="#n-score">得点システム</a></li>
         <li><a href="#n-comp">大会の種類</a></li>
         <li><a href="#n-referral">Sorareを始める方へ — 登録で特典がつきます</a></li>
+        <li><a href="#n-note">noteで詳しく読む</a></li>
         <li><a href="#n-tools">分析ツール</a></li>
       </ul>
     </div>
@@ -1965,19 +1968,21 @@
 </footer>
 
 <script>
-  // note RSS読み込み
+  // note記事読み込み（note API経由）
   async function loadNoteArticles() {
     const targets = ['note-articles-f', 'note-articles-m', 'note-articles-n'];
-    const rssUrl = 'https://note.com/sorare_nba/rss';
-    const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}&count=5`;
+    const apiUrl = 'https://note.com/api/v2/creators/sorare_nba/contents?kind=note&page=1';
+    const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(apiUrl)}`;
     try {
-      const res = await fetch(apiUrl);
-      const data = await res.json();
-      if (data.status !== 'ok' || !data.items.length) throw new Error();
-      const html = data.items.map(item => {
-        const date = new Date(item.pubDate).toLocaleDateString('ja-JP', { year:'numeric', month:'2-digit', day:'2-digit' });
-        return `<a class="note-article-item" href="${item.link}" target="_blank" rel="noopener">
-          <span>${item.title}</span>
+      const res = await fetch(proxyUrl);
+      const json = await res.json();
+      const data = JSON.parse(json.contents);
+      const items = data?.data?.contents;
+      if (!items || !items.length) throw new Error();
+      const html = items.slice(0, 5).map(item => {
+        const date = new Date(item.publishAt).toLocaleDateString('ja-JP', { year:'numeric', month:'2-digit', day:'2-digit' });
+        return `<a class="note-article-item" href="https://note.com/sorare_nba/n/${item.key}" target="_blank" rel="noopener">
+          <span>${item.name}</span>
           <span class="note-article-date">${date}</span>
         </a>`;
       }).join('');
@@ -1988,7 +1993,7 @@
     } catch {
       targets.forEach(id => {
         const el = document.getElementById(id);
-        if (el) el.innerHTML = '<div class="note-loading">記事の読み込みに失敗しました。<a href="https://note.com/sorare_nba/" target="_blank" rel="noopener" style="color:#41c9b4">noteで直接確認する →</a></div>';
+        if (el) el.innerHTML = '<div class="note-loading"><a href="https://note.com/sorare_nba/" target="_blank" rel="noopener" style="color:#41c9b4">→ noteで記事を読む</a></div>';
       });
     }
   }
