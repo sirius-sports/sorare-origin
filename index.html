@@ -3,7 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SORARE ORIGIN</title>
+  <title>SORARE ORIGIN（ソラレ オリジン）| Sorare Football / MLB / NBA 非公式ファンサイト</title>
+
+  <!-- SEO基本 -->
+  <meta name="description" content="Sorare（ソラレ）の遊び方・ルール・得点システムをわかりやすく解説。Football・MLB・NBAの3競技に対応した非公式ファンサイト。大谷翔平カードや紹介特典情報も掲載。">
+  <meta name="keywords" content="Sorare,ソラレ,NFT,ファンタジースポーツ,NFL,MLB,NBA,大谷翔平,カード,遊び方,ルール,得点">
+  <meta name="author" content="SORARE ORIGIN">
+
+  <!-- 正規URL（ミラーサイト対策） -->
+  <link rel="canonical" href="https://sirius-sports.github.io/sorare-origin/">
+
+  <!-- OGP（SNSシェア用） -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sirius-sports.github.io/sorare-origin/">
+  <meta property="og:title" content="SORARE ORIGIN | Sorare 非公式ファンサイト">
+  <meta property="og:description" content="Sorareの遊び方・ルール・得点システムをわかりやすく解説。Football・MLB・NBA対応。大谷翔平カードや紹介特典情報も。">
+  <meta property="og:site_name" content="SORARE ORIGIN">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:image" content="https://sirius-sports.github.io/sorare-origin/football.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:image" content="https://sirius-sports.github.io/sorare-origin/football.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="SORARE ORIGIN | Sorare 非公式ファンサイト">
+  <meta name="twitter:description" content="Sorareの遊び方・ルール・得点システムをわかりやすく解説。Football・MLB・NBA対応。大谷翔平カードや紹介特典情報も。">
+
+  <!-- サイトマップ -->
+  <link rel="sitemap" type="application/xml" href="https://sirius-sports.github.io/sorare-origin/sitemap.xml">
+
+  <!-- AIクローラーによる学習利用の拒否 -->
+  <meta name="robots" content="noai, noimageai">
+  <meta name="CCBot" content="noindex, nofollow">
+  <meta name="GPTBot" content="noindex, nofollow">
+  <meta name="Google-Extended" content="noindex, nofollow">
+  <meta name="anthropic-ai" content="noindex, nofollow">
+  <meta name="PerplexityBot" content="noindex, nofollow">
   <style>
     :root {
       --bg: #0a0f1e;
@@ -177,12 +213,36 @@
     }
 
     .hero-unofficial {
-      font-size: 11px;
-      letter-spacing: 2px;
+      font-size: 22px;
+      letter-spacing: 3px;
       color: var(--text2);
-      margin-bottom: 10px;
-      opacity: 0.7;
+      margin-bottom: 14px;
+      opacity: 0.8;
+      font-weight: 700;
+      text-align: center;
     }
+
+    /* ── HERO TOC ── */
+    .hero-toc {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px 10px;
+      margin: 10px 0 14px;
+    }
+    .hero-toc a {
+      font-size: 11px;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 3px 10px;
+      border-radius: 20px;
+      transition: all 0.2s;
+    }
+    .football .hero-toc a:hover { color: var(--football); border-color: var(--football); }
+    .mlb .hero-toc a:hover { color: #60a5fa; border-color: #60a5fa; }
+    .nba .hero-toc a:hover { color: var(--nba); border-color: var(--nba); }
 
     .hero-sport-name {
       font-size: 20px;
@@ -411,6 +471,228 @@
     .mlb .note-box { border-color: var(--mlb); }
     .nba .note-box { border-color: var(--nba); }
 
+    /* ── NEWS ── */
+    .news-strip {
+      background: var(--bg2);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 0;
+      font-size: 12px;
+    }
+    .news-strip-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .news-strip-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+    .football .news-strip-label { background: var(--football); color: #000; }
+    .mlb .news-strip-label { background: var(--mlb); color: #fff; }
+    .nba .news-strip-label { background: var(--nba); color: #fff; }
+    .news-strip-text { color: var(--text2); }
+    .news-strip-date { color: var(--text3); margin-left: auto; white-space: nowrap; }
+
+    .news-card {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .news-card-header {
+      padding: 14px 18px 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .news-badge {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+    .football .news-badge { background: var(--football); color: #000; }
+    .mlb .news-badge { background: var(--mlb); color: #fff; }
+    .nba .news-badge { background: var(--nba); color: #fff; }
+    .news-card-title { font-size: 14px; font-weight: 700; color: var(--text); }
+    .news-card-date { font-size: 11px; color: var(--text3); margin-left: auto; }
+    .news-card-body { padding: 14px 18px; font-size: 13px; color: var(--text2); line-height: 1.8; }
+    .news-card-body ul { margin: 8px 0 8px 16px; padding: 0; }
+    .news-card-body li { margin-bottom: 4px; }
+    .news-card-tag {
+      display: inline-block;
+      background: var(--bg3, #1e293b);
+      color: var(--text3);
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin: 2px 2px 2px 0;
+    }
+
+    /* ── COPY PROTECTION ── */
+    body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    /* ── TABLE OF CONTENTS ── */
+    .toc-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+    }
+    @media (max-width: 600px) { .toc-list { grid-template-columns: 1fr; } }
+    .toc-list li a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      background: var(--bg2);
+      color: var(--text2);
+      text-decoration: none;
+      font-size: 13px;
+      transition: all 0.18s;
+      border: 1px solid var(--border);
+    }
+    .football .toc-list li a:hover { color: var(--football); border-color: var(--football); background: rgba(22,163,74,0.08); }
+    .mlb .toc-list li a:hover { color: #60a5fa; border-color: #60a5fa; background: rgba(29,78,216,0.08); }
+    .nba .toc-list li a:hover { color: var(--nba); border-color: var(--nba); background: rgba(234,88,12,0.08); }
+    .toc-list li a::before { content: "›"; font-size: 16px; opacity: 0.5; }
+
+    /* ── NOTE ── */
+    .note-section-box {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+    }
+    .note-profile-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      background: #41c9b4;
+      color: #0a0f1e;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      margin-top: 12px;
+      transition: opacity 0.2s;
+    }
+    .note-profile-link:hover { opacity: 0.85; }
+    .note-articles { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+    .note-article-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 14px;
+      background: var(--bg3);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--text);
+      font-size: 13px;
+      transition: border-color 0.18s;
+      gap: 12px;
+    }
+    .note-article-item:hover { border-color: #41c9b4; color: #41c9b4; }
+    .note-article-date { font-size: 11px; color: var(--text3); white-space: nowrap; }
+    .note-loading { color: var(--text3); font-size: 13px; padding: 10px 0; }
+
+    /* ── REFERRAL ── */
+    .referral-box {
+      background: linear-gradient(135deg, rgba(22,163,74,0.12), rgba(22,163,74,0.04));
+      border: 1px solid rgba(22,163,74,0.35);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-top: 12px;
+    }
+    .mlb .referral-box {
+      background: linear-gradient(135deg, rgba(29,78,216,0.12), rgba(29,78,216,0.04));
+      border-color: rgba(29,78,216,0.35);
+    }
+    .nba .referral-box {
+      background: linear-gradient(135deg, rgba(234,88,12,0.12), rgba(234,88,12,0.04));
+      border-color: rgba(234,88,12,0.35);
+    }
+    .referral-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .referral-desc {
+      font-size: 13px;
+      color: var(--text2);
+      line-height: 1.7;
+      margin-bottom: 12px;
+    }
+    .referral-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+    .referral-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 12px;
+      color: var(--text2);
+      line-height: 1.5;
+    }
+    .referral-step-num {
+      min-width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--football);
+      color: #000;
+      font-size: 11px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+    .mlb .referral-step-num { background: var(--mlb); color: #fff; }
+    .nba .referral-step-num { background: var(--nba); color: #fff; }
+    .referral-link-btn {
+      display: inline-block;
+      padding: 9px 20px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      background: var(--football);
+      color: #000;
+      transition: opacity 0.2s;
+    }
+    .referral-link-btn:hover { opacity: 0.85; }
+    .mlb .referral-link-btn { background: var(--mlb); color: #fff; }
+    .nba .referral-link-btn { background: var(--nba); color: #fff; }
+    .referral-note {
+      font-size: 11px;
+      color: var(--text3);
+      margin-top: 10px;
+    }
+
     /* ── TOOLS ── */
     .tools-grid {
       display: grid;
@@ -464,10 +746,47 @@
     /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
-      padding: 30px 2rem;
+      padding: 40px 2rem 30px;
       text-align: center;
       color: var(--text2);
       font-size: 12px;
+    }
+    .footer-title {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+    .footer-notice {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 24px;
+      max-width: 700px;
+      margin: 0 auto 20px;
+      text-align: left;
+    }
+    @media (max-width: 600px) { .footer-notice { grid-template-columns: 1fr; } }
+    .footer-notice-item {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      font-size: 12px;
+      color: var(--text2);
+      line-height: 1.6;
+    }
+    .footer-notice-item::before {
+      content: "—";
+      color: var(--text3);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .footer-copy {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      color: var(--text3);
+      font-size: 11px;
     }
 
     /* ── RESPONSIVE ── */
@@ -548,9 +867,9 @@
   <div class="hero hero-football">
     <div class="hero-bg"></div>
     <div class="hero-content">
+      <div class="hero-unofficial">Unofficial Fan Site</div>
       <div class="hero-title accent-football">SORARE ORIGIN</div>
       <div class="hero-subtitle">ソラレ オリジン</div>
-      <div class="hero-unofficial">Unofficial Fan Site</div>
       <div class="hero-sport-name">SORARE FOOTBALL</div>
       <div class="hero-desc">
         世界中のサッカー選手のデジタルカードを集め、<br>
@@ -559,10 +878,80 @@
     </div>
   </div>
 
+  <!-- ニュースバナー -->
+  <div class="news-strip">
+    <div class="news-strip-inner">
+      <span class="news-strip-label">NEWS</span>
+      <span class="news-strip-text">🆕 カラーズ サマーキャンプ開催中 — カラーカードは9月まで引き続きプレイ可能。エッセンス・ジェムが中心の進捗報酬に。</span>
+      <span class="news-strip-date">2025.6.24</span>
+    </div>
+  </div>
+
   <div class="content">
 
-    <!-- Sorareとは -->
+    <!-- 最新イベント -->
     <div class="section">
+      <div class="section-title football">LATEST NEWS</div>
+      <div class="section-heading">最新イベント情報</div>
+
+      <div class="news-card">
+        <div class="news-card-header">
+          <span class="news-badge">FOOTBALL</span>
+          <span class="news-card-title">🆕 カラーズ サマーキャンプ</span>
+          <span class="news-card-date">2025.6.24</span>
+        </div>
+        <div class="news-card-body">
+          <p>国際試合シーズン終了後も、<strong>カラーカードは9月まで継続してプレイ可能</strong>です。夏の間を通じてグローバルコンテストに参加できます。</p>
+
+          <p><strong>📦 対象カード（継続プレイ可能）</strong></p>
+          <ul>
+            <li>MLS・プレミアリーグ・ラ・リーガ・ブンデスリーガ・リーグ・アンのカード</li>
+            <li>移籍選手のプライマリーカラーズカードも引き続き使用可</li>
+          </ul>
+
+          <p><strong>🎁 サマーキャンプ期間中の進捗報酬</strong></p>
+          <ul>
+            <li>🧪 <strong>エッセンス</strong>と💎 <strong>ジェム</strong>が中心（現金報酬は9月に復活）</li>
+            <li>獲得したジェムは次シーズンへ引き継ぎ可能</li>
+            <li>新しい進捗ボード・コレクションミッションも同時更新</li>
+          </ul>
+
+          <p><strong>📅 今後の予定</strong><br>
+          9月に次期セットリリースと同時に<strong>現金報酬・新シーズンカードが復活</strong>。それまではエッセンスとジェムを貯めて次シーズンに備えましょう。</p>
+
+          <div style="margin-top:12px">
+            <span class="news-card-tag">FOOTBALL SET</span>
+            <span class="news-card-tag">サマーキャンプ</span>
+            <span class="news-card-tag">エッセンス</span>
+            <span class="news-card-tag">ジェム</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 目次 -->
+    <div class="section">
+      <div class="section-title football">CONTENTS</div>
+      <div class="section-heading">目次</div>
+      <ul class="toc-list">
+        <li><a href="#f-what">Sorareとは？</a></li>
+        <li><a href="#f-howto">基本的な流れ</a></li>
+        <li><a href="#f-gw">ゲームウィーク（GW）の仕組み</a></li>
+        <li><a href="#f-card">カードのレアリティ</a></li>
+        <li><a href="#f-score">得点システム</a></li>
+        <li><a href="#f-comp">大会の種類</a></li>
+        <li><a href="#f-div">ディビジョンと昇格・降格</a></li>
+        <li><a href="#f-mission">ミッションの種類</a></li>
+        <li><a href="#f-essence">エッセンスとクラフト</a></li>
+        <li><a href="#f-vault">封印（Vault）システム</a></li>
+        <li><a href="#f-ngdnp">NG・DNPとは？</a></li>
+        <li><a href="#f-referral">Sorareを始める方へ — 登録で特典がつきます</a></li>
+        <li><a href="#f-tools">分析ツール</a></li>
+      </ul>
+    </div>
+
+    <!-- Sorareとは -->
+    <div class="section" id="f-what">
       <div class="section-title football">WHAT IS SORARE</div>
       <div class="section-heading">Sorareとは？</div>
       <div class="section-body">
@@ -571,7 +960,7 @@
     </div>
 
     <!-- 基本的な流れ -->
-    <div class="section">
+    <div class="section" id="f-howto">
       <div class="section-title football">HOW TO PLAY</div>
       <div class="section-heading">基本的な流れ</div>
       <div class="flow">
@@ -599,7 +988,7 @@
     </div>
 
     <!-- ゲームウィーク -->
-    <div class="section">
+    <div class="section" id="f-gw">
       <div class="section-title football">GAME WEEK</div>
       <div class="section-heading">ゲームウィーク（GW）の仕組み</div>
       <div class="section-body">3競技共通で、1週間を前半・後半に分けてGWが設定されています。</div>
@@ -621,7 +1010,7 @@
     </div>
 
     <!-- カードの種類 -->
-    <div class="section">
+    <div class="section" id="f-card">
       <div class="section-title football">CARD RARITY</div>
       <div class="section-heading">カードのレアリティ</div>
       <div class="cards-grid">
@@ -654,7 +1043,7 @@
     </div>
 
     <!-- 得点システム -->
-    <div class="section">
+    <div class="section" id="f-score">
       <div class="section-title football">SCORING SYSTEM</div>
       <div class="section-heading">得点システム</div>
 
@@ -737,8 +1126,214 @@
       </div>
     </div>
 
+    <!-- 大会の種類 -->
+    <div class="section" id="f-comp">
+      <div class="section-title football">COMPETITIONS</div>
+      <div class="section-heading">大会の種類</div>
+      <div class="section-body" style="margin-bottom:20px">Sorare Footballの大会は「シーズン中」「クラシック」「デイリー」の3カテゴリーに分かれています。リーグごとの専用大会と、複数リーグをまとめたグローバル大会があります。</div>
+
+      <div style="margin-bottom:12px; font-size:13px; font-weight:700; color:#4ade80; letter-spacing:1px;">── シーズン中大会（プロカード必須）</div>
+      <div class="flow" style="margin-bottom:24px">
+        <div class="flow-item">
+          <div class="flow-num" style="background:var(--football); font-size:10px">👑</div>
+          <div class="flow-text">
+            <strong>Champion（チャンピオン）</strong><br>
+            最上位の大会。プレミアリーグ・ラ・リーガ・ブンデスリーガ・リーグ・アン等、主要リーグ専用大会も開催。各チームは独立して昇格・降格し、1GWにつき最大<strong>4チーム</strong>まで提出可能。
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-num" style="background:var(--football); font-size:10px">🥈</div>
+          <div class="flow-text">
+            <strong>Contender（コンテンダー）</strong><br>
+            Championに次ぐシーズン中大会。競争が少なく、中級マネージャーが報酬を狙いやすい。MLS・Jリーグ・Kリーグ等のグローバルリーグもカバー。
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:12px; font-size:13px; font-weight:700; color:#4ade80; letter-spacing:1px;">── クラシック大会（過去カード使用可）</div>
+      <div class="flow" style="margin-bottom:24px">
+        <div class="flow-item">
+          <div class="flow-num" style="background:#475569; font-size:10px">⚔️</div>
+          <div class="flow-text">
+            <strong>All Star（オールスター）</strong><br>
+            過去シーズンのカードで参加できるクラシック大会。最新カード不要なのでコレクターにも参加しやすい。ヨーロッパ・アメリカ・アジアの各地域でグループ化して開催。
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-num" style="background:#475569; font-size:10px">🎓</div>
+          <div class="flow-text">
+            <strong>U23（アンダー23）</strong><br>
+            7月1日時点で23歳以下の選手カードでのみ参加可能。若手有望株を発掘するファン向けの大会。Sorareがカバーする全リーグの選手が対象。
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:12px; font-size:13px; font-weight:700; color:#4ade80; letter-spacing:1px;">── PvE・デイリー大会</div>
+      <div class="flow" style="margin-bottom:24px">
+        <div class="flow-item">
+          <div class="flow-num" style="background:#b45309; font-size:10px">🔥</div>
+          <div class="flow-text">
+            <strong>ホットストリーク（Hot Streak）</strong><br>
+            他プレイヤーと競わないPvE形式。目標スコアを超えると報酬獲得。5段階のレベルがあり、達成するたびに次レベルへ。Limited / Rare対応で最大<strong>4ライン</strong>エントリー可能。報酬は1GWにつきレアリティごとに1回。
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-num" style="background:#475569; font-size:10px">🏟️</div>
+          <div class="flow-text">
+            <strong>アリーナ（Arena）</strong><br>
+            ミッドウィーク含む全GWで開催の短期大会。10人ランキングボード制。エントリー数制限なし。上位5%は「ゴールデンアリーナ」となり報酬が増額。リーグ専用・上限キャップ別など種類が豊富。
+          </div>
+        </div>
+      </div>
+
+      <div class="note-box football">
+        💡 <strong>Commonカードで参加できる大会：</strong>Common Champion・Common Contender のみ。プロカード（Limited以上）があると現金やカード報酬のある大会に参加できます。
+      </div>
+    </div>
+
+    <!-- ディビジョンシステム -->
+    <div class="section" id="f-div">
+      <div class="section-title football">DIVISION SYSTEM</div>
+      <div class="section-heading">ディビジョンと昇格・降格</div>
+      <div class="section-body" style="margin-bottom:16px">
+        ChampionとContenderには<strong>3つのディビジョン</strong>（1〜3部）があり、GWごとに成績に応じて昇格・降格が発生します。SR・Uniqueはディビジョンが1つのみ。
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>移動元 → 移動先</th><th>条件</th></tr></thead>
+          <tbody>
+            <tr><td>3部 → 2部</td><td class="plus">上位30%が昇格</td></tr>
+            <tr><td>2部 → 1部</td><td class="plus">上位15%が昇格</td></tr>
+            <tr><td>2部 → 3部</td><td class="minus">下位30%が降格</td></tr>
+            <tr><td>1部 → 2部</td><td class="minus">下位30%が降格</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box football" style="margin-top:16px">
+        📌 各チームは独立して昇降格を判定。最大4チームを別々のディビジョンで運用できます。
+      </div>
+    </div>
+
+    <!-- ミッション -->
+    <div class="section" id="f-mission">
+      <div class="section-title football">MISSIONS</div>
+      <div class="section-heading">ミッションの種類</div>
+      <div class="flow" style="margin-bottom:16px">
+        <div class="flow-item">
+          <div class="flow-num" style="background:var(--football); font-size:10px">📅</div>
+          <div class="flow-text">
+            <strong>デイリーミッション</strong><br>
+            その日に試合のある選手を最大<strong>3人</strong>選択。ゴール・アシスト・クリーンシートなど決定的な活躍でXP（経験値）獲得。毎日09:00（中央ヨーロッパ時間）にリセット。
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-num" style="background:var(--football); font-size:10px">🎯</div>
+          <div class="flow-text">
+            <strong>ゲームウィークミッション（ピッカー）</strong><br>
+            特定リーグの選手を使う・コレクションスコアを達成するなど、GW単位の目標をクリアするとXP・エッセンス・クレジット等を獲得。同じカードを2つのピッカーで同時使用は不可。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- エッセンス & クラフト -->
+    <div class="section" id="f-essence">
+      <div class="section-title football">ESSENCE & CRAFT</div>
+      <div class="section-heading">エッセンスとクラフト</div>
+      <div class="section-body">
+        エッセンスは大会やミッションの報酬として獲得できる素材。<strong>1,000エッセンス</strong>を消費してカードを10枚引き、その中から1枚を選ぶ「クラフト」でプロカードを作成できます。
+      </div>
+      <div class="table-wrap" style="margin-top:16px">
+        <table>
+          <thead><tr><th>抽選タイプ</th><th>確率</th><th>内容</th></tr></thead>
+          <tbody>
+            <tr><td>スタンダードドロー</td><td>75%</td><td>通常のカード配分</td></tr>
+            <tr><td>スペシャル T2+</td><td>15%</td><td>全10枚がT2以上</td></tr>
+            <tr><td>星を目指せ</td><td>9.9%</td><td>T0カード最低1枚確定</td></tr>
+            <tr><td>フルスター</td><td class="big">0.1%</td><td>全10枚がT1以上</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box football" style="margin-top:16px">
+        💡 カードレベルはXPで上げられ、レベルアップするごとにスコアボーナスが増加。カードを売買・移籍すると蓄積XPは<strong>50%減少</strong>します。
+      </div>
+    </div>
+
+    <!-- Vault（封印）システム -->
+    <div class="section" id="f-vault">
+      <div class="section-title football">VAULT SYSTEM</div>
+      <div class="section-heading">封印（Vault）システム</div>
+      <div class="section-body">
+        カードを封印することで「封印ポイント」を獲得し、Vaultレベルをアップ。レベルが上がるほど大会報酬に<strong>報酬ブースト</strong>（最大+20%）が追加されます。
+      </div>
+      <div class="table-wrap" style="margin-top:16px">
+        <table>
+          <thead><tr><th>Vaultレベル</th><th>報酬ブースト</th></tr></thead>
+          <tbody>
+            <tr><td>Lv.1</td><td class="plus">+1%</td></tr>
+            <tr><td>Lv.5</td><td class="plus">+5%</td></tr>
+            <tr><td>Lv.10</td><td class="plus">+10%</td></tr>
+            <tr><td>Lv.20</td><td class="big">+20%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box football" style="margin-top:16px">
+        ⚠️ 封印したカードは<strong>売買・大会使用不可</strong>。開封は希少度ごとに14日に1枚まで。ブーストはアリーナ・ホットストリークには適用されません。
+      </div>
+    </div>
+
+    <!-- NG・DNP説明 -->
+    <div class="section" id="f-ngdnp">
+      <div class="section-title football">NG / DNP</div>
+      <div class="section-heading">NG・DNPとは？</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>用語</th><th>意味</th><th>スコア</th></tr></thead>
+          <tbody>
+            <tr><td><strong>NG</strong> No Game</td><td>GW中に試合がなかった選手（負傷含む）</td><td class="minus">0点</td></tr>
+            <tr><td><strong>DNP</strong> Did Not Play</td><td>試合はあったが出場しなかった選手</td><td class="minus">0点</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box football" style="margin-top:16px">
+        ⚠️ 同一GWに2試合出場した選手は、<strong>高い方の試合スコア</strong>が採用されます。
+      </div>
+    </div>
+
+    <!-- 紹介リンク（ツール直上） -->
+    <div class="section" id="f-referral">
+      <div class="section-title football">REFERRAL</div>
+      <div class="section-heading">Sorareを始める方へ — 登録で特典がつきます</div>
+      <div class="referral-box">
+        <div class="referral-title">🎁 このリンクから登録すると 最大 <a href="https://sorare.com/r/tategami" target="_blank" rel="noopener" style="color:var(--football); text-decoration:underline">$50クレジット（カード購入券）</a> 付き</div>
+        <div class="referral-desc">このサイトのリンクからSorareに登録すると、あなたに最大$50クレジット（カード購入券）が付与されます。</div>
+        <div class="referral-steps">
+          <div class="referral-step"><div class="referral-step-num">1</div><div>リンクから登録し、メールアドレスと電話番号を認証する</div></div>
+          <div class="referral-step"><div class="referral-step-num">2</div><div>プライマリーマーケット（オークション or 即時購入）でカードを5枚購入する</div></div>
+          <div class="referral-step"><div class="referral-step-num">3</div><div>購入したカードを使って2つの異なるGW（ゲームウィーク）でチームを編成する</div></div>
+        </div>
+        <a class="referral-link-btn" href="https://sorare.com/r/tategami" target="_blank" rel="noopener">→ Sorareに登録する</a>
+        <div class="referral-note">QRコードで登録できます。QRコードはSorareアプリ内から確認できます。</div>
+      </div>
+    </div>
+
+    <!-- note -->
+    <div class="section" id="f-note">
+      <div class="section-title football">NOTE</div>
+      <div class="section-heading">noteで詳しく読む</div>
+      <div class="note-section-box">
+        <div class="section-body">Sorare攻略・分析記事・Claude Codeで作ったアプリ紹介などをnoteで公開しています。</div>
+        <div class="note-articles" id="note-articles-f">
+          <div class="note-loading">記事を読み込み中...</div>
+        </div>
+        <a class="note-profile-link" href="https://note.com/sorare_nba/" target="_blank" rel="noopener">
+          ✏️ noteプロフィールを見る
+        </a>
+      </div>
+    </div>
+
     <!-- 分析ツール -->
-    <div class="section">
+    <div class="section" id="f-tools">
       <div class="section-title football">TOOLS</div>
       <div class="section-heading">分析ツール</div>
       <div class="tools-grid">
@@ -764,9 +1359,9 @@
   <div class="hero hero-mlb">
     <div class="hero-bg"></div>
     <div class="hero-content">
+      <div class="hero-unofficial">Unofficial Fan Site</div>
       <div class="hero-title accent-mlb">SORARE ORIGIN</div>
       <div class="hero-subtitle">ソラレ オリジン</div>
-      <div class="hero-unofficial">Unofficial Fan Site</div>
       <div class="hero-sport-name">SORARE MLB</div>
       <div class="hero-desc">
         大谷翔平・山本由伸をはじめとする<br>
@@ -777,7 +1372,25 @@
 
   <div class="content">
 
+    <!-- 目次 -->
     <div class="section">
+      <div class="section-title mlb">CONTENTS</div>
+      <div class="section-heading">目次</div>
+      <ul class="toc-list">
+        <li><a href="#m-howto">基本的な流れ</a></li>
+        <li><a href="#m-gw">ゲームウィーク（GW）の仕組み</a></li>
+        <li><a href="#m-card">カードのレアリティ</a></li>
+        <li><a href="#m-score">得点システム</a></li>
+        <li><a href="#m-tourn">大会の種類</a></li>
+        <li><a href="#m-essence">エッセンスとクラフト</a></li>
+        <li><a href="#m-vault">封印（Vault）システム</a></li>
+        <li><a href="#m-ngdnp">NG・DNPとは？</a></li>
+        <li><a href="#m-referral">Sorareを始める方へ — 登録で特典がつきます</a></li>
+        <li><a href="#m-tools">分析ツール</a></li>
+      </ul>
+    </div>
+
+    <div class="section" id="m-howto">
       <div class="section-title mlb">HOW TO PLAY</div>
       <div class="section-heading">基本的な流れ</div>
       <div class="flow">
@@ -800,7 +1413,7 @@
       </div>
     </div>
 
-    <div class="section">
+    <div class="section" id="m-gw">
       <div class="section-title mlb">GAME WEEK</div>
       <div class="section-heading">ゲームウィーク（GW）の仕組み</div>
       <div class="gw-box">
@@ -820,7 +1433,7 @@
       </div>
     </div>
 
-    <div class="section">
+    <div class="section" id="m-card">
       <div class="section-title mlb">CARD RARITY</div>
       <div class="section-heading">カードのレアリティ</div>
       <div class="cards-grid">
@@ -852,7 +1465,7 @@
       </div>
     </div>
 
-    <div class="section">
+    <div class="section" id="m-score">
       <div class="section-title mlb">SCORING SYSTEM</div>
       <div class="section-heading">得点システム（採点マトリックス）</div>
       <div class="section-body" style="margin-bottom:16px">アクションベースの得点システム。GW内の全試合スコアの合計がそのカードのGWスコアになります。</div>
@@ -896,7 +1509,166 @@
       </div>
     </div>
 
-    <div class="section">
+    <!-- 大会の種類 -->
+    <div class="section" id="m-tourn">
+      <div class="section-title mlb">TOURNAMENTS</div>
+      <div class="section-heading">大会の種類</div>
+      <div class="section-body" style="margin-bottom:20px">Sorare MLBには5種類の大会があります。シーズン中・クラシック・PvE・デイリーに分かれており、初心者から上級者まで参加できる形式が揃っています。</div>
+
+      <div style="margin-bottom:12px; font-size:13px; font-weight:700; color:#60a5fa; letter-spacing:1px;">── シーズン中大会</div>
+      <div class="flow" style="margin-bottom:24px">
+        <div class="flow-item">
+          <div class="flow-num" style="background:var(--mlb); font-size:10px">⚾</div>
+          <div class="flow-text">
+            <strong>Champion（チャンピオン）</strong><br>
+            MLBシーズン中のメイン大会。Limited・Rare・SR・Uniqueのレアリティごとに参加。GW内の全試合スコア合計で順位を競います。Limited / Rareは最大<strong>4ライン</strong>、SR / Uniqueは最大<strong>2ライン</strong>提出可能。
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:12px; font-size:13px; font-weight:700; color:#60a5fa; letter-spacing:1px;">── クラシック大会（過去カード使用可）</div>
+      <div class="flow" style="margin-bottom:24px">
+        <div class="flow-item">
+          <div class="flow-num" style="background:#475569; font-size:10px">📂</div>
+          <div class="flow-text">
+            <strong>Challenger（チャレンジャー）</strong><br>
+            過去シーズンのカード（クラシックカード）を使って参加できる大会。最新カードがなくても参加できるため、コレクターにも嬉しい形式。Championと並行して開催されます。
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:12px; font-size:13px; font-weight:700; color:#60a5fa; letter-spacing:1px;">── PvE大会（対コンピュータ）</div>
+      <div class="flow" style="margin-bottom:24px">
+        <div class="flow-item">
+          <div class="flow-num" style="background:#b45309; font-size:10px">🔥</div>
+          <div class="flow-text">
+            <strong>ホットストリーク（Hot Streak）</strong><br>
+            他のプレイヤーと直接競わないPvE形式。目標スコアを超えると報酬獲得。各レアリティ最大<strong>3ライン</strong>エントリー可能。初心者でも報酬が取りやすいおすすめモードです。
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:12px; font-size:13px; font-weight:700; color:#60a5fa; letter-spacing:1px;">── デイリー大会</div>
+      <div class="flow" style="margin-bottom:24px">
+        <div class="flow-item">
+          <div class="flow-num" style="background:var(--mlb); font-size:10px">📅</div>
+          <div class="flow-text">
+            <strong>アリーナ（Arena）</strong><br>
+            不定期開催の短期大会。24時間以内に完結するため、週単位のGWとは別に参加のチャンスがあります。
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-num" style="background:#6d28d9; font-size:10px">✅</div>
+          <div class="flow-text">
+            <strong>デイリーミッション（Daily Mission）</strong><br>
+            1日最大<strong>21選手</strong>を起用して達成するミッション形式。エッセンス・クレジット・XP（経験値）を獲得できます。毎日コツコツこなすとカードを育てやすくなります。
+          </div>
+        </div>
+      </div>
+
+      <div class="note-box mlb">
+        💡 <strong>マルチエントリー早見表：</strong>Limited / Rare → 最大4ライン　／　SR / Unique → 最大2ライン　／　ホットストリーク → 各レアリティ最大3ライン
+      </div>
+    </div>
+
+    <!-- エッセンス & クラフト -->
+    <div class="section" id="m-essence">
+      <div class="section-title mlb">ESSENCE & CRAFT</div>
+      <div class="section-heading">エッセンスとクラフト</div>
+      <div class="section-body">
+        エッセンスは、カードを強化・作成するための素材です。デイリーミッションや大会報酬として獲得でき、以下の用途に使用できます。
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>用途</th><th>内容</th></tr></thead>
+          <tbody>
+            <tr><td>クラフト</td><td>エッセンスを消費して新しいカードを作成する</td></tr>
+            <tr><td>カード強化</td><td>XPを蓄積してカードのレベルを上げる（最大Lv.10）</td></tr>
+            <tr><td>封印（Vault）</td><td>カードを封印して特定の報酬を受け取る</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box mlb" style="margin-top:16px">
+        📈 <strong>カードレベルの効果：</strong>レベルが上がるごとに+1%のスコアボーナスが追加されます（Lv.0〜10）。SR・Unique はさらにLv.10でユニークボーナスあり。
+      </div>
+    </div>
+
+    <!-- 封印（Vault）システム -->
+    <div class="section" id="m-vault">
+      <div class="section-title mlb">VAULT SYSTEM</div>
+      <div class="section-heading">封印（Vault）システム</div>
+      <div class="section-body">
+        Vaultは、使用頻度の低いカードを封印することで報酬を得られる仕組みです。
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>特徴</th><th>内容</th></tr></thead>
+          <tbody>
+            <tr><td>対象カード</td><td>Limited・Rare・SR・Unique（いずれも封印可能）</td></tr>
+            <tr><td>獲得報酬</td><td>エッセンス・クレジット・特典アイテムなど</td></tr>
+            <tr><td>注意点</td><td>封印中はトーナメント出場不可。封印解除は可能</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box mlb" style="margin-top:16px">
+        💡 使いたいカードは封印しないよう注意。GW編成の前に封印状況を確認しましょう。
+      </div>
+    </div>
+
+    <!-- NG・DNP説明 -->
+    <div class="section" id="m-ngdnp">
+      <div class="section-title mlb">NG / DNP</div>
+      <div class="section-heading">NG・DNPとは？</div>
+      <div class="section-body">
+        MLBでよく目にする2つの用語を覚えておきましょう。
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>用語</th><th>意味</th><th>スコアへの影響</th></tr></thead>
+          <tbody>
+            <tr><td><strong>NG</strong><br>No Game</td><td>GW期間中に試合がなかった選手</td><td class="minus">0点（スコアなし）</td></tr>
+            <tr><td><strong>DNP</strong><br>Did Not Play</td><td>試合はあったが出場しなかった選手</td><td class="minus">0点（スコアなし）</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box mlb" style="margin-top:16px">
+        ⚠️ NG・DNPの選手はスコア0点になります。GW前には<strong>先発予定・出場予定</strong>を必ず確認しましょう。特に投手は先発ローテーションのチェックが重要です。
+      </div>
+    </div>
+
+    <!-- 紹介リンク -->
+    <div class="section" id="m-referral">
+      <div class="section-title mlb">REFERRAL</div>
+      <div class="section-heading">Sorareを始める方へ — 登録で特典がつきます</div>
+      <div class="referral-box">
+        <div class="referral-title">🎁 このリンクから登録すると 最大 <a href="https://sorare.com/r/tategami" target="_blank" rel="noopener" style="color:var(--mlb-light, #60a5fa); text-decoration:underline">$50クレジット（カード購入券）</a> 付き</div>
+        <div class="referral-desc">このサイトのリンクからSorareに登録すると、あなたに最大$50クレジット（カード購入券）が付与されます。</div>
+        <div class="referral-steps">
+          <div class="referral-step"><div class="referral-step-num">1</div><div>リンクから登録し、メールアドレスと電話番号を認証する</div></div>
+          <div class="referral-step"><div class="referral-step-num">2</div><div>プライマリーマーケット（オークション or 即時購入）でカードを5枚購入する</div></div>
+          <div class="referral-step"><div class="referral-step-num">3</div><div>購入したカードを使って2つの異なるGW（ゲームウィーク）でチームを編成する</div></div>
+        </div>
+        <a class="referral-link-btn" href="https://sorare.com/r/tategami" target="_blank" rel="noopener">→ Sorareに登録する</a>
+        <div class="referral-note">QRコードで登録できます。QRコードはSorareアプリ内から確認できます。</div>
+      </div>
+    </div>
+
+    <!-- note -->
+    <div class="section" id="m-note">
+      <div class="section-title mlb">NOTE</div>
+      <div class="section-heading">noteで詳しく読む</div>
+      <div class="note-section-box">
+        <div class="section-body">Sorare攻略・分析記事・Claude Codeで作ったアプリ紹介などをnoteで公開しています。</div>
+        <div class="note-articles" id="note-articles-m">
+          <div class="note-loading">記事を読み込み中...</div>
+        </div>
+        <a class="note-profile-link" href="https://note.com/sorare_nba/" target="_blank" rel="noopener">
+          ✏️ noteプロフィールを見る
+        </a>
+      </div>
+    </div>
+
+    <div class="section" id="m-tools">
       <div class="section-title mlb">TOOLS</div>
       <div class="section-heading">分析ツール</div>
       <div class="tools-grid">
@@ -922,9 +1694,9 @@
   <div class="hero hero-nba">
     <div class="hero-bg"></div>
     <div class="hero-content">
+      <div class="hero-unofficial">Unofficial Fan Site</div>
       <div class="hero-title accent-nba">SORARE ORIGIN</div>
       <div class="hero-subtitle">ソラレ オリジン</div>
-      <div class="hero-unofficial">Unofficial Fan Site</div>
       <div class="hero-sport-name">SORARE NBA</div>
       <div class="hero-desc">
         NBAスター選手のカードを集めて<br>
@@ -935,7 +1707,22 @@
 
   <div class="content">
 
+    <!-- 目次 -->
     <div class="section">
+      <div class="section-title nba">CONTENTS</div>
+      <div class="section-heading">目次</div>
+      <ul class="toc-list">
+        <li><a href="#n-howto">基本的な流れ</a></li>
+        <li><a href="#n-gw">ゲームウィーク（GW）の仕組み</a></li>
+        <li><a href="#n-card">カードのレアリティ</a></li>
+        <li><a href="#n-score">得点システム</a></li>
+        <li><a href="#n-comp">大会の種類</a></li>
+        <li><a href="#n-referral">Sorareを始める方へ — 登録で特典がつきます</a></li>
+        <li><a href="#n-tools">分析ツール</a></li>
+      </ul>
+    </div>
+
+    <div class="section" id="n-howto">
       <div class="section-title nba">HOW TO PLAY</div>
       <div class="section-heading">基本的な流れ</div>
       <div class="flow">
@@ -958,7 +1745,7 @@
       </div>
     </div>
 
-    <div class="section">
+    <div class="section" id="n-gw">
       <div class="section-title nba">GAME WEEK</div>
       <div class="section-heading">ゲームウィーク（GW）の仕組み</div>
       <div class="gw-box">
@@ -978,7 +1765,7 @@
       </div>
     </div>
 
-    <div class="section">
+    <div class="section" id="n-card">
       <div class="section-title nba">CARD RARITY</div>
       <div class="section-heading">カードのレアリティ</div>
       <div class="cards-grid">
@@ -1010,7 +1797,7 @@
       </div>
     </div>
 
-    <div class="section">
+    <div class="section" id="n-score">
       <div class="section-title nba">SCORING SYSTEM</div>
       <div class="section-heading">得点システム（採点マトリックス）</div>
       <div class="section-body" style="margin-bottom:16px">アクションベースのスコアリング。コート上の出来事が即座にスコアに反映されます。</div>
@@ -1040,7 +1827,7 @@
     </div>
 
     <!-- 大会の種類 -->
-    <div class="section">
+    <div class="section" id="n-comp">
       <div class="section-title nba">COMPETITIONS</div>
       <div class="section-heading">大会の種類</div>
       <div class="section-body" style="margin-bottom:20px">Sorare NBAには5種類の大会があります。シーズン中大会とクラシック大会、そしてデイリーの3カテゴリーに分かれています。</div>
@@ -1109,7 +1896,39 @@
       </div>
     </div>
 
-    <div class="section">
+    <!-- 紹介リンク -->
+    <div class="section" id="n-referral">
+      <div class="section-title nba">REFERRAL</div>
+      <div class="section-heading">Sorareを始める方へ — 登録で特典がつきます</div>
+      <div class="referral-box">
+        <div class="referral-title">🎁 このリンクから登録すると 最大 <a href="https://sorare.com/r/tategami" target="_blank" rel="noopener" style="color:#fb923c; text-decoration:underline">$50クレジット（カード購入券）</a> 付き</div>
+        <div class="referral-desc">このサイトのリンクからSorareに登録すると、あなたに最大$50クレジット（カード購入券）が付与されます。</div>
+        <div class="referral-steps">
+          <div class="referral-step"><div class="referral-step-num">1</div><div>リンクから登録し、メールアドレスと電話番号を認証する</div></div>
+          <div class="referral-step"><div class="referral-step-num">2</div><div>プライマリーマーケット（オークション or 即時購入）でカードを5枚購入する</div></div>
+          <div class="referral-step"><div class="referral-step-num">3</div><div>購入したカードを使って2つの異なるGW（ゲームウィーク）でチームを編成する</div></div>
+        </div>
+        <a class="referral-link-btn" href="https://sorare.com/r/tategami" target="_blank" rel="noopener">→ Sorareに登録する</a>
+        <div class="referral-note">QRコードで登録できます。QRコードはSorareアプリ内から確認できます。</div>
+      </div>
+    </div>
+
+    <!-- note -->
+    <div class="section" id="n-note">
+      <div class="section-title nba">NOTE</div>
+      <div class="section-heading">noteで詳しく読む</div>
+      <div class="note-section-box">
+        <div class="section-body">Sorare攻略・分析記事・Claude Codeで作ったアプリ紹介などをnoteで公開しています。</div>
+        <div class="note-articles" id="note-articles-n">
+          <div class="note-loading">記事を読み込み中...</div>
+        </div>
+        <a class="note-profile-link" href="https://note.com/sorare_nba/" target="_blank" rel="noopener">
+          ✏️ noteプロフィールを見る
+        </a>
+      </div>
+    </div>
+
+    <div class="section" id="n-tools">
       <div class="section-title nba">TOOLS</div>
       <div class="section-heading">分析ツール</div>
       <div class="tools-grid">
@@ -1128,11 +1947,57 @@
 </div>
 
 <footer>
-  <div>SORARE ORIGIN &nbsp;|&nbsp; ソラレ オリジン</div>
-  <div style="margin-top:8px">当サイトはSorareの公式サイトではありません。情報は参考目的でご利用ください。</div>
+  <div class="footer-title">SORARE ORIGIN &nbsp;|&nbsp; ソラレ オリジン</div>
+
+  <div class="footer-notice">
+    <div class="footer-notice-item">本サイトはSorare社および各スポーツリーグとは一切関係のない非公式ファンサイトです。</div>
+    <div class="footer-notice-item">掲載内容はSorare公式ヘルプを参考に作成していますが、情報の正確性・最新性は保証できません。</div>
+    <div class="footer-notice-item">ゲームルール・報酬・仕様は予告なく変更される場合があります。最新情報は必ず <a href="https://sorare.com" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline">sorare.com</a> でご確認ください。</div>
+    <div class="footer-notice-item">NFTカードの購入・売却は価格変動リスクを伴います。投資・課金の判断はご自身の責任でお願いします。</div>
+    <div class="footer-notice-item">Sorare・各スポーツリーグのロゴ・選手名・画像は各権利者に帰属します。</div>
+    <div class="footer-notice-item">当サイトの紹介リンク経由でご登録いただいた場合、管理者にクレジットが付与されることがあります。</div>
+  </div>
+
+  <div class="footer-copy">
+    © 2025 SORARE ORIGIN — Unofficial Fan Site. Not affiliated with Sorare.<br>
+    <span style="margin-top:6px; display:block">当サイトのコンテンツ（文章・構成・デザイン）の無断転載・複製・ミラーサイトの作成を禁じます。</span>
+  </div>
 </footer>
 
 <script>
+  // note RSS読み込み
+  async function loadNoteArticles() {
+    const targets = ['note-articles-f', 'note-articles-m', 'note-articles-n'];
+    const rssUrl = 'https://note.com/sorare_nba/rss';
+    const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}&count=5`;
+    try {
+      const res = await fetch(apiUrl);
+      const data = await res.json();
+      if (data.status !== 'ok' || !data.items.length) throw new Error();
+      const html = data.items.map(item => {
+        const date = new Date(item.pubDate).toLocaleDateString('ja-JP', { year:'numeric', month:'2-digit', day:'2-digit' });
+        return `<a class="note-article-item" href="${item.link}" target="_blank" rel="noopener">
+          <span>${item.title}</span>
+          <span class="note-article-date">${date}</span>
+        </a>`;
+      }).join('');
+      targets.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.innerHTML = html;
+      });
+    } catch {
+      targets.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.innerHTML = '<div class="note-loading">記事の読み込みに失敗しました。<a href="https://note.com/sorare_nba/" target="_blank" rel="noopener" style="color:#41c9b4">noteで直接確認する →</a></div>';
+      });
+    }
+  }
+  loadNoteArticles();
+
+  // 右クリック・選択・ドラッグ禁止
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('dragstart', e => e.preventDefault());
+
   const accentColors = {
     football: '#16a34a',
     mlb: '#1d4ed8',
