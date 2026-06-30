@@ -30,6 +30,9 @@
   <meta name="twitter:title" content="SORARE ORIGIN | Sorare 非公式ファンサイト">
   <meta name="twitter:description" content="Sorareの遊び方・ルール・得点システムをわかりやすく解説。Football・MLB・NBA対応。大谷翔平カードや紹介特典情報も。">
 
+  <!-- Google Search Console 認証 -->
+  <meta name="google-site-verification" content="5NElN2a-xXTVxAKe9zvPW_SGiZ4uu0lEVxKVDYXuw9s" />
+
   <!-- サイトマップ -->
   <link rel="sitemap" type="application/xml" href="https://sirius-sports.github.io/sorare-origin/sitemap.xml">
 
@@ -1968,36 +1971,24 @@
 </footer>
 
 <script>
-  // note記事読み込み（note API経由）
-  async function loadNoteArticles() {
-    const targets = ['note-articles-f', 'note-articles-m', 'note-articles-n'];
-    const apiUrl = 'https://note.com/api/v2/creators/sorare_nba/contents?kind=note&page=1';
-    const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(apiUrl)}`;
-    try {
-      const res = await fetch(proxyUrl);
-      const json = await res.json();
-      const data = JSON.parse(json.contents);
-      const items = data?.data?.contents;
-      if (!items || !items.length) throw new Error();
-      const html = items.slice(0, 5).map(item => {
-        const date = new Date(item.publishAt).toLocaleDateString('ja-JP', { year:'numeric', month:'2-digit', day:'2-digit' });
-        return `<a class="note-article-item" href="https://note.com/sorare_nba/n/${item.key}" target="_blank" rel="noopener">
-          <span>${item.name}</span>
-          <span class="note-article-date">${date}</span>
-        </a>`;
-      }).join('');
-      targets.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.innerHTML = html;
-      });
-    } catch {
-      targets.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.innerHTML = '<div class="note-loading"><a href="https://note.com/sorare_nba/" target="_blank" rel="noopener" style="color:#41c9b4">→ noteで記事を読む</a></div>';
-      });
-    }
-  }
-  loadNoteArticles();
+  // note記事リスト（手動更新）
+  const noteArticles = [
+    { title: 'Sorare MLB チーム編成 GW26 新編成ロジック実践編', url: 'https://note.com/sorare_nba/n/nf66a4b6a4570', date: '2026.06.27' },
+    { title: 'Sorare Football 無料でワールドカップチャレンジ！目指せ賞金1,000ドル ②', url: 'https://note.com/sorare_nba/', date: '2026.06.25' },
+    { title: 'Sorare Football 無料でワールドカップチャレンジ！目指せ賞金1,000ドル', url: 'https://note.com/sorare_nba/', date: '2026.06.23' },
+    { title: 'Claude Codeで賭馬の自動投票システムを無料で作ってみた', url: 'https://note.com/sorare_nba/', date: '2026.06.22' },
+    { title: 'MLBデータをワンクリック SorareMLB分析ツール 使い方ガイド', url: 'https://note.com/sorare_nba/', date: '2026.06.20' },
+  ];
+  const noteHtml = noteArticles.map(a =>
+    `<a class="note-article-item" href="${a.url}" target="_blank" rel="noopener">
+      <span>${a.title}</span>
+      <span class="note-article-date">${a.date}</span>
+    </a>`
+  ).join('');
+  ['note-articles-f', 'note-articles-m', 'note-articles-n'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.innerHTML = noteHtml;
+  });
 
   // 右クリック・選択・ドラッグ禁止
   document.addEventListener('contextmenu', e => e.preventDefault());
