@@ -79,10 +79,15 @@
     .update-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
     .update-box-title { font-size: 14px; font-weight: 700; margin-bottom: 14px; }
     .update-list { display: flex; flex-direction: column; gap: 8px; }
-    .note-article-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: var(--bg3); border-radius: 8px; border: 1px solid var(--border); text-decoration: none; color: var(--text); font-size: 13px; transition: border-color 0.18s; gap: 12px; }
+    .note-article-item { display: flex; align-items: center; padding: 10px 14px; background: var(--bg3); border-radius: 8px; border: 1px solid var(--border); text-decoration: none; color: var(--text); font-size: 13px; transition: border-color 0.18s; gap: 10px; }
     .note-article-item:hover { border-color: #41c9b4; color: #41c9b4; }
+    .note-article-title { flex: 1; }
     .note-article-date { font-size: 11px; color: var(--text3); white-space: nowrap; }
     .note-loading { color: var(--text3); font-size: 13px; padding: 10px 0; }
+    .news-sport-badge { font-size: 10px; font-weight: 700; letter-spacing: 0.5px; padding: 2px 8px; border-radius: 4px; flex-shrink: 0; }
+    .news-badge-football { background: var(--football); color: #000; }
+    .news-badge-mlb { background: var(--mlb); color: #fff; }
+    .news-badge-nba { background: var(--nba); color: #fff; }
     @media (max-width: 600px) { .update-grid { grid-template-columns: 1fr; } }
 
     footer { border-top: 1px solid var(--border); padding: 40px 2rem 30px; text-align: center; color: var(--text2); font-size: 12px; }
@@ -180,19 +185,25 @@
   document.addEventListener('dragstart', e => e.preventDefault());
 
   // Sorare公式ニュース（GitHub Actionsが定期生成するJSONを読む）
-  fetch('data/sorare-news.json')
+  fetch('data/sorare-news.json?t=' + Date.now())
     .then(r => r.json())
     .then(data => {
       const articles = data?.articles;
       if (!articles || articles.length === 0) throw new Error();
+      const d = new Date(data.updatedAt);
+      const fetchedDate = isNaN(d) ? '' : `${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')}`;
       const html = articles.map(a =>
-        `<a class="note-article-item" href="${a.url}" target="_blank" rel="noopener"><span>${a.title}</span><span class="note-article-date">${a.meta || ''}</span></a>`
+        `<a class="note-article-item" href="${a.url}" target="_blank" rel="noopener">
+          <span class="news-sport-badge news-badge-${a.sport}">${a.sport.toUpperCase()}</span>
+          <span class="note-article-title">${a.title}</span>
+          <span class="note-article-date">${fetchedDate}</span>
+        </a>`
       ).join('');
       document.getElementById('sorare-news').innerHTML = html;
     })
     .catch(() => {
       document.getElementById('sorare-news').innerHTML =
-        `<a class="note-article-item" href="https://sorare.com/blog" target="_blank" rel="noopener"><span>Sorare公式ブログを見る</span></a>`;
+        `<a class="note-article-item" href="https://sorare.com/blog" target="_blank" rel="noopener"><span class="note-article-title">Sorare公式ブログを見る</span></a>`;
     });
 
   // note記事の自動取得
@@ -205,13 +216,13 @@
       const html = articles.slice(0, 5).map(a => {
         const d = new Date(a.publishAt || a.publish_at || a.created_at);
         const date = isNaN(d) ? '' : `${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')}`;
-        return `<a class="note-article-item" href="https://note.com/${NOTE_USER}/n/${a.key}" target="_blank" rel="noopener"><span>${a.name}</span><span class="note-article-date">${date}</span></a>`;
+        return `<a class="note-article-item" href="https://note.com/${NOTE_USER}/n/${a.key}" target="_blank" rel="noopener"><span class="note-article-title">${a.name}</span><span class="note-article-date">${date}</span></a>`;
       }).join('');
       document.getElementById('note-articles-home').innerHTML = html;
     })
     .catch(() => {
       document.getElementById('note-articles-home').innerHTML =
-        `<a class="note-article-item" href="https://note.com/sorare_nba/n/nf66a4b6a4570" target="_blank" rel="noopener"><span>Sorare MLB チーム編成 GW26 新編成ロジック実践編</span><span class="note-article-date">2026.06.27</span></a>`;
+        `<a class="note-article-item" href="https://note.com/sorare_nba/n/nf66a4b6a4570" target="_blank" rel="noopener"><span class="note-article-title">Sorare MLB チーム編成 GW26 新編成ロジック実践編</span><span class="note-article-date">2026.06.27</span></a>`;
     });
 </script>
 </body>
