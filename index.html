@@ -75,11 +75,15 @@
 
     .features { max-width: 860px; margin: 80px auto; padding: 0 2rem; }
     .features-title { text-align: center; font-size: 11px; font-weight: 700; letter-spacing: 3px; color: var(--text3); margin-bottom: 32px; }
-    .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-    .feature-item { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
-    .feature-icon { font-size: 24px; margin-bottom: 10px; }
-    .feature-name { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
-    .feature-desc { font-size: 12px; color: var(--text2); line-height: 1.7; }
+    .update-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .update-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+    .update-box-title { font-size: 14px; font-weight: 700; margin-bottom: 14px; }
+    .update-list { display: flex; flex-direction: column; gap: 8px; }
+    .note-article-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: var(--bg3); border-radius: 8px; border: 1px solid var(--border); text-decoration: none; color: var(--text); font-size: 13px; transition: border-color 0.18s; gap: 12px; }
+    .note-article-item:hover { border-color: #41c9b4; color: #41c9b4; }
+    .note-article-date { font-size: 11px; color: var(--text3); white-space: nowrap; }
+    .note-loading { color: var(--text3); font-size: 13px; padding: 10px 0; }
+    @media (max-width: 600px) { .update-grid { grid-template-columns: 1fr; } }
 
     footer { border-top: 1px solid var(--border); padding: 40px 2rem 30px; text-align: center; color: var(--text2); font-size: 12px; }
     .footer-title { font-size: 14px; font-weight: 700; letter-spacing: 2px; color: var(--text); margin-bottom: 20px; }
@@ -142,22 +146,15 @@
 </div>
 
 <div class="features">
-  <div class="features-title">WHAT YOU CAN FIND HERE</div>
-  <div class="features-grid">
-    <div class="feature-item">
-      <div class="feature-icon">📖</div>
-      <div class="feature-name">ルール・遊び方</div>
-      <div class="feature-desc">Sorareの基本から大会の仕組みまで、初心者にもわかりやすく解説しています。</div>
+  <div class="features-title">LATEST UPDATES</div>
+  <div class="update-grid">
+    <div class="update-box">
+      <div class="update-box-title">🗞️ SORARE NEWS</div>
+      <div class="update-list" id="sorare-news"><div class="note-loading">読み込み中...</div></div>
     </div>
-    <div class="feature-item">
-      <div class="feature-icon">📊</div>
-      <div class="feature-name">得点システム</div>
-      <div class="feature-desc">Football・MLB・NBAそれぞれの採点方法をテーブル形式で見やすくまとめています。</div>
-    </div>
-    <div class="feature-item">
-      <div class="feature-icon">🎁</div>
-      <div class="feature-name">紹介特典</div>
-      <div class="feature-desc">当サイトのリンクから登録すると最大$50クレジットの紹介特典が付与されます。</div>
+    <div class="update-box">
+      <div class="update-box-title">✏️ NOTE 最新記事</div>
+      <div class="update-list" id="note-articles-home"><div class="note-loading">読み込み中...</div></div>
     </div>
   </div>
 </div>
@@ -181,6 +178,41 @@
 <script>
   document.addEventListener('contextmenu', e => e.preventDefault());
   document.addEventListener('dragstart', e => e.preventDefault());
+
+  // Sorare公式ニュース（GitHub Actionsが定期生成するJSONを読む）
+  fetch('data/sorare-news.json')
+    .then(r => r.json())
+    .then(data => {
+      const articles = data?.articles;
+      if (!articles || articles.length === 0) throw new Error();
+      const html = articles.map(a =>
+        `<a class="note-article-item" href="${a.url}" target="_blank" rel="noopener"><span>${a.title}</span><span class="note-article-date">${a.meta || ''}</span></a>`
+      ).join('');
+      document.getElementById('sorare-news').innerHTML = html;
+    })
+    .catch(() => {
+      document.getElementById('sorare-news').innerHTML =
+        `<a class="note-article-item" href="https://sorare.com/blog" target="_blank" rel="noopener"><span>Sorare公式ブログを見る</span></a>`;
+    });
+
+  // note記事の自動取得
+  const NOTE_USER = 'sorare_nba';
+  fetch(`https://corsproxy.io/?https://note.com/api/v2/creators/${NOTE_USER}/contents?kind=note&page=1`)
+    .then(r => r.json())
+    .then(data => {
+      const articles = data?.data?.contents;
+      if (!articles || articles.length === 0) throw new Error();
+      const html = articles.slice(0, 5).map(a => {
+        const d = new Date(a.publishAt || a.publish_at || a.created_at);
+        const date = isNaN(d) ? '' : `${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')}`;
+        return `<a class="note-article-item" href="https://note.com/${NOTE_USER}/n/${a.key}" target="_blank" rel="noopener"><span>${a.name}</span><span class="note-article-date">${date}</span></a>`;
+      }).join('');
+      document.getElementById('note-articles-home').innerHTML = html;
+    })
+    .catch(() => {
+      document.getElementById('note-articles-home').innerHTML =
+        `<a class="note-article-item" href="https://note.com/sorare_nba/n/nf66a4b6a4570" target="_blank" rel="noopener"><span>Sorare MLB チーム編成 GW26 新編成ロジック実践編</span><span class="note-article-date">2026.06.27</span></a>`;
+    });
 </script>
 </body>
 </html>

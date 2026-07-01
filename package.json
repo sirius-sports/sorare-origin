@@ -1,0 +1,11 @@
+{
+  "name": "sorare-origin-news-scraper",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "scrape": "node scripts/fetch-sorare-news.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.47.0"
+  }
+}
