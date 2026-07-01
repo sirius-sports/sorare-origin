@@ -34,12 +34,15 @@ async function scrapeSport(page, sport) {
       const container = findContainer(a);
       const heading = container?.querySelector('h1,h2,h3,h4,h5');
       const dateLink = Array.from(container?.querySelectorAll('a') || []).find(x => /ago$/.test(x.textContent.trim()));
+      // "Football - 7 days ago" のような文字列から日付部分だけを取り出す
+      const rawDate = dateLink ? dateLink.textContent.trim() : '';
+      const dateOnly = rawDate.includes(' - ') ? rawDate.split(' - ').pop().trim() : rawDate;
 
       results.push({
         sport,
         url: 'https://sorare.com' + href,
         title: heading ? heading.textContent.trim() : (img.getAttribute('alt') || '').trim(),
-        meta: dateLink ? dateLink.textContent.trim() : ''
+        meta: dateOnly
       });
     });
     return results.slice(0, 8);
