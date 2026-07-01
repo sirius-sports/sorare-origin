@@ -1,7 +1,4 @@
 {
-  "updatedAt": "2026-07-02T00:00:00.000Z",
-  "articles": [
-    { "sport": "mlb", "title": "MLB Double Up", "url": "https://sorare.com/blog/mlb", "meta": "MLB" },
-    { "sport": "football", "title": "🆕 Colors Summer Camp", "url": "https://sorare.com/blog/football", "meta": "Football" }
-  ]
+  "updatedAt": "2026-07-01T18:41:52.948Z",
+  "articles": []
 }
