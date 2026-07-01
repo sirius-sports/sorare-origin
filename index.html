@@ -33,6 +33,9 @@
   <!-- Google Search Console 認証 -->
   <meta name="google-site-verification" content="5NElN2a-xXTVxAKe9zvPW_SGiZ4uu0lEVxKVDYXuw9s" />
 
+  <!-- ファビコン -->
+  <link rel="icon" href="football.jpg" type="image/jpeg">
+
   <!-- サイトマップ -->
   <link rel="sitemap" type="application/xml" href="https://sirius-sports.github.io/sorare-origin/sitemap.xml">
 
@@ -886,7 +889,7 @@
     <div class="news-strip-inner">
       <span class="news-strip-label">NEWS</span>
       <span class="news-strip-text">🆕 カラーズ サマーキャンプ開催中 — カラーカードは9月まで引き続きプレイ可能。エッセンス・ジェムが中心の進捗報酬に。</span>
-      <span class="news-strip-date">2025.6.24</span>
+      <span class="news-strip-date">2026.6.24</span>
     </div>
   </div>
 
@@ -901,7 +904,7 @@
         <div class="news-card-header">
           <span class="news-badge">FOOTBALL</span>
           <span class="news-card-title">🆕 カラーズ サマーキャンプ</span>
-          <span class="news-card-date">2025.6.24</span>
+          <span class="news-card-date">2026.6.24</span>
         </div>
         <div class="news-card-body">
           <p>国際試合シーズン終了後も、<strong>カラーカードは9月まで継続してプレイ可能</strong>です。夏の間を通じてグローバルコンテストに参加できます。</p>
@@ -1971,24 +1974,53 @@
 </footer>
 
 <script>
-  // note記事リスト（手動更新）
-  const noteArticles = [
-    { title: 'Sorare MLB チーム編成 GW26 新編成ロジック実践編', url: 'https://note.com/sorare_nba/n/nf66a4b6a4570', date: '2026.06.27' },
-    { title: 'Sorare Football 無料でワールドカップチャレンジ！目指せ賞金1,000ドル ②', url: 'https://note.com/sorare_nba/', date: '2026.06.25' },
-    { title: 'Sorare Football 無料でワールドカップチャレンジ！目指せ賞金1,000ドル', url: 'https://note.com/sorare_nba/', date: '2026.06.23' },
-    { title: 'Claude Codeで賭馬の自動投票システムを無料で作ってみた', url: 'https://note.com/sorare_nba/', date: '2026.06.22' },
-    { title: 'MLBデータをワンクリック SorareMLB分析ツール 使い方ガイド', url: 'https://note.com/sorare_nba/', date: '2026.06.20' },
-  ];
-  const noteHtml = noteArticles.map(a =>
-    `<a class="note-article-item" href="${a.url}" target="_blank" rel="noopener">
-      <span>${a.title}</span>
-      <span class="note-article-date">${a.date}</span>
-    </a>`
-  ).join('');
-  ['note-articles-f', 'note-articles-m', 'note-articles-n'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.innerHTML = noteHtml;
-  });
+  // note記事の自動取得
+  const NOTE_USER = 'sorare_nba';
+  const NOTE_API = `https://corsproxy.io/?https://note.com/api/v2/creators/${NOTE_USER}/contents?kind=note&page=1`;
+
+  function renderNoteArticles(articles) {
+    const html = articles.slice(0, 5).map(a => {
+      const d = new Date(a.publishAt || a.publish_at || a.created_at);
+      const date = isNaN(d) ? '' : `${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')}`;
+      const url = `https://note.com/${NOTE_USER}/n/${a.key}`;
+      return `<a class="note-article-item" href="${url}" target="_blank" rel="noopener">
+        <span>${a.name}</span>
+        <span class="note-article-date">${date}</span>
+      </a>`;
+    }).join('');
+    ['note-articles-f', 'note-articles-m', 'note-articles-n'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.innerHTML = html;
+    });
+  }
+
+  function renderFallback() {
+    const fallback = [
+      { title: 'Sorare MLB チーム編成 GW26 新編成ロジック実践編', url: 'https://note.com/sorare_nba/n/nf66a4b6a4570', date: '2026.06.27' },
+    ];
+    const html = fallback.map(a =>
+      `<a class="note-article-item" href="${a.url}" target="_blank" rel="noopener">
+        <span>${a.title}</span>
+        <span class="note-article-date">${a.date}</span>
+      </a>`
+    ).join('');
+    ['note-articles-f', 'note-articles-m', 'note-articles-n'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.innerHTML = html;
+    });
+  }
+
+  fetch(NOTE_API)
+    .then(r => r.json())
+    .then(data => {
+      const articles = data?.data?.contents;
+      if (articles && articles.length > 0) {
+        renderNoteArticles(articles);
+      } else {
+        renderFallback();
+      }
+    })
+    .catch(() => renderFallback());
 
   // 右クリック・選択・ドラッグ禁止
   document.addEventListener('contextmenu', e => e.preventDefault());
