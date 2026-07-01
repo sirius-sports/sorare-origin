@@ -4,8 +4,8 @@ import { writeFileSync, mkdirSync } from 'fs';
 const SPORTS = ['football', 'mlb', 'nba'];
 
 async function scrapeSport(page, sport) {
-  await page.goto(`https://sorare.com/blog/${sport}`, { waitUntil: 'networkidle', timeout: 30000 });
-  await page.waitForTimeout(2000);
+  await page.goto(`https://sorare.com/blog/${sport}`, { waitUntil: 'load', timeout: 45000 });
+  await page.waitForTimeout(4000);
 
   return page.evaluate((sport) => {
     function findContainer(el) {
