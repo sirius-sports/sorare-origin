@@ -79,6 +79,18 @@
   }
   </script>
 
+  <!-- 構造化データ（パンくずリスト） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://sirius-sports.github.io/sorare-origin/" },
+      { "@type": "ListItem", "position": 2, "name": "Sorare MLB", "item": "https://sirius-sports.github.io/sorare-origin/mlb.html" }
+    ]
+  }
+  </script>
+
   <style>
     :root {
       --bg: #0a0f1e; --bg2: #111827; --bg3: #1e293b;
