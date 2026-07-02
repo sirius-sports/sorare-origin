@@ -79,6 +79,18 @@
   }
   </script>
 
+  <!-- 構造化データ（パンくずリスト） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://sirius-sports.github.io/sorare-origin/" },
+      { "@type": "ListItem", "position": 2, "name": "Sorare NBA", "item": "https://sirius-sports.github.io/sorare-origin/nba.html" }
+    ]
+  }
+  </script>
+
   <style>
     :root {
       --bg: #0a0f1e; --bg2: #111827; --bg3: #1e293b;
@@ -400,6 +412,7 @@
     <div class="footer-notice-item">当サイトの紹介リンク経由でご登録いただいた場合、管理者にクレジットが付与されることがあります。</div>
   </div>
   <div class="footer-copy">
+    <div style="margin-bottom:12px;"><a href="privacy.html" style="color:var(--text2); text-decoration:none;">プライバシーポリシー</a></div>
     © 2025 SORARE ORIGIN — Unofficial Fan Site. Not affiliated with Sorare.<br>
     <span style="margin-top:6px; display:block">当サイトのコンテンツ（文章・構成・デザイン）の無断転載・複製・ミラーサイトの作成を禁じます。</span>
   </div>

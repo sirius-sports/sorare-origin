@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorare Football 攻略ガイド｜編成・スコア・市場戦略 | SORARE ORIGIN</title>
+
+  <meta name="description" content="Sorare Football（サッカー）の実践的な攻略ガイド。5枚編成とキャプテン選択、守備スタックなどスコアを伸ばすコツ、カード購入・市場戦略、初心者が避けたい失敗を解説します。">
+  <meta name="keywords" content="Sorare,ソラレ,Football,サッカー,攻略,編成,キャプテン,守備スタック,ダブルダブル,カード購入,U23">
+  <link rel="canonical" href="https://sirius-sports.github.io/sorare-origin/football-strategy.html">
+  <link rel="icon" href="football.jpg" type="image/jpeg">
+  <meta name="robots" content="index, follow, noai, noimageai">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://sirius-sports.github.io/sorare-origin/football-strategy.html">
+  <meta property="og:title" content="Sorare Football 攻略ガイド | SORARE ORIGIN">
+  <meta property="og:description" content="5枚編成・キャプテン・守備スタック・市場戦略まで、Sorare Footballの実践的な攻略を解説。">
+  <meta property="og:image" content="https://sirius-sports.github.io/sorare-origin/football.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://sirius-sports.github.io/sorare-origin/football.jpg">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJ5551CK7J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BJ5551CK7J');
+  </script>
+
+  <style>
+    :root {
+      --bg: #0a0f1e; --bg2: #111827; --bg3: #1e293b;
+      --text: #f1f5f9; --text2: #94a3b8; --text3: #475569; --border: #1e293b;
+      --football: #16a34a; --football-light: #4ade80;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', 'Noto Sans JP', sans-serif; min-height: 100vh; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,15,30,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); display: flex; align-items: center; padding: 0 2rem; height: 60px; gap: 2rem; }
+    .nav-logo { display: flex; flex-direction: column; line-height: 1; margin-right: auto; text-decoration: none; }
+    .nav-logo .en { font-size: 16px; font-weight: 800; letter-spacing: 3px; color: var(--football-light); }
+    .nav-logo .ja { font-size: 9px; letter-spacing: 2px; color: var(--text2); margin-top: 2px; }
+    .nav-back { font-size: 13px; color: var(--text2); text-decoration: none; }
+    .nav-back:hover { color: var(--football-light); }
+
+    .content { max-width: 820px; margin: 0 auto; padding: 90px 2rem 60px; }
+    .page-badge { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 2px; padding: 4px 12px; border-radius: 6px; background: var(--football); color: #000; margin-bottom: 14px; }
+    .page-title { font-size: 28px; font-weight: 800; margin-bottom: 10px; line-height: 1.35; }
+    .page-lead { font-size: 14px; color: var(--text2); line-height: 1.9; margin-bottom: 36px; }
+
+    .toc { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 18px 22px; margin-bottom: 44px; }
+    .toc-title { font-size: 11px; font-weight: 700; letter-spacing: 2px; color: var(--football-light); margin-bottom: 12px; }
+    .toc ol { margin: 0; padding-left: 20px; }
+    .toc li { margin-bottom: 6px; }
+    .toc a { color: var(--text2); text-decoration: none; font-size: 14px; }
+    .toc a:hover { color: var(--football-light); }
+
+    .section { margin-bottom: 48px; }
+    .section-num { font-size: 11px; font-weight: 700; letter-spacing: 2px; color: var(--football-light); margin-bottom: 6px; }
+    .section h2 { font-size: 21px; font-weight: 700; margin-bottom: 8px; }
+    .section > p { font-size: 14px; color: var(--text2); line-height: 1.9; margin-bottom: 16px; }
+
+    .tip { background: var(--bg2); border: 1px solid var(--border); border-left: 3px solid var(--football); border-radius: 0 10px 10px 0; padding: 16px 20px; margin-bottom: 14px; }
+    .tip-head { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+    .tip-body { font-size: 13px; color: var(--text2); line-height: 1.85; }
+    .tip-body strong { color: var(--text); }
+    .tip-why { display: block; margin-top: 8px; font-size: 12px; color: var(--text3); }
+    .tip-why b { color: var(--football-light); font-weight: 700; }
+
+    .note-box { background: var(--bg3); border-radius: 10px; padding: 14px 18px; font-size: 13px; color: var(--text2); line-height: 1.8; margin-top: 8px; }
+
+    .cta { background: linear-gradient(135deg, rgba(22,163,74,0.15), rgba(22,163,74,0.05)); border: 1px solid rgba(22,163,74,0.35); border-radius: 14px; padding: 22px 24px; margin-top: 40px; }
+    .cta-title { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .cta-desc { font-size: 13px; color: var(--text2); line-height: 1.8; margin-bottom: 14px; }
+    .cta-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+    .cta-btn { display: inline-block; font-size: 13px; font-weight: 700; padding: 9px 18px; border-radius: 8px; text-decoration: none; }
+    .cta-primary { background: var(--football); color: #000; }
+    .cta-ghost { background: var(--bg2); color: var(--text); border: 1px solid var(--border); }
+
+    .disclaimer { font-size: 12px; color: var(--text3); line-height: 1.8; margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border); }
+
+    footer { border-top: 1px solid var(--border); padding: 30px 2rem; text-align: center; color: var(--text3); font-size: 12px; }
+    footer a { color: var(--text2); text-decoration: none; margin: 0 8px; }
+    footer a:hover { color: var(--football-light); }
+    @media (max-width: 768px) { nav { padding: 0 1rem; } .content { padding: 80px 1rem 40px; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <span class="en">SORARE ORIGIN</span>
+    <span class="ja">ソラレ オリジン</span>
+  </a>
+  <a href="football.html" class="nav-back">← Football解説に戻る</a>
+</nav>
+
+<div class="content">
+  <div class="page-badge">SORARE FOOTBALL 攻略</div>
+  <div class="page-title">Sorare Football 攻略ガイド<br>編成・スコア・市場戦略</div>
+  <div class="page-lead">
+    Sorare Footballで安定して勝つ鍵は、派手なゴールよりも「確実に出場する選手を、正しい枠とキャプテンで並べる」こと。ここでは初心者〜中級者が今日から使える編成・スコア・市場・失敗回避の4つの攻略を、根拠つきでまとめました。
+  </div>
+
+  <div class="toc">
+    <div class="toc-title">目次</div>
+    <ol>
+      <li><a href="#s1">GW編成・選手選びの考え方</a></li>
+      <li><a href="#s2">スコアを最大化するコツ</a></li>
+      <li><a href="#s3">カード購入・市場戦略</a></li>
+      <li><a href="#s4">初心者がやりがちな失敗</a></li>
+    </ol>
+  </div>
+
+  <!-- 1 -->
+  <div class="section" id="s1">
+    <div class="section-num">STRATEGY 01</div>
+    <h2>GW編成・選手選びの考え方</h2>
+    <p>ラインナップは GK・DF・MF・FW・Extra の5枚。まず徹底したいのは「出場しない選手（DNP＝0点）を絶対に入れない」ことです。1人でも欠けるとチーム全体の勝機が大きく下がります。</p>
+
+    <div class="tip">
+      <div class="tip-head">L5 / L15の出場率で「確実に出る選手」を選ぶ</div>
+      <div class="tip-body">選手ページの<strong>直近5試合(L5)・15試合(L15)の出場率</strong>を確認し、100%に近い選手を優先。平均スコアの目安は<strong>55以上</strong>です。
+        <span class="tip-why"><b>なぜ？</b> Sorareは実際に出場して初めてスコアが付くため、爆発力より「確実に出る」ことが土台になります。</span>
+      </div>
+    </div>
+
+    <div class="tip">
+      <div class="tip-head">締切ギリギリまで待って確定する</div>
+      <div class="tip-body">現在は<strong>各試合のキックオフ直前まで</strong>入れ替え可能（フレキシブル・デッドライン）。公式の予測スタメンやSorareInsideの先発情報を見てから確定させましょう。
+        <span class="tip-why"><b>コツ</b> 早く組みすぎず、直前のスタメン発表・負傷情報に合わせて最適化するのが差になります。</span>
+      </div>
+    </div>
+
+    <div class="tip">
+      <div class="tip-head">キャプテンは「爆発力のあるFW/攻撃的MF」</div>
+      <div class="tip-body">キャプテンにはコンペにより<strong>+20〜50%</strong>のボーナス。1ゴールでレベル1（最低60点）が保証されるDS型の主力を指名するのが定石です。</div>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="section" id="s2">
+    <div class="section-num">STRATEGY 02</div>
+    <h2>スコアを最大化するコツ</h2>
+
+    <div class="tip">
+      <div class="tip-head">守備スタック（GK＋同一クラブDF）で無失点を刈り取る</div>
+      <div class="tip-body">同じチームの<strong>GKとDFをセット</strong>で起用。無失点(クリーンシート)ならDFに+10点、GKのスコアも大きく伸びます。
+        <span class="tip-why"><b>狙い目</b> 格下相手・守備的な試合のDFを選ぶと、ボーナスが重なって一気に高得点になります。</span>
+      </div>
+    </div>
+
+    <div class="tip">
+      <div class="tip-head">DFのダブルダブル（+4点）を狙う</div>
+      <div class="tip-body">インターセプト・タックル成功・ネットデュエルのうち<strong>2項目で各2回以上</strong>で+4点。3項目すべてで+6点、各3回以上で+12点。
+        <span class="tip-why"><b>コツ</b> 守備機会が多くなる「格上との対戦」「守備的なDF」ほど達成しやすくなります。</span>
+      </div>
+    </div>
+
+    <div class="tip">
+      <div class="tip-head">Extra枠には安定型のMFを置く</div>
+      <div class="tip-body">ポゼッションの高いクラブの司令塔型MFは、ゴールがなくてもパス精度などのAASで<strong>毎試合50〜60点台</strong>を安定して稼ぎます。
+        <span class="tip-why"><b>補足</b> 途中出場の選手も現在は35点スタートに統一され、「スーパーサブ」の価値も上がっています。</span>
+      </div>
+    </div>
+
+    <div class="note-box">⚠️ ビッグクラブ（マンC・レアル等）は選手層が厚くターンオーバーで急に欠場するリスクが高め。確実にフル出場する中堅クラブの主力を混ぜると安定します。</div>
+  </div>
+
+  <!-- 3 -->
+  <div class="section" id="s3">
+    <div class="section-num">STRATEGY 03</div>
+    <h2>カード購入・市場戦略</h2>
+
+    <div class="tip">
+      <div class="tip-head">U23の主力に投資する</div>
+      <div class="tip-body">U23限定リーグがあるため、若くてレギュラーを確保している選手は<strong>需要が絶えず価値が維持</strong>されやすいです。</div>
+    </div>
+
+    <div class="tip">
+      <div class="tip-head">ステップアップ移籍の「先回り」</div>
+      <div class="tip-body">Jリーグなどアジア勢が欧州5大リーグへ移籍する<strong>前</strong>に買っておくと、移籍後にカード価値が急騰する狙いが立てられます。
+        <span class="tip-why"><b>視点</b> 英語圏の情報が少ないJリーグは、逆に情報格差を活かせる狙い目です。</span>
+      </div>
+    </div>
+
+    <div class="tip">
+      <div class="tip-head">オフシーズンに買い、開幕前に売る</div>
+      <div class="tip-body">オフは市場の関心が薄れ価格が下がり、開幕直前や好調が続いた時が最も高く売れます。<strong>安く仕込んで高く手放す</strong>のが基本サイクルです。</div>
+    </div>
+
+    <div class="tip">
+      <div class="tip-head">In-Season と Classic を使い分ける</div>
+      <div class="tip-body">現金報酬を狙うなら最新(In-Season)カードが必要ですが高価。安く強いチームを組む・エッセンス周回(PvE)には<strong>Classicカードが狙い目</strong>です。</div>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="section" id="s4">
+    <div class="section-num">STRATEGY 04</div>
+    <h2>初心者がやりがちな失敗</h2>
+
+    <div class="tip">
+      <div class="tip-head">GW中にカードを出品してしまう</div>
+      <div class="tip-body">チームに登録して試合中のカードをマーケットに出品すると、その時点で<strong>チームから無効化されスコア0</strong>に。スコア確定までは出品を取り下げましょう。</div>
+    </div>
+
+    <div class="tip">
+      <div class="tip-head">マネージャーセールでの高値掴み</div>
+      <div class="tip-body">ユーザーが自由に値付けする「Manager Sales」は相場より高いことも。初心者は運営出品で適正価格の<strong>New Card Auctions</strong>から始めるのが安全です。</div>
+    </div>
+
+    <div class="tip">
+      <div class="tip-head">降格・移籍リスクの見落とし</div>
+      <div class="tip-body">所属クラブが未カバーの2部へ降格すると<strong>NG表示でスコアが付かなくなります</strong>（カードは消えず、昇格や移籍で再び有効化）。降格圏の選手の長期保有は要注意です。</div>
+    </div>
+
+    <div class="tip">
+      <div class="tip-head">スター1枚に予算を集中させる</div>
+      <div class="tip-body">高額な1枚に偏り、残りをDNPリスクの高い控えで埋めると、1人の欠場でチームが崩壊。まずは<strong>5人全員が確実に先発する</strong>編成を優先しましょう。</div>
+    </div>
+  </div>
+
+  <div class="cta">
+    <div class="cta-title">🧮 チームスコアを試算してみる</div>
+    <div class="cta-desc">プレイヤースコアとボーナスから、カードスコアと5枚合計を計算できるツールを用意しています。編成前のシミュレーションにどうぞ。</div>
+    <div class="cta-btns">
+      <a class="cta-btn cta-primary" href="football-calculator.html">⚽ チームスコア計算機を使う</a>
+      <a class="cta-btn cta-ghost" href="football.html">Footballルール解説に戻る</a>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    ※ 本ガイドはSorare公式情報や運営者の実プレイ経験をもとにした攻略の一例です。ルール・報酬・市場環境は変動します。最新情報は必ず <a href="https://sorare.com" target="_blank" rel="noopener" style="color:var(--football-light);">sorare.com</a> でご確認ください。NFTカードの売買は価格変動リスクを伴います。投資判断はご自身の責任でお願いします。
+  </div>
+</div>
+
+<footer>
+  <a href="index.html">ホーム</a>
+  <a href="football.html">Football</a>
+  <a href="mlb.html">MLB</a>
+  <a href="nba.html">NBA</a>
+  <a href="privacy.html">プライバシーポリシー</a>
+  <div style="margin-top:12px; color:var(--text3);">© 2025 SORARE ORIGIN — Unofficial Fan Site. Not affiliated with Sorare.</div>
+</footer>
+
+<script>document.addEventListener('contextmenu', e => e.preventDefault());</script>
+</body>
+</html>
