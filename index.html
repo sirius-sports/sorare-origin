@@ -77,6 +77,18 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "SORARE ORIGIN",
+    "alternateName": "ソラレ オリジン",
+    "url": "https://sirius-sports.github.io/sorare-origin/",
+    "description": "Sorareの遊び方・ルール・得点システムをわかりやすく解説する非公式ファンサイト。Football・MLB・NBAの3競技に対応。",
+    "publisher": { "@type": "Organization", "name": "SORARE ORIGIN" },
+    "inLanguage": "ja"
+  }
+  </script>
 
   <style>
     :root {
@@ -89,8 +101,10 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', 'Noto Sans JP', sans-serif; min-height: 100vh; -webkit-user-select: none; -moz-user-select: none; user-select: none; }
 
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,15,30,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); display: flex; align-items: center; padding: 0 2rem; height: 60px; }
-    .nav-logo { display: flex; flex-direction: column; line-height: 1; text-decoration: none; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,15,30,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); display: flex; align-items: center; padding: 0 2rem; height: 60px; gap: 2rem; }
+    .nav-logo { display: flex; flex-direction: column; line-height: 1; text-decoration: none; margin-right: auto; }
+    .nav-link { font-size: 13px; color: var(--text2); text-decoration: none; font-weight: 600; }
+    .nav-link:hover { color: var(--text); }
     .nav-logo .en { font-size: 16px; font-weight: 800; letter-spacing: 3px; color: var(--football-light); }
     .nav-logo .ja { font-size: 9px; letter-spacing: 2px; color: var(--text2); margin-top: 2px; }
 
@@ -150,6 +164,7 @@
 
     @media (max-width: 768px) {
       nav { padding: 0 1rem; }
+      .nav-link { display: none; }
       .hero-title { font-size: 38px; letter-spacing: 4px; }
       .sport-cards { grid-template-columns: 1fr; max-width: 360px; }
       .features-grid { grid-template-columns: 1fr; }
@@ -165,6 +180,10 @@
     <span class="en">SORARE ORIGIN</span>
     <span class="ja">ソラレ オリジン</span>
   </a>
+  <a href="football.html" class="nav-link">Football</a>
+  <a href="mlb.html" class="nav-link">MLB</a>
+  <a href="nba.html" class="nav-link">NBA</a>
+  <a href="glossary.html" class="nav-link">用語集</a>
 </nav>
 
 <div class="hero">
