@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-07-05T22:08:09.040Z",
+  "updatedAt": "2026-07-06T22:20:35.495Z",
   "articles": [
     {
       "sport": "football",
       "url": "https://sorare.com/blog/football/colors-set-summer-camp-squad-rewards-odds-display-improved-lineup-building",
       "title": "Colors Set: Summer Camp, Squad Rewards, Odds Display & Improved Lineup Building",
-      "meta": "2 days ago"
+      "meta": "3 days ago"
     },
     {
       "sport": "mlb",
-      "url": "https://sorare.com/blog/mlb/mlb-double-up-6",
-      "title": "MLB Double Up",
-      "meta": "2 months ago"
+      "url": "https://sorare.com/blog/mlb/%F0%9F%86%95-special-vault-competition",
+      "title": "🆕 Special Vault Competition",
+      "meta": "6 hours ago"
     },
     {
       "sport": "nba",
@@ -23,13 +23,13 @@
       "sport": "football",
       "url": "https://sorare.com/blog/football/%F0%9F%86%95-colors-summer-camp",
       "title": "🆕 Colors Summer Camp",
-      "meta": "11 days ago"
+      "meta": "12 days ago"
     },
     {
       "sport": "mlb",
-      "url": "https://sorare.com/blog/mlb/%F0%9F%86%95-introducing-mlb-rare-duo-mission",
-      "title": "🆕 Introducing MLB Rare Duo Mission",
-      "meta": "3 months ago"
+      "url": "https://sorare.com/blog/mlb/mlb-double-up-6",
+      "title": "MLB Double Up",
+      "meta": "2 months ago"
     }
   ]
 }
