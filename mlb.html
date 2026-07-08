@@ -173,6 +173,33 @@
     .referral-link-btn:hover { opacity: 0.85; }
     .referral-note { font-size: 11px; color: var(--text3); margin-top: 10px; }
 
+    .news-strip { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 10px 0; font-size: 12px; }
+    .news-strip-inner { max-width: 860px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 10px; }
+    .news-strip-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; padding: 2px 8px; border-radius: 4px; white-space: nowrap; background: var(--mlb); color: #fff; }
+    .news-strip-text { color: var(--text2); }
+    .news-strip-date { color: var(--text3); margin-left: auto; white-space: nowrap; }
+
+    .news-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .news-card-header { padding: 14px 18px 10px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--border); }
+    .news-badge { font-size: 10px; font-weight: 700; letter-spacing: 1px; padding: 3px 8px; border-radius: 4px; background: var(--mlb); color: #fff; }
+    .news-card-title { font-size: 14px; font-weight: 700; color: var(--text); }
+    .news-card-date { font-size: 11px; color: var(--text3); margin-left: auto; }
+    .news-card-body { padding: 14px 18px; font-size: 13px; color: var(--text2); line-height: 1.8; }
+    .news-card-body ul { margin: 8px 0 8px 16px; }
+    .news-card-body li { margin-bottom: 4px; }
+    .news-card-tag { display: inline-block; background: var(--bg3); color: var(--text3); font-size: 11px; padding: 2px 8px; border-radius: 4px; margin: 2px 2px 2px 0; }
+    .news-table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 12px; }
+    .news-table th { text-align: left; padding: 6px 10px; background: var(--bg3); color: var(--text3); font-weight: 600; border-bottom: 1px solid var(--border); }
+    .news-table td { padding: 5px 10px; border-bottom: 1px solid var(--border); color: var(--text2); }
+    .news-table tr:last-child td { border-bottom: none; }
+    .news-tables-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 8px 0; }
+    .news-tables-grid .news-table-wrap { background: var(--bg3); border-radius: 8px; padding: 10px; }
+    .news-tables-grid .news-table-label { font-size: 11px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .news-tables-grid .news-table { font-size: 11px; }
+    .news-tables-grid .news-table th { padding: 4px 6px; font-size: 10px; }
+    .news-tables-grid .news-table td { padding: 3px 6px; font-size: 11px; }
+    @media (max-width: 600px) { .news-tables-grid { grid-template-columns: 1fr; } }
+
     .note-section-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 16px; }
     .note-profile-link { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 8px; background: #41c9b4; color: #0a0f1e; font-weight: 700; font-size: 14px; text-decoration: none; margin-top: 12px; transition: opacity 0.2s; }
     .note-profile-link:hover { opacity: 0.85; }
@@ -239,7 +266,100 @@
     </div>
   </div>
 
+  <div class="news-strip">
+    <div class="news-strip-inner">
+      <span class="news-strip-label">NEWS</span>
+      <span class="news-strip-text">🆕 Special Vault Competition — Vault Lv3以上限定の特別大会がGW35（7/10〜13）に開催。最大20,000エッセンス。</span>
+      <span class="news-strip-date">2026.7.6</span>
+    </div>
+  </div>
+
   <div class="content">
+
+    <div class="section">
+      <div class="section-title">LATEST NEWS</div>
+      <div class="section-heading">最新イベント情報</div>
+      <div class="news-card">
+        <div class="news-card-header">
+          <span class="news-badge">MLB</span>
+          <span class="news-card-title">🆕 Special Vault Competition</span>
+          <span class="news-card-date">2026.7.6</span>
+        </div>
+        <div class="news-card-body">
+          <p>Vaultのレベルを上げたマネージャー限定の<strong>特別大会</strong>が登場。<strong>GW35（7月10日〜13日）</strong>に開催されます。</p>
+          <p>Limited / Rare / Super Rareの3リーダーボードで競い、<strong>Vault Level 3以上</strong>のマネージャーのみ参加可能です。UniqueカードはSuper Rareリーダーボードにエントリーできます。</p>
+
+          <p><strong>📋 ルール</strong></p>
+          <ul>
+            <li>全シーズンカード使用可</li>
+            <li>マルチエントリー不可（1ラインナップのみ）</li>
+            <li>New Season / XP / コレクションボーナス適用</li>
+          </ul>
+
+          <p><strong>🏆 報酬一覧</strong></p>
+          <div class="news-tables-grid">
+            <div class="news-table-wrap">
+              <div class="news-table-label">Limited</div>
+              <table class="news-table">
+                <tr><th>順位</th><th>Essence</th></tr>
+                <tr><td>1位</td><td><strong>20,000</strong></td></tr>
+                <tr><td>2位</td><td>15,000</td></tr>
+                <tr><td>3位</td><td>10,000</td></tr>
+                <tr><td>4位</td><td>7,000</td></tr>
+                <tr><td>5位</td><td>6,000</td></tr>
+                <tr><td>6〜10</td><td>5,000</td></tr>
+                <tr><td>11〜20</td><td>4,000</td></tr>
+                <tr><td>21〜50</td><td>3,000</td></tr>
+                <tr><td>51〜100</td><td>2,000</td></tr>
+                <tr><td>101〜200</td><td>1,000</td></tr>
+              </table>
+            </div>
+            <div class="news-table-wrap">
+              <div class="news-table-label">Rare</div>
+              <table class="news-table">
+                <tr><th>順位</th><th>Essence</th></tr>
+                <tr><td>1位</td><td><strong>20,000</strong></td></tr>
+                <tr><td>2位</td><td>15,000</td></tr>
+                <tr><td>3位</td><td>10,000</td></tr>
+                <tr><td>4位</td><td>7,000</td></tr>
+                <tr><td>5位</td><td>5,000</td></tr>
+                <tr><td>6〜10</td><td>3,000</td></tr>
+                <tr><td>11〜20</td><td>2,000</td></tr>
+                <tr><td>21〜50</td><td>1,000</td></tr>
+              </table>
+            </div>
+            <div class="news-table-wrap">
+              <div class="news-table-label">Super Rare</div>
+              <table class="news-table">
+                <tr><th>順位</th><th>Essence</th></tr>
+                <tr><td>1位</td><td><strong>10,000</strong></td></tr>
+                <tr><td>2位</td><td>7,000</td></tr>
+                <tr><td>3位</td><td>5,000</td></tr>
+                <tr><td>4位</td><td>4,000</td></tr>
+                <tr><td>5位</td><td>3,000</td></tr>
+                <tr><td>6〜10</td><td>2,000</td></tr>
+                <tr><td>11〜15</td><td>1,000</td></tr>
+              </table>
+            </div>
+          </div>
+
+          <p><strong>📊 現在の参加資格者数</strong></p>
+          <ul>
+            <li>Limited: <strong>275名</strong></li>
+            <li>Rare: <strong>54名</strong></li>
+            <li>Super Rare: <strong>24名</strong></li>
+          </ul>
+          <p>まだ数日間あります。カードをシールして資格を獲得しましょう。</p>
+
+          <div style="margin-top:12px">
+            <span class="news-card-tag">Vault Competition</span>
+            <span class="news-card-tag">エッセンス</span>
+            <span class="news-card-tag">GW35</span>
+            <span class="news-card-tag">Vault Lv3</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="section">
       <div class="section-title">CONTENTS</div>
