@@ -1,7 +1,11 @@
 User-agent: *
 Allow: /
 
-# AIクローラーによる学習利用の拒否
+# Google 検索の巡回を明示的に許可
+User-agent: Googlebot
+Allow: /
+
+# AIクローラーによる学習利用の拒否（Google検索の巡回には影響しません）
 User-agent: GPTBot
 Disallow: /
 
