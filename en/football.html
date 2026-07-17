@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJ5551CK7J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BJ5551CK7J');
+  </script>
+  <title>Sorare Football Complete Guide | SORARE ORIGIN</title>
+
+  <meta name="description" content="Complete guide to Sorare Football: how to play, scoring system, competition types, card rarities, Essence & Craft, and the Vault system. Unofficial fan site.">
+  <meta name="keywords" content="Sorare,Football,Scoring System,Game Week,Cards,Rarity,Essence,Vault,Fantasy Sports,NFT">
+  <meta name="author" content="SORARE ORIGIN">
+  <link rel="canonical" href="https://sirius-sports.github.io/sorare-origin/en/football.html">
+  <link rel="alternate" hreflang="ja" href="https://sirius-sports.github.io/sorare-origin/football.html">
+  <link rel="alternate" hreflang="en" href="https://sirius-sports.github.io/sorare-origin/en/football.html">
+  <link rel="icon" href="../football.jpg" type="image/jpeg">
+  <link rel="preload" as="image" href="../football.jpg">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://sirius-sports.github.io/sorare-origin/en/football.html">
+  <meta property="og:title" content="Sorare Football Complete Guide | SORARE ORIGIN">
+  <meta property="og:description" content="Complete guide to Sorare Football: scoring, competitions, and card rarities. Unofficial fan site.">
+  <meta property="og:site_name" content="SORARE ORIGIN">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://sirius-sports.github.io/sorare-origin/football.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sorare Football Complete Guide | SORARE ORIGIN">
+  <meta name="twitter:description" content="Complete guide to Sorare Football: scoring, competitions, and card rarities.">
+  <meta name="twitter:image" content="https://sirius-sports.github.io/sorare-origin/football.jpg">
+
+  <meta name="google-site-verification" content="5NElN2a-xXTVxAKe9zvPW_SGiZ4uu0lEVxKVDYXuw9s" />
+  <meta name="robots" content="index, follow, noai, noimageai">
+  <link rel="sitemap" type="application/xml" href="https://sirius-sports.github.io/sorare-origin/sitemap.xml">
+
+  <!-- Structured Data (FAQ) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": "en",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the Sorare Football scoring system work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Player Scores range from 0 to 100 points. Players start at Level 0 (35 pts) and level up with positive stats like goals, assists, and penalties won, or level down with negative stats like red cards and own goals. Card Score = Player Score x Bonus Multiplier, and the sum of all 5 cards becomes your Team Score."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many cards do you need for a Sorare Football team?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You build a team with 5 cards: GK, DEF, MID, FWD + 1 Flex slot. You can start with free Common cards."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if a player plays two matches in the same Game Week in Sorare Football?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In Football, even if a player plays two matches in a Game Week, only one match counts — and it's the first match, not the higher score. Checking schedules carefully is important."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are Essence and Craft?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Essence is a material earned through competitions and missions. By spending 1,000 Essence, you can draw 10 cards and select 1 through the 'Craft' system to create a Pro card."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data (Breadcrumb) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sirius-sports.github.io/sorare-origin/en/" },
+      { "@type": "ListItem", "position": 2, "name": "Sorare Football", "item": "https://sirius-sports.github.io/sorare-origin/en/football.html" }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0a0f1e;
+      --bg2: #111827;
+      --bg3: #1e293b;
+      --text: #f1f5f9;
+      --text2: #94a3b8;
+      --text3: #475569;
+      --border: #1e293b;
+      --football: #16a34a;
+      --football-dark: #14532d;
+      --football-light: #4ade80;
+      --mlb: #1d4ed8;
+      --mlb-light: #60a5fa;
+      --nba: #ea580c;
+      --nba-light: #fb923c;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', 'Noto Sans JP', sans-serif; min-height: 100vh; -webkit-user-select: none; -moz-user-select: none; user-select: none; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,15,30,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); display: flex; align-items: center; padding: 0 2rem; height: 60px; gap: 2rem; }
+    .nav-logo { display: flex; flex-direction: column; line-height: 1; margin-right: auto; text-decoration: none; }
+    .nav-logo .en { font-size: 16px; font-weight: 800; letter-spacing: 3px; color: var(--football); }
+    .nav-logo .sub { font-size: 9px; letter-spacing: 2px; color: var(--text2); margin-top: 2px; }
+    .nav-tabs { display: flex; gap: 4px; }
+    .nav-tab { padding: 6px 20px; border-radius: 6px; border: none; background: transparent; color: var(--text2); font-size: 13px; font-weight: 600; cursor: pointer; letter-spacing: 1px; transition: all 0.2s; text-decoration: none; display: inline-block; }
+    .nav-tab:hover { color: var(--text); background: var(--bg3); }
+    .nav-tab.active-football { background: var(--football); color: #fff; }
+    .nav-tab.active-mlb { background: var(--mlb); color: #fff; }
+    .nav-tab.active-nba { background: var(--nba); color: #fff; }
+    .nav-lang { padding: 6px 14px; border-radius: 6px; color: var(--text2); font-size: 13px; font-weight: 600; text-decoration: none; transition: all 0.2s; white-space: nowrap; }
+    .nav-lang:hover { color: var(--text); background: var(--bg3); }
+
+    .page { padding-top: 60px; }
+    .hero { position: relative; height: 520px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    .hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; filter: blur(3px) brightness(0.5); transform: scale(1.05); background-image: url('../football.jpg'); }
+    .hero-content { position: relative; text-align: center; z-index: 1; }
+    .hero-sport-badge { display: inline-block; padding: 4px 16px; border-radius: 20px; font-size: 11px; font-weight: 700; letter-spacing: 3px; margin-bottom: 16px; background: var(--football); }
+    .hero-title { font-size: 56px; font-weight: 900; letter-spacing: 6px; line-height: 1; margin-bottom: 8px; color: var(--football-light); }
+    .hero-subtitle { font-size: 14px; letter-spacing: 4px; color: var(--text2); margin-bottom: 10px; }
+    .hero-unofficial { font-size: 22px; letter-spacing: 3px; color: var(--text2); margin-bottom: 14px; opacity: 0.8; font-weight: 700; text-align: center; }
+    .hero-toc { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 10px; margin: 10px 0 14px; }
+    .hero-toc a { font-size: 11px; letter-spacing: 1px; color: rgba(255,255,255,0.55); text-decoration: none; border: 1px solid rgba(255,255,255,0.15); padding: 3px 10px; border-radius: 20px; transition: all 0.2s; }
+    .hero-toc a:hover { color: var(--football); border-color: var(--football); }
+    .hero-sport-name { font-size: 20px; font-weight: 800; letter-spacing: 4px; color: #fff; margin-bottom: 20px; opacity: 0.85; }
+    .hero-desc { font-size: 15px; color: #cbd5e1; max-width: 520px; line-height: 1.8; }
+
+    .news-strip { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 10px 0; font-size: 12px; }
+    .news-strip-inner { max-width: 860px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 10px; }
+    .news-strip-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; padding: 2px 8px; border-radius: 4px; white-space: nowrap; background: var(--football); color: #000; }
+    .news-strip-text { color: var(--text2); }
+    .news-strip-date { color: var(--text3); margin-left: auto; white-space: nowrap; }
+
+    .content { max-width: 900px; margin: 0 auto; padding: 60px 2rem; }
+    .section { margin-bottom: 60px; }
+    .section-title { font-size: 11px; font-weight: 700; letter-spacing: 3px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid var(--border); color: var(--football-light); border-color: var(--football); }
+    .section-heading { font-size: 22px; font-weight: 700; margin-bottom: 16px; }
+    .section-body { color: var(--text2); line-height: 1.9; font-size: 14px; }
+
+    .toc-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+    @media (max-width: 600px) { .toc-list { grid-template-columns: 1fr; } }
+    .toc-list li a { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 8px; background: var(--bg2); color: var(--text2); text-decoration: none; font-size: 13px; transition: all 0.18s; border: 1px solid var(--border); }
+    .toc-list li a:hover { color: var(--football); border-color: var(--football); background: rgba(22,163,74,0.08); }
+    .toc-list li a::before { content: "\203A"; font-size: 16px; opacity: 0.5; }
+
+    .flow { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+    .flow-item { display: flex; align-items: flex-start; gap: 16px; background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; }
+    .flow-num { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; flex-shrink: 0; background: var(--football); }
+    .flow-text { font-size: 14px; color: var(--text2); line-height: 1.7; }
+    .flow-text strong { color: var(--text); }
+
+    .gw-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 20px 24px; margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .gw-item { background: var(--bg3); border-radius: 8px; padding: 14px 18px; }
+    .gw-label { font-size: 10px; letter-spacing: 2px; font-weight: 700; margin-bottom: 6px; color: var(--football-light); }
+    .gw-days { font-size: 18px; font-weight: 800; margin-bottom: 2px; }
+    .gw-sub { font-size: 12px; color: var(--text2); }
+
+    .cards-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 20px; }
+    .card-item { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 16px 12px; text-align: center; }
+    .card-rarity { font-size: 10px; font-weight: 700; letter-spacing: 1px; margin-bottom: 8px; }
+    .card-count { font-size: 18px; font-weight: 800; margin-bottom: 4px; }
+    .card-desc { font-size: 11px; color: var(--text2); line-height: 1.5; }
+    .rarity-common { color: #94a3b8; }
+    .rarity-limited { color: #a78bfa; }
+    .rarity-rare { color: #60a5fa; }
+    .rarity-sr { color: #f59e0b; }
+    .rarity-unique { color: #f43f5e; }
+
+    .table-wrap { overflow-x: auto; margin-top: 20px; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th { padding: 10px 16px; text-align: left; font-size: 10px; letter-spacing: 1px; color: var(--text2); border-bottom: 1px solid var(--border); }
+    td { padding: 12px 16px; border-bottom: 1px solid var(--border); color: var(--text2); }
+    td:first-child { color: var(--text); font-weight: 500; }
+    td.plus { color: #4ade80; font-weight: 700; }
+    td.minus { color: #f87171; font-weight: 700; }
+    td.big { color: #fbbf24; font-weight: 700; }
+    tr:hover td { background: var(--bg2); }
+    .table-group-header td { background: var(--bg3); color: var(--text2); font-size: 10px; letter-spacing: 2px; font-weight: 700; padding: 8px 16px; }
+
+    .note-box { background: var(--bg2); border-left: 3px solid var(--football); border-radius: 0 8px 8px 0; padding: 14px 18px; margin-top: 16px; font-size: 13px; color: var(--text2); line-height: 1.7; }
+
+    .formula-box { background: var(--bg3); border-radius: 10px; padding: 20px 24px; margin: 20px 0; font-family: monospace; font-size: 13px; color: var(--text2); line-height: 2; }
+    .formula-box span { color: var(--text); font-weight: 700; }
+
+    .news-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .news-card-header { padding: 14px 18px 10px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--border); }
+    .news-badge { font-size: 10px; font-weight: 700; letter-spacing: 1px; padding: 3px 8px; border-radius: 4px; background: var(--football); color: #000; }
+    .news-card-title { font-size: 14px; font-weight: 700; color: var(--text); }
+    .news-card-date { font-size: 11px; color: var(--text3); margin-left: auto; }
+    .news-card-body { padding: 14px 18px; font-size: 13px; color: var(--text2); line-height: 1.8; }
+    .news-card-body ul { margin: 8px 0 8px 16px; }
+    .news-card-body li { margin-bottom: 4px; }
+    .news-card-tag { display: inline-block; background: var(--bg3); color: var(--text3); font-size: 11px; padding: 2px 8px; border-radius: 4px; margin: 2px 2px 2px 0; }
+
+    .referral-box { background: linear-gradient(135deg, rgba(22,163,74,0.12), rgba(22,163,74,0.04)); border: 1px solid rgba(22,163,74,0.35); border-radius: 12px; padding: 18px 20px; margin-top: 12px; }
+    .referral-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .referral-desc { font-size: 13px; color: var(--text2); line-height: 1.7; margin-bottom: 12px; }
+    .referral-steps { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+    .referral-step { display: flex; align-items: flex-start; gap: 10px; font-size: 12px; color: var(--text2); line-height: 1.5; }
+    .referral-step-num { min-width: 20px; height: 20px; border-radius: 50%; background: var(--football); color: #000; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+    .referral-link-btn { display: inline-block; padding: 9px 20px; border-radius: 8px; font-size: 13px; font-weight: 700; text-decoration: none; background: var(--football); color: #000; transition: opacity 0.2s; }
+    .referral-link-btn:hover { opacity: 0.85; }
+    .referral-note { font-size: 11px; color: var(--text3); margin-top: 10px; }
+
+    .note-section-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+    .note-profile-link { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 8px; background: #41c9b4; color: #0a0f1e; font-weight: 700; font-size: 14px; text-decoration: none; margin-top: 12px; transition: opacity 0.2s; }
+    .note-profile-link:hover { opacity: 0.85; }
+    .note-articles { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+    .note-article-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: var(--bg3); border-radius: 8px; border: 1px solid var(--border); text-decoration: none; color: var(--text); font-size: 13px; transition: border-color 0.18s; gap: 12px; }
+    .note-article-item:hover { border-color: #41c9b4; color: #41c9b4; }
+    .note-article-date { font-size: 11px; color: var(--text3); white-space: nowrap; }
+
+    .tools-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+    .tool-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 20px; text-decoration: none; display: block; transition: all 0.2s; }
+    .tool-card:hover { border-color: var(--football); transform: translateY(-2px); }
+    .tool-name { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .tool-desc { font-size: 12px; color: var(--text2); line-height: 1.6; }
+
+    footer { border-top: 1px solid var(--border); padding: 40px 2rem 30px; text-align: center; color: var(--text2); font-size: 12px; }
+    .footer-title { font-size: 14px; font-weight: 700; letter-spacing: 2px; color: var(--text); margin-bottom: 20px; }
+    .footer-copy { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--text3); font-size: 11px; }
+
+    @media (max-width: 768px) {
+      nav { flex-direction: column; height: auto; padding: 10px 1rem; gap: 8px; }
+      .nav-logo { margin-right: 0; }
+      .nav-tabs { width: 100%; justify-content: center; }
+      .nav-tab { flex: 1; text-align: center; padding: 6px 8px; font-size: 12px; }
+      .page { padding-top: 100px; }
+      .hero { height: 360px; padding: 0 1rem; }
+      .hero-title { font-size: 32px; letter-spacing: 3px; }
+      .content { padding: 40px 1rem; }
+      .cards-grid { grid-template-columns: repeat(3, 1fr); }
+      .tools-grid { grid-template-columns: 1fr; }
+      .gw-box { grid-template-columns: 1fr; }
+      table { font-size: 12px; }
+      th, td { padding: 10px; }
+    }
+    @media (max-width: 400px) {
+      .cards-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-title { font-size: 26px; }
+      .nav-tab { font-size: 11px; padding: 5px 4px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <span class="en">SORARE ORIGIN</span>
+    <span class="sub">Unofficial Fan Guide</span>
+  </a>
+  <div class="nav-tabs">
+    <a href="football.html" class="nav-tab active-football">⚽ FOOTBALL</a>
+    <a href="mlb.html" class="nav-tab">⚾ MLB</a>
+    <a href="nba.html" class="nav-tab">🏀 NBA</a>
+  </div>
+  <a href="../football.html" class="nav-lang">🇯🇵 日本語</a>
+</nav>
+
+<div class="page football">
+
+  <div class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-unofficial">Unofficial Fan Site</div>
+      <div class="hero-title">SORARE ORIGIN</div>
+      <div class="hero-subtitle">COMPLETE FOOTBALL GUIDE</div>
+      <div class="hero-sport-name">SORARE FOOTBALL</div>
+      <div class="hero-toc">
+        <a href="#f-what">What is Sorare</a>
+        <a href="#f-howto">How to Play</a>
+        <a href="#f-score">Scoring</a>
+        <a href="#f-comp">Competitions</a>
+        <a href="#f-card">Card Rarity</a>
+        <a href="#f-essence">Essence & Craft</a>
+        <a href="#f-vault">Vault</a>
+      </div>
+      <div class="hero-desc">
+        Collect digital cards of real football players from around the world<br>
+        and compete in a fantasy sports game powered by NFT technology.
+      </div>
+    </div>
+  </div>
+
+  <div class="news-strip">
+    <div class="news-strip-inner">
+      <span class="news-strip-label">NEWS</span>
+      <span class="news-strip-text">🆕 Colors Summer Camp is live — Color cards remain playable through September. Progress rewards now focus on Essence & Gems.</span>
+      <span class="news-strip-date">2026.6.24</span>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <div class="section-title">LATEST NEWS</div>
+      <div class="section-heading">Latest Event Info</div>
+      <div class="news-card">
+        <div class="news-card-header">
+          <span class="news-badge">FOOTBALL</span>
+          <span class="news-card-title">🆕 Colors Summer Camp</span>
+          <span class="news-card-date">2026.6.24</span>
+        </div>
+        <div class="news-card-body">
+          <p>Even after the international match season ends, <strong>Color cards remain playable through September</strong>. You can participate in global contests throughout the summer.</p>
+          <p><strong>📦 Eligible Cards (Still Playable)</strong></p>
+          <ul>
+            <li>Cards from MLS, Premier League, La Liga, Bundesliga, and Ligue 1</li>
+            <li>Primary Colors cards of transferred players remain usable</li>
+          </ul>
+          <p><strong>🎁 Summer Camp Progress Rewards</strong></p>
+          <ul>
+            <li>🧪 <strong>Essence</strong> and 💎 <strong>Gems</strong> are the main rewards (cash rewards return in September)</li>
+            <li>Gems earned carry over to the next season</li>
+            <li>New progress boards and collection missions also updated</li>
+          </ul>
+          <p><strong>📅 What's Next</strong><br>In September, <strong>cash rewards and new season cards return</strong> alongside the next set release. Until then, stock up on Essence and Gems to prepare for the next season.</p>
+          <div style="margin-top:12px">
+            <span class="news-card-tag">FOOTBALL SET</span>
+            <span class="news-card-tag">SUMMER CAMP</span>
+            <span class="news-card-tag">ESSENCE</span>
+            <span class="news-card-tag">GEMS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">CONTENTS</div>
+      <div class="section-heading">Table of Contents</div>
+      <ul class="toc-list">
+        <li><a href="#f-what">What is Sorare?</a></li>
+        <li><a href="#f-howto">How to Play</a></li>
+        <li><a href="#f-gw">Game Week (GW) System</a></li>
+        <li><a href="#f-card">Card Rarity</a></li>
+        <li><a href="#f-score">Scoring System</a></li>
+        <li><a href="#f-comp">Competition Types</a></li>
+        <li><a href="#f-div">Divisions & Promotion/Relegation</a></li>
+        <li><a href="#f-mission">Mission Types</a></li>
+        <li><a href="#f-essence">Essence & Craft</a></li>
+        <li><a href="#f-vault">Vault System</a></li>
+        <li><a href="#f-ngdnp">NG & DNP Explained</a></li>
+        <li><a href="#f-referral">Sign Up with Benefits</a></li>
+        <li><a href="#f-tools">Analysis Tools</a></li>
+      </ul>
+    </div>
+
+    <div class="section" id="f-what">
+      <div class="section-title">WHAT IS SORARE</div>
+      <div class="section-heading">What is Sorare?</div>
+      <div class="section-body">Sorare is a fantasy sports game where you collect digital cards of real players, build teams, and compete based on actual match results. Cards are NFTs built on blockchain technology and can be bought, sold, and traded. The game covers three sports — Football, MLB, and NBA — with official partnerships with hundreds of clubs worldwide.</div>
+    </div>
+
+    <div class="section" id="f-howto">
+      <div class="section-title">HOW TO PLAY</div>
+      <div class="section-heading">How to Play</div>
+      <div class="flow">
+        <div class="flow-item"><div class="flow-num">1</div><div class="flow-text"><strong>Get Player Cards</strong><br>Start with free Common cards. Build your collection through market purchases and tournament rewards.</div></div>
+        <div class="flow-item"><div class="flow-num">2</div><div class="flow-text"><strong>Build a Team of 5 Cards</strong><br>Create a team with GK + DEF + MID + FWD + 1 Flex slot (any position).</div></div>
+        <div class="flow-item"><div class="flow-num">3</div><div class="flow-text"><strong>Enter a Game Week (GW) Tournament</strong><br>Participate in twice-weekly GWs. Check player schedules and matchups carefully before building your lineup.</div></div>
+        <div class="flow-item"><div class="flow-num">4</div><div class="flow-text"><strong>Scores Based on Real Match Results</strong><br>Your players' actual performances (goals, assists, ratings, etc.) are reflected in their scores.</div></div>
+        <div class="flow-item"><div class="flow-num">5</div><div class="flow-text"><strong>Earn Rewards for Top Finishes</strong><br>Win cards and prizes based on your ranking.</div></div>
+      </div>
+    </div>
+
+    <div class="section" id="f-gw">
+      <div class="section-title">GAME WEEK</div>
+      <div class="section-heading">Game Week (GW) System</div>
+      <div class="section-body">Across all three sports, each week is split into two Game Weeks (first half and second half).</div>
+      <div class="gw-box">
+        <div class="gw-item"><div class="gw-label">FIRST HALF</div><div class="gw-days">Mon - Thu</div><div class="gw-sub">4 days</div></div>
+        <div class="gw-item"><div class="gw-label">SECOND HALF</div><div class="gw-days">Fri - Sun</div><div class="gw-sub">3 days</div></div>
+      </div>
+      <div class="note-box">⚠️ In Football, even if a player appears in two matches during a GW, <strong>only one match counts</strong> (the first match, not the higher score). Checking schedules is crucial.</div>
+    </div>
+
+    <div class="section" id="f-card">
+      <div class="section-title">CARD RARITY</div>
+      <div class="section-heading">Card Rarity</div>
+      <div class="cards-grid">
+        <div class="card-item"><div class="card-rarity rarity-common">COMMON</div><div class="card-count" style="color:#94a3b8">∞</div><div class="card-desc">Free<br>No-reward tournaments only</div></div>
+        <div class="card-item"><div class="card-rarity rarity-limited">LIMITED</div><div class="card-count" style="color:#a78bfa">1,000</div><div class="card-desc">Up to<br>1,000 issued</div></div>
+        <div class="card-item"><div class="card-rarity rarity-rare">RARE</div><div class="card-count" style="color:#60a5fa">100</div><div class="card-desc">Up to<br>100 issued</div></div>
+        <div class="card-item"><div class="card-rarity rarity-sr">SUPER RARE</div><div class="card-count" style="color:#f59e0b">10</div><div class="card-desc">Up to<br>10 issued</div></div>
+        <div class="card-item"><div class="card-rarity rarity-unique">UNIQUE</div><div class="card-count" style="color:#f43f5e">1</div><div class="card-desc">Only 1<br>in the world</div></div>
+      </div>
+    </div>
+
+    <div class="section" id="f-score">
+      <div class="section-title">SCORING SYSTEM</div>
+      <div class="section-heading">Scoring System</div>
+      <div class="formula-box">
+        Team Score = <span>Sum of 5 Card Scores</span><br>
+        Card Score = <span>Player Score x Bonus Multiplier</span><br>
+        Player Score = <span>Decisive Score (DS) + All Around Score (AAS)</span>
+      </div>
+      <div class="section-body" style="margin-bottom:16px">Player Scores are calculated on a scale of <strong style="color:var(--text)">0 to 100 points</strong>. Both starters and substitutes begin at Level 0 (35 pts), leveling up with positive stats and leveling down with negative stats.</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Stat</th><th>Abbreviation</th><th>Level Change</th></tr></thead>
+          <tbody>
+            <tr class="table-group-header"><td colspan="3">▲ POSITIVE (Level Up)</td></tr>
+            <tr><td>Goal</td><td>G</td><td class="plus">+1</td></tr>
+            <tr><td>Assist</td><td>A</td><td class="plus">+1</td></tr>
+            <tr><td>Penalty Won</td><td>PW</td><td class="plus">+1</td></tr>
+            <tr class="table-group-header"><td colspan="3">▼ NEGATIVE (Level Down)</td></tr>
+            <tr><td>Red Card</td><td>RC</td><td class="minus">-2</td></tr>
+            <tr><td>Penalty Conceded</td><td>PC</td><td class="minus">-1</td></tr>
+            <tr><td>Own Goal</td><td>OG</td><td class="minus">-1</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-top:24px; margin-bottom:12px; font-size:14px; font-weight:600;">Guaranteed Points by Level</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Level</th><th>Guaranteed Points</th></tr></thead>
+          <tbody>
+            <tr><td>-2 or below</td><td>5 pt</td></tr>
+            <tr><td>-1</td><td>15 pt</td></tr>
+            <tr><td>0 (Start)</td><td>35 pt</td></tr>
+            <tr><td>1</td><td>55 pt</td></tr>
+            <tr><td>2</td><td>70 pt</td></tr>
+            <tr><td>3</td><td>80 pt</td></tr>
+            <tr><td>4</td><td>87 pt</td></tr>
+            <tr><td>5+</td><td class="big">100 pt</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-top:24px; margin-bottom:12px; font-size:14px; font-weight:600;">DEF-Only Bonus (Double-Double)</div>
+      <div class="section-body" style="margin-bottom:12px">Eligible stats: Interceptions / Successful Tackles / Net Duels</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Bonus</th><th>Condition</th><th>Points</th></tr></thead>
+          <tbody>
+            <tr><td>Double-Double</td><td>2+ in each of 2 out of 3 categories</td><td class="plus">+4 pt</td></tr>
+            <tr><td>Triple-Double</td><td>2+ in all 3 categories</td><td class="plus">+6 pt</td></tr>
+            <tr><td>Triple-Triple</td><td>3+ in all 3 categories</td><td class="big">+12 pt</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="margin-top:24px; margin-bottom:12px; font-size:14px; font-weight:600;">Card Bonuses</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Bonus Type</th><th>Details</th></tr></thead>
+          <tbody>
+            <tr><td>Captain</td><td>0% / 20% / 50% (varies by competition)</td></tr>
+            <tr><td>Current Season Card</td><td>+5%</td></tr>
+            <tr><td>Training</td><td>Additional % per card</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box" style="margin-top:16px">Example: Player Score 70 pts x 10% Bonus = Card Score <strong>77 pts</strong></div>
+    </div>
+
+    <div class="section" id="f-comp">
+      <div class="section-title">COMPETITIONS</div>
+      <div class="section-heading">Competition Types</div>
+      <div class="section-body" style="margin-bottom:20px">Sorare Football competitions are divided into three categories: In-Season, Classic, and Daily/PvE.</div>
+      <div style="margin-bottom:12px; font-size:13px; font-weight:700; color:#4ade80; letter-spacing:1px;">── In-Season Competitions (Pro Cards Required)</div>
+      <div class="flow" style="margin-bottom:24px">
+        <div class="flow-item"><div class="flow-num" style="font-size:10px">👑</div><div class="flow-text"><strong>Champion</strong><br>The top-tier competition. Includes dedicated competitions for major leagues like the Premier League and La Liga. Each team is promoted/relegated independently, and you can submit up to <strong>4 teams</strong> per GW.</div></div>
+        <div class="flow-item"><div class="flow-num" style="font-size:10px">🥈</div><div class="flow-text"><strong>Contender</strong><br>The second-tier in-season competition. Less competition makes it easier for mid-level managers to earn rewards. Also covers MLS, J-League, and more.</div></div>
+      </div>
+      <div style="margin-bottom:12px; font-size:13px; font-weight:700; color:#4ade80; letter-spacing:1px;">── Classic Competitions (Past Season Cards Allowed)</div>
+      <div class="flow" style="margin-bottom:24px">
+        <div class="flow-item"><div class="flow-num" style="background:#475569; font-size:10px">⚔️</div><div class="flow-text"><strong>All Star</strong><br>A classic competition where you can use cards from past seasons. Organized by regional groups: Europe, Americas, and Asia.</div></div>
+        <div class="flow-item"><div class="flow-num" style="background:#475569; font-size:10px">🎓</div><div class="flow-text"><strong>U23 (Under-23)</strong><br>Only cards of players aged 23 or under (as of July 1) are eligible. A competition for fans looking to discover young talent.</div></div>
+      </div>
+      <div style="margin-bottom:12px; font-size:13px; font-weight:700; color:#4ade80; letter-spacing:1px;">── PvE & Daily Competitions</div>
+      <div class="flow" style="margin-bottom:24px">
+        <div class="flow-item"><div class="flow-num" style="background:#b45309; font-size:10px">🔥</div><div class="flow-text"><strong>Hot Streak</strong><br>A PvE format — no competing against other players. Beat the target score to earn rewards. 5 difficulty levels, progressing as you succeed. Up to <strong>4 lines</strong> can be entered.</div></div>
+        <div class="flow-item"><div class="flow-num" style="background:#475569; font-size:10px">🏟️</div><div class="flow-text"><strong>Arena</strong><br>A 10-player leaderboard format. No limit on entries. The top 5% qualify for the "Golden Arena" with increased rewards.</div></div>
+      </div>
+      <div class="note-box">💡 <strong>Competitions open to Common cards:</strong> Common Champion and Common Contender only. Pro cards (Limited or higher) unlock competitions with cash and card rewards.</div>
+    </div>
+
+    <div class="section" id="f-div">
+      <div class="section-title">DIVISION SYSTEM</div>
+      <div class="section-heading">Divisions & Promotion/Relegation</div>
+      <div class="section-body" style="margin-bottom:16px">Champion and Contender each have <strong>3 Divisions</strong> (Div 1-3), with promotion and relegation based on GW performance.</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Movement</th><th>Condition</th></tr></thead>
+          <tbody>
+            <tr><td>Div 3 → Div 2</td><td class="plus">Top 30% promoted</td></tr>
+            <tr><td>Div 2 → Div 1</td><td class="plus">Top 15% promoted</td></tr>
+            <tr><td>Div 2 → Div 3</td><td class="minus">Bottom 30% relegated</td></tr>
+            <tr><td>Div 1 → Div 2</td><td class="minus">Bottom 30% relegated</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box" style="margin-top:16px">📌 Each team is promoted/relegated independently. You can manage up to 4 teams across different divisions.</div>
+    </div>
+
+    <div class="section" id="f-mission">
+      <div class="section-title">MISSIONS</div>
+      <div class="section-heading">Mission Types</div>
+      <div class="flow">
+        <div class="flow-item"><div class="flow-num" style="font-size:10px">📅</div><div class="flow-text"><strong>Daily Missions</strong><br>Select up to <strong>3 players</strong> with matches that day. Earn XP (experience points) for decisive actions like goals, assists, and clean sheets. Resets daily at 09:00 CET.</div></div>
+        <div class="flow-item"><div class="flow-num" style="font-size:10px">🎯</div><div class="flow-text"><strong>Game Week Missions (Picker)</strong><br>Complete GW-based objectives such as using players from specific leagues or achieving a collection score. Rewards include XP, Essence, and credits.</div></div>
+      </div>
+    </div>
+
+    <div class="section" id="f-essence">
+      <div class="section-title">ESSENCE & CRAFT</div>
+      <div class="section-heading">Essence & Craft</div>
+      <div class="section-body">Essence is a material earned through competitions and missions. Spend <strong>1,000 Essence</strong> to draw 10 cards and select 1 through the "Craft" system to create a Pro card.</div>
+      <div class="table-wrap" style="margin-top:16px">
+        <table>
+          <thead><tr><th>Draw Type</th><th>Chance</th><th>Details</th></tr></thead>
+          <tbody>
+            <tr><td>Standard Draw</td><td>75%</td><td>Normal card distribution</td></tr>
+            <tr><td>Special T2+</td><td>15%</td><td>All 10 cards are T2 or above</td></tr>
+            <tr><td>Reach for the Stars</td><td>9.9%</td><td>At least 1 T0 card guaranteed</td></tr>
+            <tr><td>Full Star</td><td class="big">0.1%</td><td>All 10 cards are T1 or above</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box" style="margin-top:16px">💡 Card levels increase with XP, boosting the score bonus with each level-up. When a card is sold or transferred, accumulated XP is <strong>reduced by 50%</strong>.</div>
+    </div>
+
+    <div class="section" id="f-vault">
+      <div class="section-title">VAULT SYSTEM</div>
+      <div class="section-heading">Vault System</div>
+      <div class="section-body">Seal cards to earn "Seal Points" and increase your Vault Level. Higher levels add a <strong>Reward Boost</strong> (up to +20%) to competition rewards.</div>
+      <div class="table-wrap" style="margin-top:16px">
+        <table>
+          <thead><tr><th>Vault Level</th><th>Reward Boost</th></tr></thead>
+          <tbody>
+            <tr><td>Lv.1</td><td class="plus">+1%</td></tr>
+            <tr><td>Lv.5</td><td class="plus">+5%</td></tr>
+            <tr><td>Lv.10</td><td class="plus">+10%</td></tr>
+            <tr><td>Lv.20</td><td class="big">+20%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box" style="margin-top:16px">⚠️ Sealed cards <strong>cannot be traded or used in competitions</strong>. Unsealing is limited to 1 card per rarity every 14 days. Boosts do not apply to Arena or Hot Streak.</div>
+    </div>
+
+    <div class="section" id="f-ngdnp">
+      <div class="section-title">NG / DNP</div>
+      <div class="section-heading">NG & DNP Explained</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Term</th><th>Meaning</th><th>Score</th></tr></thead>
+          <tbody>
+            <tr><td><strong>NG</strong> No Game</td><td>Player had no match during the GW (including injuries)</td><td class="minus">0 pts</td></tr>
+            <tr><td><strong>DNP</strong> Did Not Play</td><td>Player's team had a match, but the player did not appear</td><td class="minus">0 pts</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box" style="margin-top:16px">⚠️ If a player appears in 2 matches during the same GW, the <strong>higher match score</strong> is used.</div>
+    </div>
+
+    <div class="section" id="f-referral">
+      <div class="section-title">REFERRAL</div>
+      <div class="section-heading">New to Sorare? Sign Up with Benefits</div>
+      <div class="referral-box">
+        <div class="referral-title">🎁 Sign up through this link and receive up to <a href="https://sorare.com/r/tategami" target="_blank" rel="noopener" style="color:var(--football); text-decoration:underline">$50 in credits (card purchase voucher)</a></div>
+        <div class="referral-desc">Register for Sorare through this site's link and you'll receive up to $50 in credits (card purchase voucher).</div>
+        <div class="referral-steps">
+          <div class="referral-step"><div class="referral-step-num">1</div><div>Sign up via the link and verify your email address and phone number</div></div>
+          <div class="referral-step"><div class="referral-step-num">2</div><div>Purchase 5 cards from the Primary Market (auction or instant buy)</div></div>
+          <div class="referral-step"><div class="referral-step-num">3</div><div>Use those cards to build teams for 2 different Game Weeks (GWs)</div></div>
+        </div>
+        <a class="referral-link-btn" href="https://sorare.com/r/tategami" target="_blank" rel="noopener">→ Sign Up for Sorare</a>
+        <div class="referral-note">You can also register via QR code, available in the Sorare app.</div>
+      </div>
+    </div>
+
+    <div class="section" id="f-note">
+      <div class="section-title">NOTE</div>
+      <div class="section-heading">Read More on note</div>
+      <div class="note-section-box">
+        <div class="section-body">Sorare strategy articles, data analysis, and app showcases published on note.</div>
+        <div class="note-articles" id="note-articles"></div>
+        <a class="note-profile-link" href="https://note.com/sorare_nba/" target="_blank" rel="noopener">✏️ View note Profile</a>
+      </div>
+    </div>
+
+    <div class="section" id="f-tools">
+      <div class="section-title">TOOLS</div>
+      <div class="section-heading">Analysis Tools</div>
+      <div class="tools-grid">
+        <a class="tool-card" href="glossary.html">
+          <div class="tool-name">📖 Sorare Glossary</div>
+          <div class="tool-desc">50+ key terms explained in plain language</div>
+        </a>
+        <a class="tool-card" href="football-strategy.html">
+          <div class="tool-name">📖 Football Strategy Guide</div>
+          <div class="tool-desc">Lineup building, captain picks, defensive stacking, and market strategy.</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">OTHER SPORTS</div>
+      <div class="section-heading">Explore Other Sports</div>
+      <div class="tools-grid">
+        <a class="tool-card" href="mlb.html">
+          <div class="tool-name">⚾ Sorare MLB</div>
+          <div class="tool-desc">MLB scoring system, competitions, and strategy explained.</div>
+        </a>
+        <a class="tool-card" href="nba.html">
+          <div class="tool-name">🏀 Sorare NBA</div>
+          <div class="tool-desc">NBA scoring system and competition types made simple.</div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-title">SORARE ORIGIN</div>
+  <div style="max-width:700px; margin:0 auto 20px; text-align:left; font-size:12px; color:var(--text2); line-height:1.8;">
+    This is an unofficial fan site with no affiliation to Sorare or any sports league. Content is based on Sorare's official help resources but accuracy and timeliness are not guaranteed. Game rules, rewards, and features may change without notice — always check <a href="https://sorare.com" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline">sorare.com</a> for the latest information. NFT card purchases involve price volatility risk; all investment decisions are your own responsibility. Sorare, league logos, player names, and images belong to their respective rights holders. Signing up through referral links on this site may grant credits to the site operator.
+  </div>
+  <div class="footer-copy">
+    <div style="margin-bottom:12px;">
+      <a href="privacy.html" style="color:var(--text2); text-decoration:none;">Privacy Policy</a>
+      &nbsp;|&nbsp;
+      <a href="../football.html" style="color:var(--text2); text-decoration:none;">🇯🇵 Japanese Version</a>
+    </div>
+    © 2025 SORARE ORIGIN — Unofficial Fan Site. Not affiliated with Sorare.<br>
+    <span style="margin-top:6px; display:block">Unauthorized reproduction, copying, or mirroring of this site's content (text, structure, design) is prohibited.</span>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('dragstart', e => e.preventDefault());
+
+  const NOTE_USER = 'sorare_nba';
+  fetch(`https://corsproxy.io/?https://note.com/api/v2/creators/${NOTE_USER}/contents?kind=note&page=1`)
+    .then(r => r.json())
+    .then(data => {
+      const articles = data?.data?.contents;
+      if (!articles || articles.length === 0) throw new Error();
+      const html = articles.slice(0, 5).map(a => {
+        const d = new Date(a.publishAt || a.publish_at || a.created_at);
+        const date = isNaN(d) ? '' : `${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')}`;
+        return `<a class="note-article-item" href="https://note.com/${NOTE_USER}/n/${a.key}" target="_blank" rel="noopener"><span>${a.name}</span><span class="note-article-date">${date}</span></a>`;
+      }).join('');
+      document.getElementById('note-articles').innerHTML = html;
+    })
+    .catch(() => {
+      document.getElementById('note-articles').innerHTML =
+        `<a class="note-article-item" href="https://note.com/sorare_nba/" target="_blank" rel="noopener"><span>Visit note profile →</span></a>`;
+    });
+</script>
+</body>
+</html>

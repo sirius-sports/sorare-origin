@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJ5551CK7J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BJ5551CK7J');
+  </script>
+  <title>Sorare MLB Complete Guide | SORARE ORIGIN</title>
+
+  <meta name="description" content="Complete guide to Sorare MLB: scoring system, competitions, card rarities, and roster building tips. Unofficial fan guide for fantasy baseball on Sorare.">
+  <meta name="keywords" content="Sorare,MLB,Major League Baseball,Shohei Ohtani,scoring system,game week,cards,fantasy sports">
+  <meta name="author" content="SORARE ORIGIN">
+  <link rel="canonical" href="https://sirius-sports.github.io/sorare-origin/en/mlb.html">
+  <link rel="alternate" hreflang="ja" href="https://sirius-sports.github.io/sorare-origin/mlb.html">
+  <link rel="alternate" hreflang="en" href="https://sirius-sports.github.io/sorare-origin/en/mlb.html">
+  <link rel="icon" href="../mlb.jpg" type="image/jpeg">
+  <link rel="preload" as="image" href="../mlb.jpg">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://sirius-sports.github.io/sorare-origin/en/mlb.html">
+  <meta property="og:title" content="Sorare MLB Complete Guide | SORARE ORIGIN">
+  <meta property="og:description" content="Complete guide to Sorare MLB scoring, competitions, and card strategy. Unofficial fan guide.">
+  <meta property="og:site_name" content="SORARE ORIGIN">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://sirius-sports.github.io/sorare-origin/mlb.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sorare MLB Complete Guide | SORARE ORIGIN">
+  <meta name="twitter:description" content="Complete guide to Sorare MLB scoring, competitions, and card strategy.">
+  <meta name="twitter:image" content="https://sirius-sports.github.io/sorare-origin/mlb.jpg">
+
+  <meta name="google-site-verification" content="5NElN2a-xXTVxAKe9zvPW_SGiZ4uu0lEVxKVDYXuw9s" />
+  <meta name="robots" content="index, follow, noai, noimageai">
+  <link rel="sitemap" type="application/xml" href="https://sirius-sports.github.io/sorare-origin/sitemap.xml">
+
+  <!-- Structured Data (FAQ) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does the Sorare MLB scoring system work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sorare MLB uses an action-based scoring system. Batting stats include Home Run +10, Triple +8, Double +5, Stolen Base +5, and more. Pitching stats include Strikeout +2, Win +5, Save +10, No-Hitter +30, and more. All game scores within the Game Week are summed to produce the card's GW score."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many cards are in a Sorare MLB roster?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You build a roster of 7 cards: pitchers + position players. Pay attention to starter, reliever, and closer roles when building your lineup."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is Shohei Ohtani's two-way card scored?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Two-way cards like Ohtani's are scored based on the slot they are placed in. In a pitcher slot, only pitching stats apply. In a batter slot, only batting stats apply."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are NG and DNP in Sorare MLB?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "NG (No Game) means the player had no scheduled game during the GW period. DNP (Did Not Play) means the player's team had a game but they did not appear. Both result in a score of 0. Always check starting lineups and rotation schedules before locking in your roster."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Structured Data (Breadcrumb) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://sirius-sports.github.io/sorare-origin/en/" },
+      { "@type": "ListItem", "position": 2, "name": "Sorare MLB", "item": "https://sirius-sports.github.io/sorare-origin/en/mlb.html" }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #0a0f1e; --bg2: #111827; --bg3: #1e293b;
+      --text: #f1f5f9; --text2: #94a3b8; --text3: #475569; --border: #1e293b;
+      --football: #16a34a; --football-light: #4ade80;
+      --mlb: #1d4ed8; --mlb-dark: #1e3a8a; --mlb-light: #60a5fa;
+      --nba: #ea580c; --nba-light: #fb923c;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', 'Noto Sans JP', sans-serif; min-height: 100vh; -webkit-user-select: none; -moz-user-select: none; user-select: none; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,15,30,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); display: flex; align-items: center; padding: 0 2rem; height: 60px; gap: 2rem; }
+    .nav-logo { display: flex; flex-direction: column; line-height: 1; margin-right: auto; text-decoration: none; }
+    .nav-logo .en { font-size: 16px; font-weight: 800; letter-spacing: 3px; color: var(--mlb-light); }
+    .nav-logo .sub { font-size: 9px; letter-spacing: 2px; color: var(--text2); margin-top: 2px; }
+    .nav-tabs { display: flex; gap: 4px; }
+    .nav-tab { padding: 6px 20px; border-radius: 6px; border: none; background: transparent; color: var(--text2); font-size: 13px; font-weight: 600; cursor: pointer; letter-spacing: 1px; transition: all 0.2s; text-decoration: none; display: inline-block; }
+    .nav-tab:hover { color: var(--text); background: var(--bg3); }
+    .nav-tab.active-mlb { background: var(--mlb); color: #fff; }
+    .nav-lang { padding: 6px 14px; border-radius: 6px; color: var(--text2); font-size: 13px; font-weight: 600; text-decoration: none; transition: all 0.2s; white-space: nowrap; }
+    .nav-lang:hover { color: var(--text); background: var(--bg3); }
+
+    .page { padding-top: 60px; }
+    .hero { position: relative; height: 520px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    .hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; filter: blur(3px) brightness(0.5); transform: scale(1.05); background-image: url('../mlb.jpg'); }
+    .hero-content { position: relative; text-align: center; z-index: 1; }
+    .hero-unofficial { font-size: 22px; letter-spacing: 3px; color: var(--text2); margin-bottom: 14px; opacity: 0.8; font-weight: 700; }
+    .hero-title { font-size: 56px; font-weight: 900; letter-spacing: 6px; line-height: 1; margin-bottom: 8px; color: var(--mlb-light); }
+    .hero-subtitle { font-size: 14px; letter-spacing: 4px; color: var(--text2); margin-bottom: 10px; }
+    .hero-sport-name { font-size: 20px; font-weight: 800; letter-spacing: 4px; color: #fff; margin-bottom: 20px; opacity: 0.85; }
+    .hero-desc { font-size: 15px; color: #cbd5e1; max-width: 520px; line-height: 1.8; }
+
+    .content { max-width: 900px; margin: 0 auto; padding: 60px 2rem; }
+    .section { margin-bottom: 60px; }
+    .section-title { font-size: 11px; font-weight: 700; letter-spacing: 3px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid var(--border); color: var(--mlb-light); border-color: var(--mlb); }
+    .section-heading { font-size: 22px; font-weight: 700; margin-bottom: 16px; }
+    .section-body { color: var(--text2); line-height: 1.9; font-size: 14px; }
+
+    .toc-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
+    @media (max-width: 600px) { .toc-list { grid-template-columns: 1fr; } }
+    .toc-list li a { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-radius: 8px; background: var(--bg2); color: var(--text2); text-decoration: none; font-size: 13px; transition: all 0.18s; border: 1px solid var(--border); }
+    .toc-list li a:hover { color: var(--mlb-light); border-color: var(--mlb-light); background: rgba(29,78,216,0.08); }
+    .toc-list li a::before { content: "\203A"; font-size: 16px; opacity: 0.5; }
+
+    .flow { display: flex; flex-direction: column; gap: 12px; margin-top: 20px; }
+    .flow-item { display: flex; align-items: flex-start; gap: 16px; background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 16px 20px; }
+    .flow-num { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; flex-shrink: 0; background: var(--mlb); color: #fff; }
+    .flow-text { font-size: 14px; color: var(--text2); line-height: 1.7; }
+    .flow-text strong { color: var(--text); }
+
+    .gw-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 20px 24px; margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .gw-item { background: var(--bg3); border-radius: 8px; padding: 14px 18px; }
+    .gw-label { font-size: 10px; letter-spacing: 2px; font-weight: 700; margin-bottom: 6px; color: var(--mlb-light); }
+    .gw-days { font-size: 18px; font-weight: 800; margin-bottom: 2px; }
+    .gw-sub { font-size: 12px; color: var(--text2); }
+
+    .cards-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 20px; }
+    .card-item { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 16px 12px; text-align: center; }
+    .card-rarity { font-size: 10px; font-weight: 700; letter-spacing: 1px; margin-bottom: 8px; }
+    .card-count { font-size: 18px; font-weight: 800; margin-bottom: 4px; }
+    .card-desc { font-size: 11px; color: var(--text2); line-height: 1.5; }
+    .rarity-common { color: #94a3b8; } .rarity-limited { color: #a78bfa; } .rarity-rare { color: #60a5fa; } .rarity-sr { color: #f59e0b; } .rarity-unique { color: #f43f5e; }
+
+    .table-wrap { overflow-x: auto; margin-top: 20px; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th { padding: 10px 16px; text-align: left; font-size: 10px; letter-spacing: 1px; color: var(--text2); border-bottom: 1px solid var(--border); }
+    td { padding: 12px 16px; border-bottom: 1px solid var(--border); color: var(--text2); }
+    td:first-child { color: var(--text); font-weight: 500; }
+    td.plus { color: #4ade80; font-weight: 700; } td.minus { color: #f87171; font-weight: 700; } td.big { color: #fbbf24; font-weight: 700; }
+    tr:hover td { background: var(--bg2); }
+    .table-group-header td { background: var(--bg3); color: var(--text2); font-size: 10px; letter-spacing: 2px; font-weight: 700; padding: 8px 16px; }
+
+    .note-box { background: var(--bg2); border-left: 3px solid var(--mlb); border-radius: 0 8px 8px 0; padding: 14px 18px; margin-top: 16px; font-size: 13px; color: var(--text2); line-height: 1.7; }
+
+    .referral-box { background: linear-gradient(135deg, rgba(29,78,216,0.12), rgba(29,78,216,0.04)); border: 1px solid rgba(29,78,216,0.35); border-radius: 12px; padding: 18px 20px; margin-top: 12px; }
+    .referral-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .referral-desc { font-size: 13px; color: var(--text2); line-height: 1.7; margin-bottom: 12px; }
+    .referral-steps { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+    .referral-step { display: flex; align-items: flex-start; gap: 10px; font-size: 12px; color: var(--text2); line-height: 1.5; }
+    .referral-step-num { min-width: 20px; height: 20px; border-radius: 50%; background: var(--mlb); color: #fff; font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+    .referral-link-btn { display: inline-block; padding: 9px 20px; border-radius: 8px; font-size: 13px; font-weight: 700; text-decoration: none; background: var(--mlb); color: #fff; transition: opacity 0.2s; }
+    .referral-link-btn:hover { opacity: 0.85; }
+    .referral-note { font-size: 11px; color: var(--text3); margin-top: 10px; }
+
+    .news-strip { background: var(--bg2); border-bottom: 1px solid var(--border); padding: 10px 0; font-size: 12px; }
+    .news-strip-inner { max-width: 860px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; gap: 10px; }
+    .news-strip-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; padding: 2px 8px; border-radius: 4px; white-space: nowrap; background: var(--mlb); color: #fff; }
+    .news-strip-text { color: var(--text2); }
+    .news-strip-date { color: var(--text3); margin-left: auto; white-space: nowrap; }
+
+    .news-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .news-card-header { padding: 14px 18px 10px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--border); }
+    .news-badge { font-size: 10px; font-weight: 700; letter-spacing: 1px; padding: 3px 8px; border-radius: 4px; background: var(--mlb); color: #fff; }
+    .news-card-title { font-size: 14px; font-weight: 700; color: var(--text); }
+    .news-card-date { font-size: 11px; color: var(--text3); margin-left: auto; }
+    .news-card-body { padding: 14px 18px; font-size: 13px; color: var(--text2); line-height: 1.8; }
+    .news-card-body ul { margin: 8px 0 8px 16px; }
+    .news-card-body li { margin-bottom: 4px; }
+    .news-card-tag { display: inline-block; background: var(--bg3); color: var(--text3); font-size: 11px; padding: 2px 8px; border-radius: 4px; margin: 2px 2px 2px 0; }
+    .news-table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 12px; }
+    .news-table th { text-align: left; padding: 6px 10px; background: var(--bg3); color: var(--text3); font-weight: 600; border-bottom: 1px solid var(--border); }
+    .news-table td { padding: 5px 10px; border-bottom: 1px solid var(--border); color: var(--text2); }
+    .news-table tr:last-child td { border-bottom: none; }
+    .news-tables-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 8px 0; }
+    .news-tables-grid .news-table-wrap { background: var(--bg3); border-radius: 8px; padding: 10px; }
+    .news-tables-grid .news-table-label { font-size: 11px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .news-tables-grid .news-table { font-size: 11px; }
+    .news-tables-grid .news-table th { padding: 4px 6px; font-size: 10px; }
+    .news-tables-grid .news-table td { padding: 3px 6px; font-size: 11px; }
+    @media (max-width: 600px) { .news-tables-grid { grid-template-columns: 1fr; } }
+
+    .note-section-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 16px; }
+    .note-profile-link { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 8px; background: #41c9b4; color: #0a0f1e; font-weight: 700; font-size: 14px; text-decoration: none; margin-top: 12px; transition: opacity 0.2s; }
+    .note-profile-link:hover { opacity: 0.85; }
+    .note-articles { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+    .note-article-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background: var(--bg3); border-radius: 8px; border: 1px solid var(--border); text-decoration: none; color: var(--text); font-size: 13px; transition: border-color 0.18s; gap: 12px; }
+    .note-article-item:hover { border-color: #41c9b4; color: #41c9b4; }
+    .note-article-date { font-size: 11px; color: var(--text3); white-space: nowrap; }
+
+    .tools-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+    .tool-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 20px; text-decoration: none; display: block; transition: all 0.2s; }
+    .tool-card:hover { border-color: var(--mlb); transform: translateY(-2px); }
+    .tool-name { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .tool-desc { font-size: 12px; color: var(--text2); line-height: 1.6; }
+
+    footer { border-top: 1px solid var(--border); padding: 40px 2rem 30px; text-align: center; color: var(--text2); font-size: 12px; }
+    .footer-title { font-size: 14px; font-weight: 700; letter-spacing: 2px; color: var(--text); margin-bottom: 20px; }
+    .footer-notice { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; max-width: 700px; margin: 0 auto 20px; text-align: left; }
+    @media (max-width: 600px) { .footer-notice { grid-template-columns: 1fr; } }
+    .footer-notice-item { display: flex; gap: 8px; align-items: flex-start; font-size: 12px; color: var(--text2); line-height: 1.6; }
+    .footer-notice-item::before { content: "\2014"; color: var(--text3); flex-shrink: 0; margin-top: 1px; }
+    .footer-copy { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--text3); font-size: 11px; }
+
+    @media (max-width: 768px) {
+      nav { flex-direction: column; height: auto; padding: 10px 1rem; gap: 8px; }
+      .nav-logo { margin-right: 0; }
+      .nav-tabs { width: 100%; justify-content: center; }
+      .nav-tab { flex: 1; text-align: center; padding: 6px 8px; font-size: 12px; }
+      .page { padding-top: 100px; }
+      .hero { height: 360px; padding: 0 1rem; }
+      .hero-title { font-size: 32px; letter-spacing: 3px; }
+      .content { padding: 40px 1rem; }
+      .cards-grid { grid-template-columns: repeat(3, 1fr); }
+      .tools-grid { grid-template-columns: 1fr; }
+      .gw-box { grid-template-columns: 1fr; }
+      table { font-size: 12px; } th, td { padding: 10px; }
+    }
+    @media (max-width: 400px) { .cards-grid { grid-template-columns: repeat(2, 1fr); } .hero-title { font-size: 26px; } .nav-tab { font-size: 11px; padding: 5px 4px; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <span class="en">SORARE ORIGIN</span>
+    <span class="sub">Unofficial Fan Guide</span>
+  </a>
+  <div class="nav-tabs">
+    <a href="football.html" class="nav-tab">⚽ FOOTBALL</a>
+    <a href="mlb.html" class="nav-tab active-mlb">⚾ MLB</a>
+    <a href="nba.html" class="nav-tab">🏀 NBA</a>
+  </div>
+  <a href="../mlb.html" class="nav-lang">🇯🇵 日本語</a>
+</nav>
+
+<div class="page">
+
+  <div class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-unofficial">Unofficial Fan Guide</div>
+      <div class="hero-title">SORARE ORIGIN</div>
+      <div class="hero-subtitle">Fantasy Baseball on Sorare</div>
+      <div class="hero-sport-name">SORARE MLB</div>
+      <div class="hero-desc">Build your fantasy lineup with MLB star players<br>and compete in weekly Game Weeks.</div>
+    </div>
+  </div>
+
+  <div class="news-strip">
+    <div class="news-strip-inner">
+      <span class="news-strip-label">NEWS</span>
+      <span class="news-strip-text">⏸️ Special Vault Competition — Currently ended. May restart at any time as a surprise event.</span>
+      <span class="news-strip-date">2026.7.6</span>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="section">
+      <div class="section-title">LATEST NEWS</div>
+      <div class="section-heading">Latest Event Information</div>
+      <div class="news-card">
+        <div class="news-card-header">
+          <span class="news-badge">MLB</span>
+          <span class="news-card-title">⏸️ Special Vault Competition</span>
+          <span class="news-card-date">2026.7.6</span>
+        </div>
+        <div class="news-card-body">
+          <p style="background:var(--bg3); padding:8px 12px; border-radius:6px; font-size:12px; color:var(--nba-light); margin-bottom:10px;">⚠️ This event has currently ended. It may restart at any time as a surprise pop-up event.</p>
+          <p>A <strong>special competition</strong> exclusively for managers who have leveled up their Vault. The first edition was held during <strong>GW35 (July 10-13)</strong>.</p>
+          <p>Compete across three leaderboards: Limited / Rare / Super Rare. Only managers with <strong>Vault Level 3 or higher</strong> are eligible. Unique cards can be entered in the Super Rare leaderboard.</p>
+
+          <p><strong>📋 Rules</strong></p>
+          <ul>
+            <li>Cards from all seasons are eligible</li>
+            <li>No multi-entry (1 lineup only)</li>
+            <li>New Season / XP / Collection bonuses apply</li>
+          </ul>
+
+          <p><strong>🏆 Reward Table</strong></p>
+          <div class="news-tables-grid">
+            <div class="news-table-wrap">
+              <div class="news-table-label">Limited</div>
+              <table class="news-table">
+                <tr><th>Rank</th><th>Essence</th></tr>
+                <tr><td>1st</td><td><strong>20,000</strong></td></tr>
+                <tr><td>2nd</td><td>15,000</td></tr>
+                <tr><td>3rd</td><td>10,000</td></tr>
+                <tr><td>4th</td><td>7,000</td></tr>
+                <tr><td>5th</td><td>6,000</td></tr>
+                <tr><td>6-10</td><td>5,000</td></tr>
+                <tr><td>11-20</td><td>4,000</td></tr>
+                <tr><td>21-50</td><td>3,000</td></tr>
+                <tr><td>51-100</td><td>2,000</td></tr>
+                <tr><td>101-200</td><td>1,000</td></tr>
+              </table>
+            </div>
+            <div class="news-table-wrap">
+              <div class="news-table-label">Rare</div>
+              <table class="news-table">
+                <tr><th>Rank</th><th>Essence</th></tr>
+                <tr><td>1st</td><td><strong>20,000</strong></td></tr>
+                <tr><td>2nd</td><td>15,000</td></tr>
+                <tr><td>3rd</td><td>10,000</td></tr>
+                <tr><td>4th</td><td>7,000</td></tr>
+                <tr><td>5th</td><td>5,000</td></tr>
+                <tr><td>6-10</td><td>3,000</td></tr>
+                <tr><td>11-20</td><td>2,000</td></tr>
+                <tr><td>21-50</td><td>1,000</td></tr>
+              </table>
+            </div>
+            <div class="news-table-wrap">
+              <div class="news-table-label">Super Rare</div>
+              <table class="news-table">
+                <tr><th>Rank</th><th>Essence</th></tr>
+                <tr><td>1st</td><td><strong>10,000</strong></td></tr>
+                <tr><td>2nd</td><td>7,000</td></tr>
+                <tr><td>3rd</td><td>5,000</td></tr>
+                <tr><td>4th</td><td>4,000</td></tr>
+                <tr><td>5th</td><td>3,000</td></tr>
+                <tr><td>6-10</td><td>2,000</td></tr>
+                <tr><td>11-15</td><td>1,000</td></tr>
+              </table>
+            </div>
+          </div>
+
+          <p><strong>📊 Current Eligible Managers</strong></p>
+          <ul>
+            <li>Limited: <strong>275 managers</strong></li>
+            <li>Rare: <strong>54 managers</strong></li>
+            <li>Super Rare: <strong>24 managers</strong></li>
+          </ul>
+          <p>Seal your cards to earn eligibility before the next event.</p>
+
+          <div style="margin-top:12px">
+            <span class="news-card-tag">Vault Competition</span>
+            <span class="news-card-tag">Essence</span>
+            <span class="news-card-tag">GW35</span>
+            <span class="news-card-tag">Vault Lv3</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">CONTENTS</div>
+      <div class="section-heading">Table of Contents</div>
+      <ul class="toc-list">
+        <li><a href="#m-howto">How to Play</a></li>
+        <li><a href="#m-gw">Game Week (GW) Structure</a></li>
+        <li><a href="#m-card">Card Rarities</a></li>
+        <li><a href="#m-score">Scoring System</a></li>
+        <li><a href="#m-tourn">Competition Types</a></li>
+        <li><a href="#m-essence">Essence & Craft</a></li>
+        <li><a href="#m-vault">Vault System</a></li>
+        <li><a href="#m-ngdnp">NG & DNP Explained</a></li>
+        <li><a href="#m-referral">Sign Up with Bonus</a></li>
+        <li><a href="#m-tools">Analysis Tools</a></li>
+      </ul>
+    </div>
+
+    <div class="section" id="m-howto">
+      <div class="section-title">HOW TO PLAY</div>
+      <div class="section-heading">How to Play</div>
+      <div class="flow">
+        <div class="flow-item"><div class="flow-num">1</div><div class="flow-text"><strong>Collect MLB player cards</strong><br>You can start with free Common cards. Cards of popular players are available on the marketplace.</div></div>
+        <div class="flow-item"><div class="flow-num">2</div><div class="flow-text"><strong>Build a 7-card roster</strong><br>Assemble a roster of 7 cards: pitchers + position players. Pay attention to starter, reliever, and closer roles.</div></div>
+        <div class="flow-item"><div class="flow-num">3</div><div class="flow-text"><strong>Enter a Game Week (GW)</strong><br>Participate in the first-half and second-half GWs each week. During the season, scores update daily as games are played.</div></div>
+        <div class="flow-item"><div class="flow-num">4</div><div class="flow-text"><strong>All game scores within the GW are summed</strong><br>In MLB, <strong>all game scores within the GW are totaled</strong> (unlike other sports). Players with more games have higher scoring potential.</div></div>
+      </div>
+    </div>
+
+    <div class="section" id="m-gw">
+      <div class="section-title">GAME WEEK</div>
+      <div class="section-heading">Game Week (GW) Structure</div>
+      <div class="gw-box">
+        <div class="gw-item"><div class="gw-label">FIRST HALF</div><div class="gw-days">Mon - Thu</div><div class="gw-sub">4 days</div></div>
+        <div class="gw-item"><div class="gw-label">SECOND HALF</div><div class="gw-days">Fri - Sun</div><div class="gw-sub">3 days</div></div>
+      </div>
+      <div class="note-box">⚾ In MLB, <strong>all game scores within the GW are summed</strong>. Players with more games during the GW period have higher scoring potential.</div>
+    </div>
+
+    <div class="section" id="m-card">
+      <div class="section-title">CARD RARITY</div>
+      <div class="section-heading">Card Rarities</div>
+      <div class="cards-grid">
+        <div class="card-item"><div class="card-rarity rarity-common">COMMON</div><div class="card-count" style="color:#94a3b8">∞</div><div class="card-desc">Free cards<br>No rewards</div></div>
+        <div class="card-item"><div class="card-rarity rarity-limited">LIMITED</div><div class="card-count" style="color:#a78bfa">1,000</div><div class="card-desc">Up to<br>1,000 minted</div></div>
+        <div class="card-item"><div class="card-rarity rarity-rare">RARE</div><div class="card-count" style="color:#60a5fa">100</div><div class="card-desc">Up to<br>100 minted</div></div>
+        <div class="card-item"><div class="card-rarity rarity-sr">SUPER RARE</div><div class="card-count" style="color:#f59e0b">10</div><div class="card-desc">Up to<br>10 minted</div></div>
+        <div class="card-item"><div class="card-rarity rarity-unique">UNIQUE</div><div class="card-count" style="color:#f43f5e">1</div><div class="card-desc">Only 1<br>in the world</div></div>
+      </div>
+    </div>
+
+    <div class="section" id="m-score">
+      <div class="section-title">SCORING SYSTEM</div>
+      <div class="section-heading">Scoring System (Scoring Matrix)</div>
+      <div class="section-body" style="margin-bottom:16px">Action-based scoring system. All game scores within the GW are summed to produce the card's total GW score.</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Stat</th><th>Abbreviation</th><th>Points</th></tr></thead>
+          <tbody>
+            <tr class="table-group-header"><td colspan="3">BATTING</td></tr>
+            <tr><td>Run</td><td>R</td><td class="plus">+3</td></tr>
+            <tr><td>Run Batted In</td><td>RBI</td><td class="plus">+3</td></tr>
+            <tr><td>Single</td><td>1B</td><td class="plus">+2</td></tr>
+            <tr><td>Double</td><td>2B</td><td class="plus">+5</td></tr>
+            <tr><td>Triple</td><td>3B</td><td class="plus">+8</td></tr>
+            <tr><td>Home Run</td><td>HR</td><td class="big">+10</td></tr>
+            <tr><td>Walk</td><td>BB</td><td class="plus">+2</td></tr>
+            <tr><td>Stolen Base</td><td>SB</td><td class="plus">+5</td></tr>
+            <tr><td>Hit by Pitch</td><td>HBP</td><td class="plus">+2</td></tr>
+            <tr><td>Strikeout (Batter)</td><td>K</td><td class="minus">-1</td></tr>
+            <tr><td>Caught Stealing</td><td>CS</td><td class="minus">-1</td></tr>
+            <tr class="table-group-header"><td colspan="3">PITCHING</td></tr>
+            <tr><td>Innings Pitched</td><td>IP</td><td class="plus">+3</td></tr>
+            <tr><td>Strikeout (Pitcher)</td><td>K</td><td class="plus">+2</td></tr>
+            <tr><td>Win</td><td>W</td><td class="plus">+5</td></tr>
+            <tr><td>Save</td><td>S</td><td class="big">+10</td></tr>
+            <tr><td>Hold</td><td>H</td><td class="plus">+5</td></tr>
+            <tr><td>Relief Appearance</td><td>RA</td><td class="plus">+5</td></tr>
+            <tr><td>No-Hitter</td><td>—</td><td class="big">+30</td></tr>
+            <tr><td>Hits Allowed</td><td>H</td><td class="minus">-0.5</td></tr>
+            <tr><td>Earned Run</td><td>ER</td><td class="minus">-2</td></tr>
+            <tr><td>Walk (Pitcher)</td><td>BB</td><td class="minus">-1</td></tr>
+            <tr><td>Hit by Pitch (Pitcher)</td><td>HBP</td><td class="minus">-1</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box" style="margin-top:16px">⚡ <strong>Two-way players like Shohei Ohtani</strong> are scored based on the slot they are placed in. Pitcher slot = pitching stats only. Batter slot = batting stats only.</div>
+    </div>
+
+    <div class="section" id="m-tourn">
+      <div class="section-title">TOURNAMENTS</div>
+      <div class="section-heading">Competition Types</div>
+      <div class="section-body" style="margin-bottom:20px">Sorare MLB offers 5 types of competitions across in-season, classic, PvE, and daily formats.</div>
+      <div style="margin-bottom:12px; font-size:13px; font-weight:700; color:#60a5fa; letter-spacing:1px;">— In-Season Competitions</div>
+      <div class="flow" style="margin-bottom:24px">
+        <div class="flow-item"><div class="flow-num" style="font-size:10px">⚾</div><div class="flow-text"><strong>Champion</strong><br>The main competition during the MLB season. Rankings are determined by total GW scores. Limited / Rare allow up to <strong>4 lineups</strong>; SR / Unique allow up to <strong>2 lineups</strong>.</div></div>
+      </div>
+      <div style="margin-bottom:12px; font-size:13px; font-weight:700; color:#60a5fa; letter-spacing:1px;">— Classic Competitions (Past Season Cards Allowed)</div>
+      <div class="flow" style="margin-bottom:24px">
+        <div class="flow-item"><div class="flow-num" style="background:#475569; font-size:10px">📂</div><div class="flow-text"><strong>Challenger</strong><br>A competition where you can use cards from previous seasons. Great for collectors who may not have the latest cards.</div></div>
+      </div>
+      <div style="margin-bottom:12px; font-size:13px; font-weight:700; color:#60a5fa; letter-spacing:1px;">— PvE Competitions (vs. Computer)</div>
+      <div class="flow" style="margin-bottom:24px">
+        <div class="flow-item"><div class="flow-num" style="background:#b45309; font-size:10px">🔥</div><div class="flow-text"><strong>Hot Streak</strong><br>A PvE format where you don't compete directly against other players. Hit the target score to earn rewards. Up to <strong>3 lineups</strong> per rarity. A great mode for beginners to earn rewards.</div></div>
+      </div>
+      <div style="margin-bottom:12px; font-size:13px; font-weight:700; color:#60a5fa; letter-spacing:1px;">— Daily Competitions</div>
+      <div class="flow" style="margin-bottom:24px">
+        <div class="flow-item"><div class="flow-num" style="font-size:10px">📅</div><div class="flow-text"><strong>Arena</strong><br>Short-term competitions held on an irregular schedule. They conclude within 24 hours, giving you additional chances to compete outside the regular weekly GW.</div></div>
+        <div class="flow-item"><div class="flow-num" style="background:#6d28d9; font-size:10px">✅</div><div class="flow-text"><strong>Daily Mission</strong><br>A mission format where you can assign up to <strong>21 players</strong> per day. Earn Essence, Credits, and XP.</div></div>
+      </div>
+      <div class="note-box">💡 <strong>Multi-entry quick reference:</strong> Limited / Rare = up to 4 lineups | SR / Unique = up to 2 lineups | Hot Streak = up to 3 lineups per rarity</div>
+    </div>
+
+    <div class="section" id="m-essence">
+      <div class="section-title">ESSENCE & CRAFT</div>
+      <div class="section-heading">Essence & Craft</div>
+      <div class="section-body">Essence is the in-game currency used to enhance and create cards. You can earn it through Daily Missions and competition rewards. It can be used for the following:</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Use</th><th>Description</th></tr></thead>
+          <tbody>
+            <tr><td>Craft</td><td>Spend Essence to create new cards</td></tr>
+            <tr><td>Card Leveling</td><td>Accumulate XP to level up cards (max Lv.10)</td></tr>
+            <tr><td>Vault (Seal)</td><td>Seal cards to receive specific rewards</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box" style="margin-top:16px">📈 <strong>Card Level Bonus:</strong> Each level adds a +1% score bonus (Lv.0 to 10). SR and Unique cards receive an additional unique bonus at Lv.10.</div>
+    </div>
+
+    <div class="section" id="m-vault">
+      <div class="section-title">VAULT SYSTEM</div>
+      <div class="section-heading">Vault (Seal) System</div>
+      <div class="section-body">The Vault lets you seal cards you're not actively using to earn rewards over time.</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Feature</th><th>Details</th></tr></thead>
+          <tbody>
+            <tr><td>Eligible Cards</td><td>Limited, Rare, Super Rare, and Unique cards can all be sealed</td></tr>
+            <tr><td>Rewards</td><td>Essence, Credits, special items, and more</td></tr>
+            <tr><td>Important</td><td>Sealed cards cannot be used in tournaments. Unsealing is possible</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box" style="margin-top:16px">💡 Be careful not to seal cards you need for your lineup. Always check your seal status before building your GW roster.</div>
+    </div>
+
+    <div class="section" id="m-ngdnp">
+      <div class="section-title">NG / DNP</div>
+      <div class="section-heading">NG & DNP Explained</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Term</th><th>Meaning</th><th>Score Impact</th></tr></thead>
+          <tbody>
+            <tr><td><strong>NG</strong> (No Game)</td><td>The player's team had no game scheduled during the GW</td><td class="minus">0 points</td></tr>
+            <tr><td><strong>DNP</strong> (Did Not Play)</td><td>The team played but the player did not appear in the game</td><td class="minus">0 points</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="note-box" style="margin-top:16px">⚠️ Always check <strong>starting lineups and pitching rotations</strong> before locking in your roster. This is especially critical for pitchers.</div>
+    </div>
+
+    <div class="section" id="m-referral">
+      <div class="section-title">REFERRAL</div>
+      <div class="section-heading">Getting Started — Sign Up with Bonus</div>
+      <div class="referral-box">
+        <div class="referral-title">🎁 Sign up through this link to receive up to <a href="https://sorare.com/r/tategami" target="_blank" rel="noopener" style="color:var(--mlb-light); text-decoration:underline">$50 in credits (card purchase voucher)</a></div>
+        <div class="referral-desc">Register for Sorare through this site's link and receive up to $50 in credits to spend on cards.</div>
+        <div class="referral-steps">
+          <div class="referral-step"><div class="referral-step-num">1</div><div>Sign up via the link and verify your email address and phone number</div></div>
+          <div class="referral-step"><div class="referral-step-num">2</div><div>Purchase 5 cards from the Primary Market (auction or instant buy)</div></div>
+          <div class="referral-step"><div class="referral-step-num">3</div><div>Build a team and enter 2 different Game Weeks with your purchased cards</div></div>
+        </div>
+        <a class="referral-link-btn" href="https://sorare.com/r/tategami" target="_blank" rel="noopener">→ Sign Up for Sorare</a>
+        <div class="referral-note">You can also register via QR code, available in the Sorare app.</div>
+      </div>
+    </div>
+
+    <div class="section" id="m-note">
+      <div class="section-title">NOTE</div>
+      <div class="section-heading">Read More on note</div>
+      <div class="note-section-box">
+        <div class="section-body">Sorare strategy articles, data analysis, and app showcases published on note.</div>
+        <div class="note-articles" id="note-articles"></div>
+        <a class="note-profile-link" href="https://note.com/sorare_nba/" target="_blank" rel="noopener">✏️ View note Profile</a>
+      </div>
+    </div>
+
+    <div class="section" id="m-tools">
+      <div class="section-title">TOOLS</div>
+      <div class="section-heading">Analysis Tools</div>
+      <div class="tools-grid">
+        <a class="tool-card" href="glossary.html"><div class="tool-name">📖 Sorare Glossary</div><div class="tool-desc">50+ terms explained in plain language</div></a>
+        <a class="tool-card" href="mlb-strategy.html"><div class="tool-name">📖 MLB Strategy Guide</div><div class="tool-desc">Lineup building, score optimization, market strategy, and beginner mistake avoidance.</div></a>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">OTHER SPORTS</div>
+      <div class="section-heading">Explore Other Sports</div>
+      <div class="tools-grid">
+        <a class="tool-card" href="football.html">
+          <div class="tool-name">⚽ Sorare Football</div>
+          <div class="tool-desc">Complete guide to Football scoring, competitions, and divisions.</div>
+        </a>
+        <a class="tool-card" href="nba.html">
+          <div class="tool-name">🏀 Sorare NBA</div>
+          <div class="tool-desc">Complete guide to NBA scoring system and competition types.</div>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <div class="footer-title">SORARE ORIGIN</div>
+  <div class="footer-notice">
+    <div class="footer-notice-item">This is an unofficial fan site and is not affiliated with Sorare or any sports league.</div>
+    <div class="footer-notice-item">Content is based on Sorare's official help center but accuracy and timeliness are not guaranteed.</div>
+    <div class="footer-notice-item">Game rules, rewards, and specifications may change without notice. Always check <a href="https://sorare.com" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline">sorare.com</a> for the latest information.</div>
+    <div class="footer-notice-item">NFT card purchases involve price fluctuation risks. All investment decisions are your own responsibility.</div>
+    <div class="footer-notice-item">Sorare, league logos, player names, and images are the property of their respective owners.</div>
+    <div class="footer-notice-item">If you register through a referral link on this site, the site operator may receive credits.</div>
+  </div>
+  <div class="footer-copy">
+    <div style="margin-bottom:12px;"><a href="privacy.html" style="color:var(--text2); text-decoration:none;">Privacy Policy</a></div>
+    © 2025 SORARE ORIGIN — Unofficial Fan Site. Not affiliated with Sorare.<br>
+    <span style="margin-top:6px; display:block">Unauthorized reproduction or mirroring of this site's content is prohibited.</span>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('dragstart', e => e.preventDefault());
+
+  const NOTE_USER = 'sorare_nba';
+  fetch(`https://corsproxy.io/?https://note.com/api/v2/creators/${NOTE_USER}/contents?kind=note&page=1`)
+    .then(r => r.json())
+    .then(data => {
+      const articles = data?.data?.contents;
+      if (!articles || articles.length === 0) throw new Error();
+      const html = articles.slice(0, 5).map(a => {
+        const d = new Date(a.publishAt || a.publish_at || a.created_at);
+        const date = isNaN(d) ? '' : `${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')}`;
+        return `<a class="note-article-item" href="https://note.com/${NOTE_USER}/n/${a.key}" target="_blank" rel="noopener"><span>${a.name}</span><span class="note-article-date">${date}</span></a>`;
+      }).join('');
+      document.getElementById('note-articles').innerHTML = html;
+    })
+    .catch(() => {
+      document.getElementById('note-articles').innerHTML =
+        `<a class="note-article-item" href="https://note.com/sorare_nba/" target="_blank" rel="noopener"><span>Visit note profile →</span></a>`;
+    });
+</script>
+</body>
+</html>
