@@ -1,11 +1,11 @@
 {
-  "updatedAt": "2026-08-05T22:16:33.435Z",
+  "updatedAt": "2026-08-07T01:02:01.785Z",
   "articles": [
     {
       "sport": "football",
       "url": "https://sorare.com/blog/football/pitch-notes-july-31-2026",
       "title": "Pitch Notes, July 31, 2026",
-      "meta": "5 days ago"
+      "meta": "6 days ago"
     },
     {
       "sport": "mlb",
@@ -23,13 +23,13 @@
       "sport": "football",
       "url": "https://sorare.com/blog/football/first-boosted-early-access-drop-wednesday-july-29th",
       "title": "First Boosted Early Access Drop: Wednesday, July 29th",
-      "meta": "8 days ago"
+      "meta": "9 days ago"
     },
     {
       "sport": "mlb",
       "url": "https://sorare.com/blog/mlb/mlb-double-up-6",
       "title": "MLB Double Up",
-      "meta": "3 months ago"
+      "meta": "4 months ago"
     }
   ]
 }
