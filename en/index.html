@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="../legacy-host-redirect.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJ5551CK7J"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R4433M7QWX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-BJ5551CK7J');
+    gtag('config', 'G-R4433M7QWX');
   </script>
   <title>SORARE ORIGIN | The Unofficial Guide to Sorare Football, MLB & NBA</title>
 
@@ -207,14 +206,14 @@
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo">
+  <a href="./" class="nav-logo">
     <span class="en">SORARE ORIGIN</span>
     <span class="sub">Unofficial Fan Guide</span>
   </a>
-  <a href="football.html" class="nav-link">Football</a>
-  <a href="mlb.html" class="nav-link">MLB</a>
-  <a href="nba.html" class="nav-link">NBA</a>
-  <a href="../index.html" class="nav-lang">🇯🇵 日本語</a>
+  <a href="football" class="nav-link">Football</a>
+  <a href="mlb" class="nav-link">MLB</a>
+  <a href="nba" class="nav-link">NBA</a>
+  <a href="../" class="nav-lang">🇯🇵 日本語</a>
 </nav>
 
 <div class="hero">
@@ -228,7 +227,7 @@
     </div>
 
     <div class="sport-cards">
-      <a href="football.html" class="sport-card football">
+      <a href="football" class="sport-card football">
         <span class="sport-icon">⚽</span>
         <div class="sport-name">FOOTBALL</div>
         <div class="sport-desc">Build your squad from 400+ licensed clubs worldwide. Master the scoring system, divisions, and essence crafting.</div>
@@ -239,7 +238,7 @@
         </ul>
         <span class="sport-btn">Read Guide →</span>
       </a>
-      <a href="mlb.html" class="sport-card mlb">
+      <a href="mlb" class="sport-card mlb">
         <span class="sport-icon">⚾</span>
         <div class="sport-name">MLB</div>
         <div class="sport-desc">Compete with MLB stars including Shohei Ohtani. Unique pitcher/batter dual scoring and daily lineups.</div>
@@ -250,7 +249,7 @@
         </ul>
         <span class="sport-btn">Read Guide →</span>
       </a>
-      <a href="nba.html" class="sport-card nba">
+      <a href="nba" class="sport-card nba">
         <span class="sport-icon">🏀</span>
         <div class="sport-name">NBA</div>
         <div class="sport-desc">Draft NBA superstars and compete in fast-paced fantasy basketball with points caps and MVP bonuses.</div>
@@ -353,11 +352,12 @@
 <footer>
   <div class="footer-title">SORARE ORIGIN</div>
   <div class="footer-links">
-    <a href="football.html">Football</a>
-    <a href="mlb.html">MLB</a>
-    <a href="nba.html">NBA</a>
-    <a href="../privacy.html">Privacy</a>
-    <a href="../index.html">🇯🇵 Japanese</a>
+    <a href="football">Football</a>
+    <a href="mlb">MLB</a>
+    <a href="nba">NBA</a>
+    <a href="../privacy">Privacy</a>
+    <a href="../contact">Contact</a>
+    <a href="../">🇯🇵 Japanese</a>
   </div>
   <div class="footer-notice">
     This is an unofficial fan site not affiliated with Sorare or any sports league. Game rules, rewards, and mechanics are subject to change without notice. Always check <a href="https://sorare.com" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline">sorare.com</a> for the latest information. NFT card trading involves price volatility risk.
@@ -395,14 +395,13 @@
 
   // note articles auto-fetch
   const NOTE_USER = 'sorare_nba';
-  fetch(`https://corsproxy.io/?https://note.com/api/v2/creators/${NOTE_USER}/contents?kind=note&page=1`)
+  fetch('../data/note-articles.json?t=' + Date.now())
     .then(r => r.json())
     .then(data => {
-      const articles = data?.data?.contents;
+      const articles = data?.articles;
       if (!articles || articles.length === 0) throw new Error();
       const html = articles.slice(0, 5).map(a => {
-        const d = new Date(a.publishAt || a.publish_at || a.created_at);
-        const date = isNaN(d) ? '' : `${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')}`;
+        const date = a.publishAt ? a.publishAt.replace(/-/g, '.') : '';
         return `<a class="note-article-item" href="https://note.com/${NOTE_USER}/n/${a.key}" target="_blank" rel="noopener"><span class="note-article-title">${a.name}</span><span class="note-article-date">${date}</span></a>`;
       }).join('');
       document.getElementById('note-articles-home').innerHTML = html;

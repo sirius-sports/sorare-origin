@@ -10,61 +10,61 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://sorare.siriusfactor.com/football.html</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sorare.siriusfactor.com/football.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sorare.siriusfactor.com/en/football.html"/>
+    <loc>https://sorare.siriusfactor.com/football</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sorare.siriusfactor.com/football"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sorare.siriusfactor.com/en/football"/>
     <lastmod>2026-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://sorare.siriusfactor.com/mlb.html</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sorare.siriusfactor.com/mlb.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sorare.siriusfactor.com/en/mlb.html"/>
+    <loc>https://sorare.siriusfactor.com/mlb</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sorare.siriusfactor.com/mlb"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sorare.siriusfactor.com/en/mlb"/>
     <lastmod>2026-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://sorare.siriusfactor.com/nba.html</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sorare.siriusfactor.com/nba.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sorare.siriusfactor.com/en/nba.html"/>
+    <loc>https://sorare.siriusfactor.com/nba</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sorare.siriusfactor.com/nba"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sorare.siriusfactor.com/en/nba"/>
     <lastmod>2026-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://sorare.siriusfactor.com/football-strategy.html</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sorare.siriusfactor.com/football-strategy.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sorare.siriusfactor.com/en/football-strategy.html"/>
+    <loc>https://sorare.siriusfactor.com/football-strategy</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sorare.siriusfactor.com/football-strategy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sorare.siriusfactor.com/en/football-strategy"/>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sorare.siriusfactor.com/mlb-strategy.html</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sorare.siriusfactor.com/mlb-strategy.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sorare.siriusfactor.com/en/mlb-strategy.html"/>
+    <loc>https://sorare.siriusfactor.com/mlb-strategy</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sorare.siriusfactor.com/mlb-strategy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sorare.siriusfactor.com/en/mlb-strategy"/>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sorare.siriusfactor.com/nba-strategy.html</loc>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sorare.siriusfactor.com/nba-strategy.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sorare.siriusfactor.com/en/nba-strategy.html"/>
+    <loc>https://sorare.siriusfactor.com/nba-strategy</loc>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sorare.siriusfactor.com/nba-strategy"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sorare.siriusfactor.com/en/nba-strategy"/>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sorare.siriusfactor.com/glossary.html</loc>
+    <loc>https://sorare.siriusfactor.com/glossary</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sorare.siriusfactor.com/privacy.html</loc>
+    <loc>https://sorare.siriusfactor.com/privacy</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -78,49 +78,49 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://sorare.siriusfactor.com/en/football.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sorare.siriusfactor.com/en/football.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sorare.siriusfactor.com/football.html"/>
+    <loc>https://sorare.siriusfactor.com/en/football</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sorare.siriusfactor.com/en/football"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sorare.siriusfactor.com/football"/>
     <lastmod>2026-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sorare.siriusfactor.com/en/mlb.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sorare.siriusfactor.com/en/mlb.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sorare.siriusfactor.com/mlb.html"/>
+    <loc>https://sorare.siriusfactor.com/en/mlb</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sorare.siriusfactor.com/en/mlb"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sorare.siriusfactor.com/mlb"/>
     <lastmod>2026-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sorare.siriusfactor.com/en/nba.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sorare.siriusfactor.com/en/nba.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sorare.siriusfactor.com/nba.html"/>
+    <loc>https://sorare.siriusfactor.com/en/nba</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sorare.siriusfactor.com/en/nba"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sorare.siriusfactor.com/nba"/>
     <lastmod>2026-07-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://sorare.siriusfactor.com/en/football-strategy.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sorare.siriusfactor.com/en/football-strategy.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sorare.siriusfactor.com/football-strategy.html"/>
+    <loc>https://sorare.siriusfactor.com/en/football-strategy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sorare.siriusfactor.com/en/football-strategy"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sorare.siriusfactor.com/football-strategy"/>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://sorare.siriusfactor.com/en/mlb-strategy.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sorare.siriusfactor.com/en/mlb-strategy.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sorare.siriusfactor.com/mlb-strategy.html"/>
+    <loc>https://sorare.siriusfactor.com/en/mlb-strategy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sorare.siriusfactor.com/en/mlb-strategy"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sorare.siriusfactor.com/mlb-strategy"/>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://sorare.siriusfactor.com/en/nba-strategy.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://sorare.siriusfactor.com/en/nba-strategy.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://sorare.siriusfactor.com/nba-strategy.html"/>
+    <loc>https://sorare.siriusfactor.com/en/nba-strategy</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sorare.siriusfactor.com/en/nba-strategy"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://sorare.siriusfactor.com/nba-strategy"/>
     <lastmod>2026-07-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

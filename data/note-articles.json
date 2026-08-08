@@ -1,0 +1,14 @@
+{
+  "updatedAt": "2026-07-31T00:00:00.000Z",
+  "user": "sorare_nba",
+  "magazine": "Sorare攻略・分析・実践記録",
+  "magazineUrl": "https://note.com/sorare_nba/m/m51c987722c4c",
+  "articles": [
+    { "name": "SorareMLB GW38結果編", "key": "n4127aa4dbdde", "publishAt": "2026-07-28" },
+    { "name": "SorareMLBで新イベントがスタート", "key": "na0088b3185d3", "publishAt": "2026-07-11" },
+    { "name": "Sorare MLB チーム編成 GW28 新編成ロジック実践編", "key": "n1aa22cce493a", "publishAt": "2026-07-07" },
+    { "name": "【Sorare MLB】RP登録の先発投手が実は超お得だった件 ②", "key": "n3c11ba05c0eb", "publishAt": "2026-07-04" },
+    { "name": "Sorare MLB チーム編成 GW27 新編成ロジック実践編", "key": "nc39f1cd7dd6f", "publishAt": "2026-07-04" },
+    { "name": "SorareMLB分析アプリを使ってデイリーミッションに挑戦！③ 結果編", "key": "n44260487c982", "publishAt": "2026-07-04" }
+  ]
+}

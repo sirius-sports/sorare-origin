@@ -29,4 +29,3 @@ Disallow: /
 
 # サイトマップ
 Sitemap: https://sorare.siriusfactor.com/sitemap.xml
-Sitemap: https://sorare.siriusfactor.com/sitemap.txt

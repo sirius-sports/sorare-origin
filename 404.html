@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ページが見つかりません | SORARE ORIGIN（ソラレ オリジン）</title>
+<meta name="description" content="お探しのページは見つかりませんでした。SORARE ORIGINのトップページから各コンテンツをご覧ください。">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" href="/football.jpg" type="image/jpeg">
+<style>
+    :root {
+      --bg: #0a0f1e; --bg2: #111827; --bg3: #1e293b;
+      --text: #f1f5f9; --text2: #94a3b8; --text3: #475569; --border: #1e293b;
+      --football: #16a34a; --football-light: #4ade80;
+      --mlb: #1d4ed8; --mlb-light: #60a5fa;
+      --nba: #ea580c; --nba-light: #fb923c;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', 'Noto Sans JP', sans-serif; min-height: 100vh; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,15,30,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); display: flex; align-items: center; padding: 0 2rem; height: 60px; }
+    .nav-logo { display: flex; flex-direction: column; line-height: 1; text-decoration: none; }
+    .nav-logo .en { font-size: 16px; font-weight: 800; letter-spacing: 3px; color: var(--football-light); }
+    .nav-logo .ja { font-size: 9px; letter-spacing: 2px; color: var(--text2); margin-top: 2px; }
+
+    .content { max-width: 760px; margin: 0 auto; padding: 100px 2rem 60px; }
+    .page-title { font-size: 28px; font-weight: 800; letter-spacing: 2px; margin-bottom: 8px; }
+    .page-sub { font-size: 12px; color: var(--text3); letter-spacing: 2px; margin-bottom: 40px; }
+
+    .section { margin-bottom: 36px; }
+    .section h2 { font-size: 16px; font-weight: 700; color: var(--football-light); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .section p, .section li { font-size: 14px; color: var(--text2); line-height: 1.9; }
+    .section ul { margin: 8px 0 0 20px; }
+    .section li { margin-bottom: 6px; }
+    .section a { color: var(--football-light); text-decoration: underline; }
+
+    .updated { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); font-size: 12px; color: var(--text3); }
+
+    footer { border-top: 1px solid var(--border); padding: 30px 2rem; text-align: center; color: var(--text3); font-size: 12px; }
+    footer a { color: var(--text2); text-decoration: none; margin: 0 10px; }
+    footer a:hover { color: var(--football-light); }
+
+    @media (max-width: 768px) { nav { padding: 0 1rem; } .content { padding: 90px 1rem 40px; } }
+  
+.notfound-code{font-size:4rem;font-weight:800;color:var(--text3);line-height:1;margin-bottom:8px}
+.notfound-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.notfound-links a{display:inline-block;padding:10px 18px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;color:var(--text);text-decoration:none;font-size:.92rem}
+.notfound-links a:hover{background:var(--bg2)}
+</style>
+</head>
+<body>
+<nav>
+<a href="/" class="nav-logo">
+<span class="en">SORARE ORIGIN</span>
+<span class="ja">ソラレ オリジン</span>
+</a>
+</nav>
+<div class="content">
+<div class="notfound-code">404</div>
+<div class="page-title">ページが見つかりません</div>
+<div class="page-sub">PAGE NOT FOUND</div>
+<div class="section">
+<p>お探しのページは、移動または削除された可能性があります。URLをご確認いただくか、下のリンクからお進みください。</p>
+<div class="notfound-links">
+<a href="/">トップページ</a>
+<a href="/football">フットボール</a>
+<a href="/mlb">MLB</a>
+<a href="/nba">NBA</a>
+<a href="/glossary">用語集</a>
+<a href="/en/">English</a>
+</div>
+</div>
+</div>
+</body>
+</html>

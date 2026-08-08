@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <script src="legacy-host-redirect.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJ5551CK7J"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R4433M7QWX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-BJ5551CK7J');
+    gtag('config', 'G-R4433M7QWX');
   </script>
   <title>SORARE ORIGIN（ソラレ オリジン）| Sorare Football / MLB / NBA 非公式ファンサイト</title>
 
@@ -179,21 +178,21 @@
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo">
+  <a href="./" class="nav-logo">
     <span class="en">SORARE ORIGIN</span>
     <span class="ja">ソラレ オリジン</span>
   </a>
-  <a href="football.html" class="nav-link">Football</a>
-  <a href="mlb.html" class="nav-link">MLB</a>
-  <a href="nba.html" class="nav-link">NBA</a>
-  <a href="glossary.html" class="nav-link">用語集</a>
+  <a href="football" class="nav-link">Football</a>
+  <a href="mlb" class="nav-link">MLB</a>
+  <a href="nba" class="nav-link">NBA</a>
+  <a href="glossary" class="nav-link">用語集</a>
 </nav>
 
 <div class="hero">
   <div class="hero-bg"></div>
   <div class="hero-content">
     <div class="hero-badge">UNOFFICIAL FAN SITE</div>
-    <div class="hero-title">SORARE ORIGIN</div>
+    <h1 class="hero-title">SORARE ORIGIN</h1>
     <div class="hero-subtitle">ソラレ オリジン</div>
     <div class="hero-desc">
       Sorare（ソラレ）の遊び方・ルール・得点システムを<br>
@@ -201,19 +200,19 @@
       Football・MLB・NBAの3競技に対応。
     </div>
     <div class="sport-cards">
-      <a href="football.html" class="sport-card football">
+      <a href="football" class="sport-card football">
         <span class="sport-icon">⚽</span>
         <div class="sport-name">FOOTBALL</div>
         <div class="sport-desc">世界中のサッカー選手カードでファンタジースポーツを楽しもう。得点システム・大会の種類を完全解説。</div>
         <span class="sport-btn">→ 解説を読む</span>
       </a>
-      <a href="mlb.html" class="sport-card mlb">
+      <a href="mlb" class="sport-card mlb">
         <span class="sport-icon">⚾</span>
         <div class="sport-name">MLB</div>
         <div class="sport-desc">大谷翔平・山本由伸など日本人選手も活躍するMLBのファンタジーゲームを解説。</div>
         <span class="sport-btn">→ 解説を読む</span>
       </a>
-      <a href="nba.html" class="sport-card nba">
+      <a href="nba" class="sport-card nba">
         <span class="sport-icon">🏀</span>
         <div class="sport-name">NBA</div>
         <div class="sport-desc">NBAスター選手のカードでファンタジーバスケットボールを極めよう。大会の種類まで網羅。</div>
@@ -248,7 +247,7 @@
     <div class="footer-notice-item">当サイトの紹介リンク経由でご登録いただいた場合、管理者にクレジットが付与されることがあります。</div>
   </div>
   <div class="footer-copy">
-    <div style="margin-bottom:12px;"><a href="privacy.html" style="color:var(--text2); text-decoration:none;">プライバシーポリシー</a></div>
+    <div style="margin-bottom:12px;"><a href="privacy" style="color:var(--text2); text-decoration:none;">プライバシーポリシー</a> | <a href="contact" style="color:var(--text2); text-decoration:none;">お問い合わせ</a></div>
     © 2025 SORARE ORIGIN — Unofficial Fan Site. Not affiliated with Sorare.<br>
     <span style="margin-top:6px; display:block">当サイトのコンテンツ（文章・構成・デザイン）の無断転載・複製・ミラーサイトの作成を禁じます。</span>
   </div>
@@ -280,23 +279,22 @@
         `<a class="note-article-item" href="https://sorare.com/blog" target="_blank" rel="noopener"><span class="note-article-title">Sorare公式ブログを見る</span></a>`;
     });
 
-  // note記事の自動取得
+  // note記事（ローカルJSON）
   const NOTE_USER = 'sorare_nba';
-  fetch(`https://corsproxy.io/?https://note.com/api/v2/creators/${NOTE_USER}/contents?kind=note&page=1`)
+  fetch('data/note-articles.json?t=' + Date.now())
     .then(r => r.json())
     .then(data => {
-      const articles = data?.data?.contents;
+      const articles = data?.articles;
       if (!articles || articles.length === 0) throw new Error();
       const html = articles.slice(0, 5).map(a => {
-        const d = new Date(a.publishAt || a.publish_at || a.created_at);
-        const date = isNaN(d) ? '' : `${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')}`;
+        const date = a.publishAt ? a.publishAt.replace(/-/g, '.') : '';
         return `<a class="note-article-item" href="https://note.com/${NOTE_USER}/n/${a.key}" target="_blank" rel="noopener"><span class="note-article-title">${a.name}</span><span class="note-article-date">${date}</span></a>`;
       }).join('');
       document.getElementById('note-articles-home').innerHTML = html;
     })
     .catch(() => {
       document.getElementById('note-articles-home').innerHTML =
-        `<a class="note-article-item" href="https://note.com/sorare_nba/n/nf66a4b6a4570" target="_blank" rel="noopener"><span class="note-article-title">Sorare MLB チーム編成 GW26 新編成ロジック実践編</span><span class="note-article-date">2026.06.27</span></a>`;
+        `<a class="note-article-item" href="https://note.com/sorare_nba/" target="_blank" rel="noopener"><span class="note-article-title">noteプロフィールを見る →</span></a>`;
     });
 </script>
 </body>
