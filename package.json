@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "scrape": "node scripts/fetch-sorare-news.js"
+    "scrape": "node scripts/fetch-sorare-news.js",
+    "test:redirect": "node scripts/test-legacy-host-redirect.mjs"
   },
   "devDependencies": {
     "playwright": "^1.47.0"

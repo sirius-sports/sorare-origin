@@ -28,5 +28,5 @@ User-agent: Bytespider
 Disallow: /
 
 # サイトマップ
-Sitemap: https://sirius-sports.github.io/sorare-origin/sitemap.xml
-Sitemap: https://sirius-sports.github.io/sorare-origin/sitemap.txt
+Sitemap: https://sorare.siriusfactor.com/sitemap.xml
+Sitemap: https://sorare.siriusfactor.com/sitemap.txt
