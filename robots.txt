@@ -28,4 +28,4 @@ User-agent: Bytespider
 Disallow: /
 
 # サイトマップ
-Sitemap: https://sorare.siriusfactor.com/sitemap.xml
+Sitemap: https://sirius-sports.github.io/sorare-origin/sitemap.xml
