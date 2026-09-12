@@ -1,0 +1,31 @@
+User-agent: *
+Allow: /
+
+# Google 検索の巡回を明示的に許可
+User-agent: Googlebot
+Allow: /
+
+# AIクローラーによる学習利用の拒否（Google検索の巡回には影響しません）
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# サイトマップ
+Sitemap: https://sorare.siriusfactor.com/sitemap.xml
