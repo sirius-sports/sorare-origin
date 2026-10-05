@@ -14,7 +14,7 @@
   </script>
   <title>Sorare NBA（ソラレ NBA）完全解説 | SORARE ORIGIN</title>
 
-  <meta name="description" content="Sorare NBAの遊び方・得点システム・大会の種類をわかりやすく解説。Champion・Contender・Arena・Daily Pickupまで網羅した非公式ファンサイト。">
+  <meta name="description" content="Sorare NBAの遊び方・得点システム・大会の種類をわかりやすく解説。Champion・Contender・Arena・Arcadeまで網羅した非公式ファンサイト。">
   <meta name="keywords" content="Sorare,ソラレ,NBA,バスケットボール,得点システム,ゲームウィーク,カード,Champion,Arena,ファンタジースポーツ">
   <meta name="author" content="SORARE ORIGIN">
   <link rel="canonical" href="https://sirius-sports.github.io/sorare-origin/nba">
@@ -74,7 +74,7 @@
         "name": "Sorare NBAにはどんな大会がありますか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Champion・Contender（シーズン中大会・各レアリティ最大5ライン）、Challenger・Arena（クラシック大会・過去カード使用可）、Daily Pickup（デイリー大会・1ライン）の5種類があります。Commonカードで参加できるのはCommon Champion・Common Contender・Daily Pickupの3つです。"
+          "text": "2026-27シーズンは、シーズン中大会のChampion（16スター）・Contender（11スター）、過去カードも使えるClassic大会とArena、毎日遊べるArcadeがあります。ChallengerとDaily Pickupは廃止されました。"
         }
       }
     ]
@@ -316,38 +316,51 @@
     <div class="section" id="n-comp">
       <div class="section-title">COMPETITIONS</div>
       <div class="section-heading">大会の種類</div>
-      <div class="section-body" style="margin-bottom:20px"><p>Sorare NBAには5種類の大会があります。</p><p>シーズン中大会・クラシック大会・デイリーの3カテゴリーに分かれています。</p></div>
+      <div class="section-body" style="margin-bottom:20px"><p>2026-27シーズン（NBA 27）から、編成の制限が「ポイントキャップ」から<strong>スター数</strong>に変わりました。MVP枠は廃止されています。</p><p>各選手には直近10試合（L10）のスコアをもとに<strong>1〜5つ星（0.5刻み）</strong>が付き、5人の星の合計を上限内に収めて編成します。星の評価は各GWの締め切りごとに更新されます。</p></div>
 
-      <div style="margin-bottom:12px; font-size:13px; font-weight:700; color:var(--nba-light); letter-spacing:1px;">── シーズン中・隔週大会</div>
-      <div class="flow" style="margin-bottom:24px">
-        <div class="flow-item"><div class="flow-num" style="font-size:10px">👑</div><div class="flow-text"><strong>Champion（チャンピオン）</strong><br>最上位のシーズン中大会。各レアリティ最大<strong>5ライン</strong>まで提出できます。最高報酬を狙う上位マネージャー向け。</div></div>
-        <div class="flow-item"><div class="flow-num" style="font-size:10px">🥈</div><div class="flow-text"><strong>Contender（コンテンダー）</strong><br>Championに次ぐシーズン中大会。同じく各レアリティで最大<strong>5ライン</strong>提出可能。中級マネージャーが賞金を狙いやすい大会です。</div></div>
-      </div>
-
-      <div style="margin-bottom:12px; font-size:13px; font-weight:700; color:var(--nba-light); letter-spacing:1px;">── クラシック・隔週大会（過去カード使用可）</div>
-      <div class="flow" style="margin-bottom:24px">
-        <div class="flow-item"><div class="flow-num" style="background:#475569; font-size:10px">⚔️</div><div class="flow-text"><strong>Challenger（チャレンジャー）</strong><br>過去シーズンのカードで参加できるクラシック大会。<strong>Cap 140 + MVP形式</strong>で、各レアリティ最大<strong>3ライン</strong>提出可能。</div></div>
-        <div class="flow-item"><div class="flow-num" style="background:#475569; font-size:10px">🏟️</div><div class="flow-text"><strong>Arena（アリーナ）</strong><br>エッセンスを消費して参加。<strong>10人リーダーボード制</strong>。5%の確率で「ゴールデンルーム」に入ると<strong>報酬2倍</strong>。Uncapped・Arena 140・Arena 75の3種類。</div></div>
-      </div>
-
-      <div style="margin-bottom:12px; font-size:13px; font-weight:700; color:var(--nba-light); letter-spacing:1px;">── デイリー大会</div>
-      <div class="flow" style="margin-bottom:16px">
-        <div class="flow-item"><div class="flow-num" style="font-size:10px">📅</div><div class="flow-text"><strong>Daily Pickup（デイリーピックアップ）</strong><br>NBA試合開催日にいつでも参加可能。<strong>Cap 120 + MVP形式</strong>。1GWにつき<strong>1ライン</strong>のみ提出可能。シーズン中カード不要で気軽に参加できます。</div></div>
-      </div>
-
-      <div class="note-box">⚠️ <strong>Commonカードで参加できる大会</strong>は Common Champion・Common Contender・Daily Pickupの3つのみです。</div>
-
-      <div style="margin-top:24px; margin-bottom:12px; font-size:14px; font-weight:600;">マルチエントリーまとめ</div>
-      <div class="table-wrap">
+      <div class="table-wrap" style="margin-bottom:24px">
         <table>
-          <thead><tr><th>大会</th><th>最大ライン数</th><th>シーズン中カード</th></tr></thead>
+          <thead><tr><th>形式</th><th>スター上限</th><th>考え方</th></tr></thead>
           <tbody>
-            <tr><td>Champion / Contender</td><td>各レアリティ 5ライン</td><td>必要</td></tr>
-            <tr><td>Challenger / Arena</td><td>各レアリティ 3ライン</td><td>不要</td></tr>
-            <tr><td>Daily Pickup</td><td>1ライン</td><td>不要</td></tr>
+            <tr><td>Champion</td><td>16スター</td><td>Contenderの11スターに、5つ星の選手1人分の余裕を足した形</td></tr>
+            <tr><td>Contender</td><td>11スター</td><td>星の割にスコアを出せる選手を探す</td></tr>
           </tbody>
         </table>
       </div>
+
+      <div style="margin-bottom:12px; font-size:13px; font-weight:700; color:var(--nba-light); letter-spacing:1px;">── シーズン中大会（今シーズンのカード）</div>
+      <div class="flow" style="margin-bottom:24px">
+        <div class="flow-item"><div class="flow-num" style="font-size:10px">👑</div><div class="flow-text"><strong>Champion / Contender（Limited）</strong><br>GW単位のリーダーボード。提出したラインナップは、そのまま<strong>Hot Streaks</strong>（連続達成で報酬が出る仕組み）にも参加します。1つのラインナップで2つの報酬を狙えます。</div></div>
+        <div class="flow-item"><div class="flow-num" style="font-size:10px">🥈</div><div class="flow-text"><strong>Champion / Contender（Rare）</strong><br>GW単位のリーダーボード。NBA 26と同じく各GW<strong>5チーム</strong>まで提出できます。</div></div>
+        <div class="flow-item"><div class="flow-num" style="font-size:10px">💎</div><div class="flow-text"><strong>Champion / Contender（Super Rare・Unique）</strong><br>隔週開催。In-SeasonのUniqueカード1枚ごとに報酬<strong>+100%</strong>、ClassicのUniqueカードは<strong>+25%</strong>。</div></div>
+      </div>
+
+      <div style="margin-bottom:12px; font-size:13px; font-weight:700; color:var(--nba-light); letter-spacing:1px;">── クラシック大会（過去シーズンのカード使用可）</div>
+      <div class="flow" style="margin-bottom:24px">
+        <div class="flow-item"><div class="flow-num" style="background:#475569; font-size:10px">⚔️</div><div class="flow-text"><strong>Classic Champion / Contender</strong><br>Challengerは廃止され、Champion（16スター）・Contender（11スター）に統一されました。各大会・各レアリティ<strong>3ライン</strong>まで。Unique Classicには今シーズンから現金報酬が付きます。</div></div>
+        <div class="flow-item"><div class="flow-num" style="background:#475569; font-size:10px">🏟️</div><div class="flow-text"><strong>Arena（アリーナ）</strong><br>エッセンスを消費して参加。5%の確率で「ゴールデンルーム」に入ります。開幕時は下の5部屋です。</div></div>
+      </div>
+
+      <div class="table-wrap" style="margin-bottom:24px">
+        <table>
+          <thead><tr><th>Arena</th><th>上限</th><th>参加費</th></tr></thead>
+          <tbody>
+            <tr><td>Uncapped</td><td>なし</td><td>200エッセンス</td></tr>
+            <tr><td>Champion</td><td>16スター</td><td>150エッセンス</td></tr>
+            <tr><td>Contender</td><td>11スター</td><td>75エッセンス</td></tr>
+            <tr><td>Veterans（30歳以上）</td><td>16スター</td><td>150エッセンス</td></tr>
+            <tr><td>U23</td><td>11スター</td><td>150エッセンス</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-bottom:12px; font-size:13px; font-weight:700; color:var(--nba-light); letter-spacing:1px;">── 毎日遊ぶなら</div>
+      <div class="flow" style="margin-bottom:16px">
+        <div class="flow-item"><div class="flow-num" style="font-size:10px">🎮</div><div class="flow-text"><strong>Arcade（アーケード）</strong><br>Daily Pickupなどのデイリー大会は廃止されました。代わりに2026年10月末から、毎日短時間で遊べる<strong>Arcade</strong>が始まります。</div></div>
+      </div>
+
+      <div class="note-box">📅 <strong>開幕キャンペーン（GW1〜GW8）</strong>：Limited ChampionのHot Streaks報酬が2倍。RareではChampion Streaksが期間限定で追加されます。</div>
+      <div class="note-box" style="margin-top:12px">ℹ️ 2026年10月1日のSorare公式発表に基づいています。9月23日に発表された「Pro Streaks」「スコア上限75点」は撤回されました。</div>
     </div>
 
     <div class="section" id="n-referral">
@@ -415,7 +428,7 @@
   </div>
   <div class="footer-copy">
     <div style="margin-bottom:12px;"><a href="privacy" style="color:var(--text2); text-decoration:none;">プライバシーポリシー</a> | <a href="contact" style="color:var(--text2); text-decoration:none;">お問い合わせ</a></div>
-    © 2025 SORARE ORIGIN — Unofficial Fan Site. Not affiliated with Sorare.<br>
+    © 2026 SORARE ORIGIN — Unofficial Fan Site. Not affiliated with Sorare.<br>
     <span style="margin-top:6px; display:block">当サイトのコンテンツ（文章・構成・デザイン）の無断転載・複製・ミラーサイトの作成を禁じます。</span>
   </div>
 </footer>
